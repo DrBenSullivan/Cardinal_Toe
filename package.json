@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DrBenSullivan/Cardinal_Toe/issues"
   },
-  "homepage": "https://github.com/DrBenSullivan/Cardinal_Toe#readme"
+  "homepage": "https://github.com/DrBenSullivan/Cardinal_Toe#readme",
+  "dependencies": {
+    "angular": "^1.8.3"
+  }
 }
