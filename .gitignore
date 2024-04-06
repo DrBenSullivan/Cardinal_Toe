@@ -5,46 +5,13 @@ cardinal_toe_app/.vscode/**
 cardinal_toe_app/.angular/**
 cardinal_toe_app/.editorconfig
 cardinal_toe_app/.angular/**
+cardinal_toe_app/angular.json
 cardinal_toe_app/node_modules/**
-
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
-
-# Node
-/node_modules
+cardinal_toe_app/dist
+cardinal_toe_app/tmp
+cardinal_toe_app/out-tsc
+cardinal_toe_app/bazel-out
 npm-debug.log
 yarn-error.log
-
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
 *.launch
-.settings/
 *.sublime-workspace
-
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
-
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-
-# System files
-.DS_Store
-Thumbs.db
-
