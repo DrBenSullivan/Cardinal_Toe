@@ -1,11 +1,11 @@
 node_modules
 .gitignore
 
-cardinal_toe_app/.vscode
-cardinal_toe_app/.angular
+cardinal_toe_app/.vscode/**
+cardinal_toe_app/.angular/**
 cardinal_toe_app/.editorconfig
-cardinal_toe_app/.angular
-cardinal_toe_app/node_modules
+cardinal_toe_app/.angular/**
+cardinal_toe_app/node_modules/**
 
 # Compiled output
 /dist
