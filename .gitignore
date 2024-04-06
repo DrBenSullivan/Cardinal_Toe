@@ -1,7 +1,7 @@
 node_modules
 .gitignore
 
-cardinal_toe_app/.vscode/**
+cardinal_toe_app/.vscode/** 
 cardinal_toe_app/.angular/**
 cardinal_toe_app/.editorconfig
 cardinal_toe_app/.angular/**
