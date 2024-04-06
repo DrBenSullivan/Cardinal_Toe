@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DrBenSullivan/Cardinal_Toe/blob/master/README.md",
   "dependencies": {
-    "angular": "^1.8.3"
+    "angular": "^1.8.3",
+    "primeng": "^17.12.0"
   }
 }

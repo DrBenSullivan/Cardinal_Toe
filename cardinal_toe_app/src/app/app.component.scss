@@ -1,0 +1,30 @@
+.grid-display {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template: 
+        "header header" 30px
+        "first-panel second-panel" auto
+        "footer footer" 30px / 20% auto;
+    background-color: burlywood;
+    gap: 0;
+}   
+
+app-header {
+    grid-area: header;
+    border: solid 1px #000;
+}
+app-nav {
+    grid-area: first-panel;
+    border: solid 1px #000;
+}
+app-content {
+    grid-area: second-panel;
+    border: solid 1px #000;
+}
+app-footer {
+    grid-area: footer;
+    border: solid 1px #000;
+}
