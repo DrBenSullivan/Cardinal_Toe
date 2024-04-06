@@ -13,5 +13,4 @@ import { FooterComponent } from './footer/footer.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'cardinal_toe_app';
 }
