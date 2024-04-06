@@ -2,79 +2,98 @@
     "locations": [
       {
         "name": "forest",
-        "description": "You find yourself in a dense, ancient forest. Tall trees tower above you, their branches blocking out most of the sunlight. The forest floor is covered in a thick layer of moss and fallen leaves. You can hear the distant sounds of wildlife echoing through the trees."
+        "description": "You find yourself in a dense, ancient forest. Tall trees tower above you, their branches blocking out most of the sunlight. The forest floor is covered in a thick layer of moss and fallen leaves. You can hear the distant sounds of wildlife echoing through the trees.",
+        "image": "https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "field",
-        "description": "You stand in a vast field stretching out before you. Golden wheat sways gently in the breeze, creating waves of movement across the landscape. The sky above is wide and open, with only a few fluffy clouds drifting lazily by. In the distance, you can see a small farmhouse."
+        "description": "You stand in a vast field stretching out before you. Golden wheat sways gently in the breeze, creating waves of movement across the landscape. The sky above is wide and open, with only a few fluffy clouds drifting lazily by. In the distance, you can see a small farmhouse.",
+        "image": "https://images.pexels.com/photos/259280/pexels-photo-259280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "farm",
-        "description": "You arrive at a quaint farm nestled in the countryside. Chickens peck at the ground, while cows graze lazily in the pasture. The farmhouse itself is weathered but welcoming, with smoke curling from the chimney. A sense of peace and tranquility envelops the area."
+        "description": "You arrive at a quaint farm nestled in the countryside. Chickens peck at the ground, while cows graze lazily in the pasture. The farmhouse itself is weathered but welcoming, with smoke curling from the chimney. A sense of peace and tranquility envelops the area.",
+        "image": "https://images.pexels.com/photos/235725/pexels-photo-235725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "town",
-        "description": "You enter a bustling town, filled with the hustle and bustle of daily life. Merchants hawk their wares in the crowded marketplace, while children play in the cobblestone streets. The scent of freshly baked bread wafts through the air, mingling with the sounds of laughter and chatter."
+        "description": "You enter a bustling town, filled with the hustle and bustle of daily life. Merchants hawk their wares in the crowded marketplace, while children play in the cobblestone streets. The scent of freshly baked bread wafts through the air, mingling with the sounds of laughter and chatter.",
+        "image": "https://images.pexels.com/photos/259780/pexels-photo-259780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "palace",
-        "description": "Before you stands a magnificent palace, its towering spires reaching towards the sky. Guards in gleaming armor stand watch at the entrance, their eyes sharp and alert. The palace grounds are immaculately kept, with vibrant gardens and sparkling fountains. You can't help but feel a sense of awe at the grandeur before you."
+        "description": "Before you stands a magnificent palace, its towering spires reaching towards the sky. Guards in gleaming armor stand watch at the entrance, their eyes sharp and alert. The palace grounds are immaculately kept, with vibrant gardens and sparkling fountains. You can't help but feel a sense of awe at the grandeur before you.",
+        "image": "https://images.pexels.com/photos/2606600/pexels-photo-2606600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "room",
-        "description": "You find yourself in a small, dimly lit room. The air is musty and stale, and the only furnishings are a rickety wooden chair and a moth-eaten rug. A single window lets in a shaft of weak sunlight, illuminating the dust motes dancing in the air."
+        "description": "You find yourself in a small, dimly lit room. The air is musty and stale, and the only furnishings are a rickety wooden chair and a moth-eaten rug. A single window lets in a shaft of weak sunlight, illuminating the dust motes dancing in the air.",
+        "image": "https://images.pexels.com/photos/13909777/pexels-photo-13909777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "cave",
-        "description": "You stumble into a dark, foreboding cave. The air is cool and damp, and the only sound is the echo of your footsteps against the stone walls. Strange shadows flicker across the cavern floor, and you can't shake the feeling that you're being watched."
+        "description": "You stumble into a dark, foreboding cave. The air is cool and damp, and the only sound is the echo of your footsteps against the stone walls. Strange shadows flicker across the cavern floor, and you can't shake the feeling that you're being watched.",
+        "image": "https://images.pexels.com/photos/1683490/pexels-photo-1683490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "tunnel",
-        "description": "You find yourself in a narrow tunnel, its walls rough and uneven. The air is thick with the smell of earth and dampness, and the only sound is the faint drip of water echoing in the distance. You can't see more than a few feet ahead of you, and the darkness feels suffocating."
+        "description": "You find yourself in a narrow tunnel, its walls rough and uneven. The air is thick with the smell of earth and dampness, and the only sound is the faint drip of water echoing in the distance. You can't see more than a few feet ahead of you, and the darkness feels suffocating.",
+        "image": "https://images.pexels.com/photos/249097/pexels-photo-249097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "blacksmith",
-        "description": "You step into a bustling blacksmith's shop, filled with the clang of metal on metal and the hiss of steam. A burly blacksmith works at the forge, sweat beading on his brow as he shapes molten metal into intricate designs. Weapons and armor line the walls, gleaming in the firelight."
+        "description": "You step into a bustling blacksmith's shop, filled with the clang of metal on metal and the hiss of steam. A burly blacksmith works at the forge, sweat beading on his brow as he shapes molten metal into intricate designs. Weapons and armor line the walls, gleaming in the firelight.",
+        "image": "https://images.pexels.com/photos/3680094/pexels-photo-3680094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "mountain",
-        "description": "You stand at the base of a towering mountain, its jagged peaks disappearing into the clouds above. The air is thin and crisp, and the only sound is the distant cry of a mountain hawk. The mountain slopes are dotted with hardy shrubs and patches of snow, and the ascent looks treacherous."
+        "description": "You stand at the base of a towering mountain, its jagged peaks disappearing into the clouds above. The air is thin and crisp, and the only sound is the distant cry of a mountain hawk. The mountain slopes are dotted with hardy shrubs and patches of snow, and the ascent looks treacherous.",
+        "image": "https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "beach",
-        "description": "You find yourself on a sandy beach, with gentle waves lapping at the shore. Seagulls wheel overhead, their cries mingling with the sound of the surf. The air is salty and fresh, and the sun beats down warmly on your skin. A sense of serenity washes over you as you gaze out at the endless expanse of the ocean."
+        "description": "You find yourself on a sandy beach, with gentle waves lapping at the shore. Seagulls wheel overhead, their cries mingling with the sound of the surf. The air is salty and fresh, and the sun beats down warmly on your skin. A sense of serenity washes over you as you gaze out at the endless expanse of the ocean.",
+        "image": "https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "desert",
-        "description": "You are lost in a vast desert, with dunes stretching out in every direction as far as the eye can see. The sun beats down mercilessly, and the heat shimmers off the sand in waves. There is no sign of life except for the occasional scuttle of a lizard or the distant cry of a desert bird."
+        "description": "You are lost in a vast desert, with dunes stretching out in every direction as far as the eye can see. The sun beats down mercilessly, and the heat shimmers off the sand in waves. There is no sign of life except for the occasional scuttle of a lizard or the distant cry of a desert bird.",
+        "image": "https://images.pexels.com/photos/4017971/pexels-photo-4017971.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "ruins",
-        "description": "You stumble upon a set of ancient ruins, their crumbling walls bearing silent witness to the passage of time. Vines and moss cling to the weathered stones, and the air is heavy with the weight of history. You can almost hear the echoes of a forgotten civilization as you explore the deserted corridors and crumbling archways."
+        "description": "You stumble upon a set of ancient ruins, their crumbling walls bearing silent witness to the passage of time. Vines and moss cling to the weathered stones, and the air is heavy with the weight of history. You can almost hear the echoes of a forgotten civilization as you explore the deserted corridors and crumbling archways.",
+        "image": "https://images.pexels.com/photos/1481829/pexels-photo-1481829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "cemetery",
-        "description": "You find yourself in a quiet cemetery, with rows of weathered headstones standing sentinel over the graves. The air is still and heavy, and the only sound is the whisper of the wind through the trees. A sense of melancholy hangs in the air as you walk among the graves, reading the names and dates etched into the stone."
+        "description": "You find yourself in a quiet cemetery, with rows of weathered headstones standing sentinel over the graves. The air is still and heavy, and the only sound is the whisper of the wind through the trees. A sense of melancholy hangs in the air as you walk among the graves, reading the names and dates etched into the stone.",
+        "image": "https://images.pexels.com/photos/460617/pexels-photo-460617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "library",
-        "description": "You step into a grand library, its shelves lined with dusty tomes and ancient scrolls. The air is thick with the smell of old paper and leather bindings, and shafts of sunlight filter through stained glass windows, casting colorful patterns on the polished wooden floors. You can't help but feel a sense of awe at the vast repository of knowledge surrounding you."
+        "description": "You step into a grand library, its shelves lined with dusty tomes and ancient scrolls. The air is thick with the smell of old paper and leather bindings, and shafts of sunlight filter through stained glass windows, casting colorful patterns on the polished wooden floors. You can't help but feel a sense of awe at the vast repository of knowledge surrounding you.",
+        "image": "https://images.pexels.com/photos/1290141/pexels-photo-1290141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "castle",
-        "description": "You find yourself in the courtyard of a massive castle, its imposing walls rising high above you. Flags flutter in the breeze, and the sound of clashing swords drifts from the training grounds. The castle grounds are alive with activity, with knights in shining armor bustling about and servants scurrying to and fro."
+        "description": "You find yourself in the courtyard of a massive castle, its imposing walls rising high above you. Flags flutter in the breeze, and the sound of clashing swords drifts from the training grounds. The castle grounds are alive with activity, with knights in shining armor bustling about and servants scurrying to and fro.",
+        "image": "https://images.pexels.com/photos/3358880/pexels-photo-3358880.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "dungeon",
-        "description": "You descend into a dark and forbidding dungeon, its stone walls damp with moisture and streaked with grime. The air is thick and musty, and the only sounds are the drip of water from unseen leaks and the distant skittering of rats. Shadows dance on the walls as you navigate the twisting passages and dimly lit corridors."
+        "description": "You descend into a dark and forbidding dungeon, its stone walls damp with moisture and streaked with grime. The air is thick and musty, and the only sounds are the drip of water from unseen leaks and the distant skittering of rats. Shadows dance on the walls as you navigate the twisting passages and dimly lit corridors.",
+        "image": "https://images.pexels.com/photos/19254623/pexels-photo-19254623/free-photo-of-view-on-sea-through-the-bars.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "volcano",
-        "description": "You find yourself at the edge of a smoldering volcano, its crater bubbling and steaming ominously. The air is thick with sulfur, and the ground beneath your feet is hot to the touch. Lava flows sluggishly down the mountainside, casting an eerie orange glow over the barren landscape. You can't help but feel a sense of impending danger as you gaze into the roiling depths below."
+        "description": "You find yourself at the edge of a smoldering volcano, its crater bubbling and steaming ominously. The air is thick with sulfur, and the ground beneath your feet is hot to the touch. Lava flows sluggishly down the mountainside, casting an eerie orange glow over the barren landscape. You can't help but feel a sense of impending danger as you gaze into the roiling depths below.",
+        "image": "https://images.pexels.com/photos/4220967/pexels-photo-4220967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "name": "waterfall",
-        "description": "You stand at the foot of a majestic waterfall, its waters cascading down from high above in a torrent of foam and spray. The air is cool and refreshing, and the sound of rushing water fills your ears. Rainbows dance in the mist as the sunlight filters through, creating a dazzling display of color and light."
+        "description": "You stand at the foot of a majestic waterfall, its waters cascading down from high above in a torrent of foam and spray. The air is cool and refreshing, and the sound of rushing water fills your ears. Rainbows dance in the mist as the sunlight filters through, creating a dazzling display of color and light.",
+        "image": "https://images.pexels.com/photos/1875480/pexels-photo-1875480.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       }
     ]
   }
