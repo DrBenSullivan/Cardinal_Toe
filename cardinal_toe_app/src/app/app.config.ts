@@ -7,6 +7,6 @@ import { BrowserModule } from '@angular/platform-browser';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, withComponentInputBinding()),
-    importProvidersFrom([BrowserAnimationsModule, BrowserModule])
+    importProvidersFrom([BrowserAnimationsModule, BrowserModule ])
     ]
 };

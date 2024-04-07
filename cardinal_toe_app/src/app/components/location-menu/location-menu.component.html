@@ -1,11 +1,15 @@
-<p-dialog [header]="label" [(visible)]="display" [modal]="true" [draggable]="false" [resizable]="false" 
+<p-dialog [header]="header | titlecase" [(visible)]="display" [modal]="true" [closable]="false" [draggable]="false"
     [style]="{
         width: '50vw',  
         color: 'burlywood', 
-        padding: '30px',  
+        padding: '16px',  
         background: 'brown',  
-        border: '2px solid black',  
-        borderRadius: '25px' 
+        border: '1px solid black',  
+        borderRadius: '16px' 
     }">
-    <p>Runs!</p>
+    <p>Something about {{header | titlecase}}...</p>
+
+    <p-footer>
+        <p-button type="button" label="close" (click)="closePopup()"></p-button>
+    </p-footer>
 </p-dialog>

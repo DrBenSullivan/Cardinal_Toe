@@ -18,7 +18,7 @@ export class ContentComponent implements OnInit {
 
   ngOnInit() {
     this.node = {
-      scene: "glade",
+      scene: "the glade",
       description: "You come to your senses in a small forest clearing.<br>Brilliant beams of sunlight pierce the soft mist of the glade.<br>Your recollection of preceding events is, at best, questionable & the cloying scent of Buckfast burns your nostrils.<br>You know your friend <b class=\"person\" (click)=\"toggleMenu()\">Bazzlebeard</b> is in trouble, so you arise to find him.<br>The wall of trees that make up the <b class=\"location\" (click)=\"toggleMenu()\">forest</b>, surrounds you...",
       image: "https://images.pexels.com/photos/10116426/pexels-photo-10116426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }

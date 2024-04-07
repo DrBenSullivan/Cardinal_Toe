@@ -1,26 +1,18 @@
-<h1>The {{node.scene | uppercase}}</h1>
-<hr>
-<p>You come to your senses in a small forest clearing.
-    <br>Brilliant beams of sunlight pierce the soft mist of the glade.
-    <br>Your recollection of preceding events is, at best, questionable & the cloying scent of Buckfast burns your nostrils.
-    <br>You know your friend 
-        <b class="person" (click)="openMenu(character1)">{{character1}}</b>
-    is in trouble, so you arise to find him.
-    <br>The wall of trees that make up the 
-        <b class="location" (click)="openMenu(location1)">{{location1}}</b>   
-    surrounds you...
-</p>
-<app-location-menu 
-    [display]="display"
-    [label]="label"
-    (displayChange)="onMenuClose($event)"></app-location-menu>
-
-
-<!-- <p-dialog header="Header" [(visible)]="display" [style]="{width: '50vw'}">
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<div class="pad16">
+    <h1>{{node.scene | titlecase}}</h1>
+    <br>
+    <p>You come to your senses in a small forest clearing.
+        <br>Brilliant beams of sunlight pierce the soft mist of the glade.
+        <br>Your recollection of preceding events is, at best, questionable & the cloying scent of Buckfast burns your nostrils.
+        <br>You know your friend 
+            <b class="person" (click)="openPopup(character1)">{{character1}}</b>
+        is in trouble, so you arise to find him.
+        <br>The wall of trees that make up the 
+            <b class="location" (click)="openPopup(location1)">{{location1}}</b>   
+        surrounds you...
     </p>
-</p-dialog> -->
-<!-- class="person" (click)="toggleMenu()" -->
-<!-- <app-location-menu [(display)]="display" (displayChange)="onDialogClose($event)"></app-location-menu> -->
+</div>
+
+<app-location-menu 
+    [(display)]="displayPopup"
+    [header]="header"></app-location-menu>

@@ -20,3 +20,33 @@ img {
     height: 400px;
     width: 400px;
 }
+
+p {
+    line-height: 2;
+}
+
+.pad8 {
+    padding: 8px;
+}
+
+.pad16 {
+    padding: 16px;
+}
+
+.aCentre {
+    align-items: center;
+}
+
+.wrapper  {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

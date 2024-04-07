@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Place } from '../../interfaces/place';
-import { UpperCasePipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { LocationMenuComponent } from '../location-menu/location-menu.component';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
@@ -8,30 +8,32 @@ import { DialogModule } from 'primeng/dialog';
 @Component({
   selector: 'app-narrator',
   standalone: true,
-  imports: [ UpperCasePipe, LocationMenuComponent, ButtonModule, DialogModule ],
+  imports: [ LocationMenuComponent, ButtonModule, DialogModule, CommonModule ],
   templateUrl: './narrator.component.html',
   styleUrl: './narrator.component.scss'
 })
 
 export class NarratorComponent {
+  constructor(){}
   @Input() node: Place = {
     scene: "",
     description: "",
     image: "",
   }
-    display: boolean = false;
-    label: string = "";
-    location1: string = "forest"; //EDIT THIS FOR RANDOMISATION
+    displayPopup: boolean = false;
+    header: string = ""; //Header for popup
+
+    //Hard-coded for now...
+    location1: string = "forest"
     character1: string = "Bazzlebeard";
 
-  openMenu(value: string) {
-    this.display = true;
-    this.label = value;
+  openPopup(linkText: string) {
+    this.displayPopup = true;
+    this.header = linkText;
   }
   
-  onMenuClose(event: boolean) {
-    this.display = event;
-    this.label = "";
+  onHide(event: boolean) {
+    this.header = "";
   }
 
 }
