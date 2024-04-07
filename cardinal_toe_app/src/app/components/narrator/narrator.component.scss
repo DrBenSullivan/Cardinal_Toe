@@ -1,0 +1,21 @@
+img {
+    object-fit: contain;
+    height: 400px;
+    width: 400px;
+}
+
+.location {
+    color: green;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.person {
+    color: blue;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
