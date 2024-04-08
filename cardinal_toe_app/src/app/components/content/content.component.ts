@@ -21,8 +21,7 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.node.id);
     this.node = this.locatorService.getLocationDetails(this.node.id);
-    console.log(this.node);
+    console.log(typeof(this.node.description));
     }
 }

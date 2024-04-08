@@ -7,7 +7,6 @@ import { Place } from '../interfaces/place';
 })
 export class LocatorService {
   constructor() {
-    console.log(locationsJSON);
   }
   
   getLocationDetails(key: number){
