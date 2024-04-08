@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Place } from '../../interfaces/place';
 import { CommonModule } from '@angular/common';
 import { LocationMenuComponent } from '../location-menu/location-menu.component';
@@ -15,25 +15,14 @@ import { DialogModule } from 'primeng/dialog';
 
 export class NarratorComponent {
   constructor(){}
-  @Input() node: Place = {
-    scene: "",
-    description: "",
-    image: "",
-  }
+  @Input() node!: Place;
+
     displayPopup: boolean = false;
     header: string = ""; //Header for popup
-
-    //Hard-coded for now...
-    location1: string = "forest"
-    character1: string = "Bazzlebeard";
 
   openPopup(linkText: string) {
     this.displayPopup = true;
     this.header = linkText;
-  }
-  
-  onHide(event: boolean) {
-    this.header = "";
   }
 
 }

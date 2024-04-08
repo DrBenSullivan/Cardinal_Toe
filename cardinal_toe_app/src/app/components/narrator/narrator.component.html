@@ -1,16 +1,7 @@
 <div class="pad16">
-    <h1>{{node.scene | titlecase}}</h1>
-    <br>
-    <p>You come to your senses in a small forest clearing.
-        <br>Brilliant beams of sunlight pierce the soft mist of the glade.
-        <br>Your recollection of preceding events is, at best, questionable & the cloying scent of Buckfast burns your nostrils.
-        <br>You know your friend 
-            <b class="person" (click)="openPopup(character1)">{{character1}}</b>
-        is in trouble, so you arise to find him.
-        <br>The wall of trees that make up the 
-            <b class="location" (click)="openPopup(location1)">{{location1}}</b>   
-        surrounds you...
-    </p>
+    <h1>{{node.scene | titlecase }}</h1>
+    <img src="{{node.image}}" />
+    <p>{{node.description}}</p>
 </div>
 
 <app-location-menu 

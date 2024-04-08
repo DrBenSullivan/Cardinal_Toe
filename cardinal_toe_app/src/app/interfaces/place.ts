@@ -1,5 +1,6 @@
 export interface Place {
-    scene: string,
-    description: string,
-    image: string,
+    id: number,
+    scene?: string,
+    description?: string,
+    image?: string,
 }
