@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import locationsJSON from '../../assets/locations.json';
+import locationsJSON from '../../assets/data/locations.json';
 import { Place } from '../interfaces/place';
 
 @Injectable({
@@ -10,7 +10,7 @@ export class LocatorService {
   }
   
   getLocationDetails(key: number){
-    const locationDetails = locationsJSON.locations[key];
+    const locationDetails = locationsJSON[key];
     const nodeObject: Place = {
       id: locationDetails.id,
       scene: locationDetails.name,

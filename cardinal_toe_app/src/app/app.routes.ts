@@ -6,7 +6,7 @@ import { ErrorComponent } from './components/error/error.component';
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: '/content',
+        redirectTo: '/info',
         pathMatch: 'full'
     } ,
     {

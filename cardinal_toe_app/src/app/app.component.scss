@@ -1,6 +1,3 @@
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
-
 .grid-display {
     width: 100%;
     height: 100vh;
@@ -17,16 +14,17 @@
 
 app-header {
     grid-area: header;
-    border: solid 1px #000;
+    border: solid 1px #6e3030;
 }
+
 app-nav {
     grid-area: first-panel;
-    border: solid 1px #000;
+    border: solid 1px #6e3030;
 }
 .main {
     grid-area: second-panel;
     max-height: min-content;
-    border: solid 1px #000;
+    border: solid 1px #6e3030;
     overflow-x: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none; 
@@ -39,5 +37,5 @@ app-nav {
 
 app-footer {
     grid-area: footer;
-    border: solid 1px #000;
+    border: solid 1px #6e3030;
 }

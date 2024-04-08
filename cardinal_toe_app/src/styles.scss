@@ -6,7 +6,7 @@
 
 html, body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: brown;
+    color: #a52a2a;
     font-size: 16px;
     background-color: beige;
     margin: 0;
@@ -16,14 +16,30 @@ html, body {
 }
 
 img {
-    object-fit: contain;
-    height: 400px;
-    width: 400px;
+    border: solid 4px #6e3030;
+    border-radius: 16px;
 }
 
 p {
     line-height: 2;
     white-space: pre-wrap;
+}
+
+a {
+    color: #a52a2a;
+
+    &:hover {
+        color: #6e3030;
+        text-decoration: none;
+    }
+}
+
+.italic {
+    font-style: italic;
+}
+
+.dark {
+    color: #6e3030;
 }
 
 .pad8 {
@@ -32,6 +48,10 @@ p {
 
 .pad16 {
     padding: 16px;
+}
+
+.pad32 {
+    padding: 32px;
 }
 
 .aCentre {
@@ -50,4 +70,28 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.flexbox-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.framed100 {
+    object-fit:cover;
+    height: 100px;
+    width: 100px;
+}
+
+.framed200{
+    object-fit:cover;
+    height: 200px;
+    width: 200px;
+}
+
+.framed300{
+    object-fit:cover;
+    height: 300px;
+    width: 300px;
 }

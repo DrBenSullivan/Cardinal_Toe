@@ -1,5 +1,6 @@
 <div class="nav-bar">
-    <a [routerLink]="['/']">CONTENT</a>
-    <a [routerLink]="['/info']">INFORMATION</a>
-    <a [routerLink]="['/blahhh']">TEST ERROR</a>
+    <a [routerLink]="['/info']" routerLinkActive="active-link">HOME</a>
+    <a [routerLink]="['/content']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+        true}">PLAY</a>
+    <a [routerLink]="['/blahhh']" routerLinkActive="active-link">TEST ERROR</a>
 </div>

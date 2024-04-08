@@ -7,15 +7,24 @@
 a {
     display: flex;
     justify-content: center;
-    background-color: sandybrown;
-    color: black;
+    background-color: #f4a460;
+    color: brown;
     padding: 6px;
     margin: 6px;    
-    border: solid brown 1px;
+    border: solid #6e3030 1px;
+    border-radius: 8px;
     text-decoration: none;
     
     &:hover {
-        color: brown;
-        font-weight: bolder;
+        color: #6e3030;
+        font-style: italic;
+    }
+
+    &.active-link {
+        background-color: #6e3030;
+        color: #f4a460;
+        border: solid 1px transparent;
+        pointer-events: none;
+        cursor: default;
     }
 }   
