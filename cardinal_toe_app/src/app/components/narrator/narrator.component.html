@@ -5,14 +5,14 @@
     </div>
 
     <div class="content-title wrapper flexbox-left">
-        <h1 class = "location italic" (click)="openLocationMenu(node)">The {{node.scene | titlecase }}</h1>
+        <h1 class = "location italic" (click)="openLocationMenu(node, true)">The {{node.scene | titlecase }}</h1>
     </div>
 
     <div class="content-body">
         <p>{{node.description | paragraph}}</p>
 
         <p>{{destinationText}}<ng-template ngFor let-destination [ngForOf]="destinationObjectsArray" let-i="index">     
-            <span class="location" (click)="openLocationMenu(destination)">{{destination.scene}}</span>
+            <span class="location" (click)="openLocationMenu(destination, false)">{{destination.scene}}</span>
             <span *ngIf="i === destinationObjectsArray.length - 1">.</span>
             <span *ngIf="i === destinationObjectsArray.length - 2">, or a </span>
             <span *ngIf="i < destinationObjectsArray.length - 2">, a </span>
@@ -23,6 +23,8 @@
 </div>
 
 <app-location-menu 
-    [(display)]="locationMenuDisplay"
-    [destination]="destination"
+    [display]="locationMenuDisplay"
+    [selectedDestination]="selectedDestination"
+    [currentLocation]="currentLocation"
+    (changeDisplay)="changeLocationMenuDisplay($event)"
     (changeNode)="newNode($event)"></app-location-menu>

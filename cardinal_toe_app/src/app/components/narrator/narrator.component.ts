@@ -18,11 +18,12 @@ export class NarratorComponent implements OnInit {
   @Input() node!: Place;
 
   locationMenuDisplay: boolean = false;
+  currentLocation: boolean = false;
   routesText: string = "";
   destinationObjectsArray: Place[] = [];
   destinationScenesArray: string[] = [];
   destinationText: string = "";
-  destination!: Place;
+  selectedDestination?: Place;
 
   constructor(private destinationService: DestinationsService) {
   }
@@ -37,6 +38,7 @@ export class NarratorComponent implements OnInit {
   }
 
   updateDestinations() {
+    this.locationMenuDisplay = false;
     this.routesText = "";
     this.destinationObjectsArray = [];
     this.destinationScenesArray = [];
@@ -44,10 +46,16 @@ export class NarratorComponent implements OnInit {
     this.destinationText = this.destinationService.getDestinations(this.node, this.destinationObjectsArray, this.destinationScenesArray);
   }
   
-  openLocationMenu (destination: Place) {
-    console.log(destination);
-    this.destination = destination;
-    this.locationMenuDisplay = true;
+  openLocationMenu (destination: Place, current: boolean) {
+    if(destination) {
+      this.currentLocation = current;
+      this.selectedDestination = destination;
+      this.locationMenuDisplay = true;
+    }
+  }
+
+  changeLocationMenuDisplay (event: boolean) {
+    this.locationMenuDisplay = event;
   }
 
 }

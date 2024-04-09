@@ -1,31 +1,42 @@
 <p-dialog [(visible)]="display" [modal]="true" [closable]="false" [draggable]="false"
-[style]="{
-    width: '50vw',
-    height: '50vh',  
-    color: 'brown', 
-    padding: '16px',  
-    background: '#f4a460',  
-    border: '4px solid #6e3030',  
-    borderRadius: '16px'
-}">
-    
-    <div class="grid-container">
+    [style]="{
+        width: '50vw',
+        height: 'max-content',  
+        color: '#371818', 
+        padding: '16px',  
+        background: '#AA6332',
+        border: '4px solid #6e3030',  
+        borderRadius: '16px',
+        overflow: 'hidden'
+    }">
+        
+        <div class="grid-container">
 
-        <div class="grid-body">
-            <h2 class="location italic">The {{scene | titlecase}}</h2>
-            <br>
-            <p>{{blurb}}</p>
-        </div>
-
-        <div class="grid-image">
-            <img src="../../../assets/images/locations/{{id}}.jpeg" class="framed100 brown-border4">
-        </div>
-
-        <div class="grid-controls">
-            <div class="flexbox">
-                <p-button styleClass="popup-button" type="button" label="go" (click)="goToDestination()"></p-button>
-                <p-button styleClass="popup-button" type="button" label="close" (click)="closePopup()"></p-button>
+            <div class="grid-body">
+                <h2 class="italic"
+                    *ngIf="localDestination">The {{localDestination.scene | titlecase}}</h2>
+                <p
+                    *ngIf="localDestination">{{localDestination.blurb ?? localDestination.description}}</p>
             </div>
+
+            <div class="grid-image">
+                <img 
+                    *ngIf="localDestination"
+                    src="../../../assets/images/locations/{{localDestination.id}}.jpeg" class="framed100 brown-border4" />
+            </div>
+
+            <div class="wrapper grid-controls">
+
+                <!-- Search button in control panel, if currentLocation, canSearch -->
+                <p-button styleClass="popup-button other" type="button" label="Search" [disabled]="canSearch"></p-button>
+
+                <!-- Go-to button in control panel, if NOT currentLocation, canGo -->
+                <p-button styleClass="popup-button other" type="button" label="Go-to" [disabled]="canGo" (click)="goToDestination()"></p-button>
+            
+                <!-- Close pop-up button in control panel-->
+                <p-button styleClass="popup-button close" type="button" label="Close" (click)="closePopup()"></p-button>
+
+            </div>
+
         </div>
-    </div>
 </p-dialog>

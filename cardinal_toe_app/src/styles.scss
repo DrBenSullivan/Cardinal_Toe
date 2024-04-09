@@ -127,7 +127,6 @@ a {
 .popup-button {
     color: #371818;
     background-color: #6e3030;
-    border-radius: 4px;
     border: 4px outset #371818;
     margin: 2px;
     padding: 4px;
@@ -143,7 +142,22 @@ a {
     }
 
     &:active {
-        box-shadow: 0 4px #371818;
-        transform: translateY(4px);
+        border: solid 4px #1C0C0C;
+        transform: scale3d(0.95, 0.95, 0.95);
+    }
+
+    &:disabled {
+        background-color: #1C0C0C;
+        border: solid 4px #371818;
+        color: #000;
+
+        &:hover {
+            cursor: default;
+        }
+
+        &:active {
+            box-shadow: 0;
+            transform: 0;
+        }
     }
 }

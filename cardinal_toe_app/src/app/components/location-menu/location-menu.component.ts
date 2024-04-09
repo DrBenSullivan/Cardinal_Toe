@@ -1,46 +1,54 @@
-import { CommonModule } from '@angular/common';
-import { Input, Component, Output, EventEmitter, AfterContentChecked } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { DialogModule } from 'primeng/dialog';
+import { Input, Component, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { Place } from '../../interfaces/place';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { NgIf, TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-location-menu',
+  imports: [ DialogModule, ButtonModule, NgIf, TitleCasePipe ],
   standalone: true,
-  imports: [ DialogModule, ButtonModule, CommonModule ],
   templateUrl: './location-menu.component.html',
-  styleUrl: './location-menu.component.scss'
+  styleUrls: ['./location-menu.component.scss']
 })  
-export class LocationMenuComponent implements AfterContentChecked {
+export class LocationMenuComponent implements OnChanges {
   @Input() display: boolean = false;
-  @Input() destination!: Place;
-  @Output() displayChange = new EventEmitter<boolean>();
+  @Input() selectedDestination?: Place | undefined;
+  @Input() currentLocation?: boolean | undefined;
+  @Output() changeDisplay = new EventEmitter<boolean>();
   @Output() changeNode = new EventEmitter<Place>();
 
-  id!: number;
-  scene!: string;
-  blurb!: string;  
+  localDestination: Place | undefined;
+  localCurrent: boolean | undefined;
+  canSearch!: boolean | undefined;
+  canGo!: boolean | undefined;
 
-  constructor() {}
 
-  ngAfterContentChecked(): void {
-    if(this.destination) {
-      this.id = this.destination.id;
-      this.scene = this.destination.scene;
-      this.blurb = this.destination.blurb ?? this.destination.description;
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes && this.selectedDestination) {
+      this.localCurrent = this.currentLocation;
+      this.canSearch = !this.localCurrent;
+      this.canGo = this.localCurrent;
+      this.localDestination = this.selectedDestination;
+    } else {
+      this.resetVariables();
     }
   }
-
+  
   closePopup(){
     this.display = false;
-    this.displayChange.emit(this.display);
+    this.changeDisplay.emit(this.display);
+    this.resetVariables();
   }
 
   goToDestination(){
-    this.closePopup();
-    this.changeNode.emit(this.destination);
-    this.displayChange.emit(this.display);
+    this.changeNode.emit(this.localDestination);
+    this.closePopup();  
+    this.resetVariables();
   }
-  
 
+  resetVariables(){
+    this.localDestination = undefined;
+    this.localCurrent = undefined;
+  }
 }
