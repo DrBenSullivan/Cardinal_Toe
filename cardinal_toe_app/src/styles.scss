@@ -6,7 +6,7 @@
 
 html, body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #a52a2a;
+    color: #6e3030;
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -24,10 +24,10 @@ p, span {
 }
 
 a {
-    color: #a52a2a;
+    color: #6e3030;
 
     &:hover {
-        color: #6e3030;
+        color: #a52a2a;
         text-decoration: none;
         cursor: pointer;
     }
@@ -125,9 +125,9 @@ a {
 }
 
 .popup-button {
-    color: #371818;
-    background-color: #6e3030;
-    border: 4px outset #371818;
+    color: #deb887;
+    background-color: #a52a2a;
+    border: 4px outset #000;
     margin: 2px;
     padding: 4px;
     font-size: 16px;
@@ -137,8 +137,8 @@ a {
 
     &:hover {
         cursor: pointer;
-        color: #6e3030;
-        background-color: #CD6731;
+        color: #E08649;
+        border-color: #E08649;
     }
 
     &:active {

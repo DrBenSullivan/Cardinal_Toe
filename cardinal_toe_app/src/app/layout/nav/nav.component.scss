@@ -2,20 +2,21 @@
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: #AA6332;
+    background-color: #8d4122;
     height: 100%;
 }
 
 a {
     display: flex;
     justify-content: center;
-    background-color: #f4a460;
-    color: #6e3030;
+    background-color: #a52a2a;
+    color: #deb887;
     padding: 12px 4px 12px 4px;
     font-size: 24px;
     margin: 8px;    
     border: outset #6e3030 4px;
     text-decoration: none;
+    transition: 0.2s;
     
     
     &:hover {
@@ -33,7 +34,7 @@ a {
     }
 
     &:active {
-        box-shadow: 0 4px 371818;
+        border: solid 4px #1C0C0C;
         transform: scale3d(0.95, 0.95, 0.95);
     }
 }   

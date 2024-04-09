@@ -6,20 +6,28 @@
         "body body" auto / 200px auto;
 }
 
-.content-img {
+.content {
+
+    &-img {
     grid-area: head-img;
-}
+    }
 
-.content-title {
+    &-title {
     grid-area: head-title;
-}
+    }
 
-.content-body {
+    &-body {
     grid-area: body;
+    }
+    
 }
 
 
-.location:hover, .person:hover, .item:hover {
+.location, .person, .item {
+
+    &:hover{
     cursor: help;
     text-decoration: underline;
+    }
+
 }
