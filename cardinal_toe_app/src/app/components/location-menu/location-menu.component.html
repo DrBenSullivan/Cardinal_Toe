@@ -1,15 +1,31 @@
-<p-dialog [header]="header | titlecase" [(visible)]="display" [modal]="true" [closable]="false" [draggable]="false"
-    [style]="{
-        width: '50vw',  
-        color: 'burlywood', 
-        padding: '16px',  
-        background: 'brown',  
-        border: '1px solid black',  
-        borderRadius: '16px' 
-    }">
-    <p>Something about {{header | titlecase}}...</p>
+<p-dialog [(visible)]="display" [modal]="true" [closable]="false" [draggable]="false"
+[style]="{
+    width: '50vw',
+    height: '50vh',  
+    color: 'brown', 
+    padding: '16px',  
+    background: '#f4a460',  
+    border: '4px solid #6e3030',  
+    borderRadius: '16px'
+}">
+    
+    <div class="grid-container">
 
-    <p-footer>
-        <p-button type="button" label="close" (click)="closePopup()"></p-button>
-    </p-footer>
+        <div class="grid-body">
+            <h2 class="location italic">The {{scene | titlecase}}</h2>
+            <br>
+            <p>{{blurb}}</p>
+        </div>
+
+        <div class="grid-image">
+            <img src="../../../assets/images/locations/{{id}}.jpeg" class="framed100 brown-border4">
+        </div>
+
+        <div class="grid-controls">
+            <div class="flexbox">
+                <p-button styleClass="popup-button" type="button" label="go" (click)="goToDestination()"></p-button>
+                <p-button styleClass="popup-button" type="button" label="close" (click)="closePopup()"></p-button>
+            </div>
+        </div>
+    </div>
 </p-dialog>

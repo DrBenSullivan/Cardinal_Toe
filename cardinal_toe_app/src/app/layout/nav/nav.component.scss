@@ -2,29 +2,39 @@
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
+    background-color: #a52a2a90;
+    height: 100%;
 }
 
 a {
     display: flex;
     justify-content: center;
-    background-color: #f4a460;
-    color: brown;
-    padding: 6px;
-    margin: 6px;    
-    border: solid #6e3030 1px;
+    background-color: #CD6731;
+    color: #6e3030;
+    padding: 12px 4px 12px 4px;
+    font-size: 24px;
+    margin: 8px;    
+    border: outset #6e3030 4px;
     border-radius: 8px;
     text-decoration: none;
     
+    
     &:hover {
-        color: #6e3030;
-        font-style: italic;
+        color: #E08649;
+        border-color: #E08649;
+        cursor: pointer;
     }
 
     &.active-link {
         background-color: #6e3030;
-        color: #f4a460;
-        border: solid 1px transparent;
+        color: #371818;
+        border: inset 4px #532424;
         pointer-events: none;
         cursor: default;
+    }
+
+    &:active {
+        box-shadow: 0 4px 371818;
+        transform: translateY(4px);
     }
 }   

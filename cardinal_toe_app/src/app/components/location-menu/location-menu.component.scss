@@ -1,0 +1,19 @@
+.grid-container {
+    display: grid;
+    gap: 16px;
+    grid-template: 
+        "g-body g-image" 100px
+        "g-body g-controls" auto / auto 100px;
+}
+
+.grid-image {
+    grid-area: g-image;
+}
+
+.grid-body {
+    grid-area: g-body;
+}
+
+.grid-controls {
+    grid-area: g-controls;
+}

@@ -8,7 +8,6 @@ html, body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #a52a2a;
     font-size: 16px;
-    background-color: beige;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,11 +15,10 @@ html, body {
 }
 
 img {
-    border: solid 4px #6e3030;
     border-radius: 16px;
 }
 
-p {
+p, span {
     line-height: 2;
     white-space: pre-wrap;
 }
@@ -31,7 +29,23 @@ a {
     &:hover {
         color: #6e3030;
         text-decoration: none;
+        cursor: pointer;
     }
+}
+
+.location {
+    color: green;
+    transition: 0.2s;
+}
+
+.person {
+    color: blue;
+    transition: 0.2s;
+}
+
+.item {
+    color: red;
+    transition: 0.2s;
 }
 
 .italic {
@@ -84,6 +98,12 @@ a {
     width: 100px;
 }
 
+.framed150 {
+    object-fit:cover;
+    height: 150px;
+    width: 150px;
+}
+
 .framed200{
     object-fit:cover;
     height: 200px;
@@ -94,4 +114,36 @@ a {
     object-fit:cover;
     height: 300px;
     width: 300px;
+}
+
+.brown-border4{
+    border: solid 4px #6e3030;
+}
+
+.black-border2{
+    border: solid 2px #000;
+}
+
+.popup-button {
+    color: #371818;
+    background-color: #6e3030;
+    border-radius: 4px;
+    border: 4px outset #371818;
+    margin: 2px;
+    padding: 4px;
+    font-size: 16px;
+    width: 1fr; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        color: #6e3030;
+        background-color: #CD6731;
+    }
+
+    &:active {
+        box-shadow: 0 4px #371818;
+        transform: translateY(4px);
+    }
 }

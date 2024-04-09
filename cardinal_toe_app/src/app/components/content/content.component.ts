@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
 import { Place } from '../../interfaces/place';
 import { NarratorComponent } from '../narrator/narrator.component';
-import { LocatorService } from '../../services/locator.service'
+import { LocatorService } from '../../services/locator/locator.service'
 
 
 @Component({
@@ -14,7 +13,10 @@ import { LocatorService } from '../../services/locator.service'
 })
 export class ContentComponent implements OnInit {
   node: Place = {
-    id: 0
+    id: 0,
+    scene: "",
+    description: "",
+    routes: [],
   }
 
   constructor(private locatorService: LocatorService){
@@ -22,6 +24,5 @@ export class ContentComponent implements OnInit {
 
   ngOnInit() {
     this.node = this.locatorService.getLocationDetails(this.node.id);
-    console.log(typeof(this.node.description));
     }
 }

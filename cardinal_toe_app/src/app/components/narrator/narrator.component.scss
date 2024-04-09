@@ -1,25 +1,9 @@
-.location {
-    color: green;
-
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-.person {
-    color: blue;
-
-    &:hover {
-        cursor: pointer;
-    }
-}
-
 .grid-container {
     display: grid;
     gap: 16px;
     grid-template: 
-        "head-img head-title" 100px
-        "body body" auto / 100px auto;
+        "head-img head-title" 200px
+        "body body" auto / 200px auto;
 }
 
 .content-img {
@@ -32,4 +16,10 @@
 
 .content-body {
     grid-area: body;
+}
+
+
+.location:hover, .person:hover, .item:hover {
+    cursor: help;
+    text-decoration: underline;
 }

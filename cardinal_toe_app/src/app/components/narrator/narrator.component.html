@@ -1,19 +1,28 @@
 <div class="grid-container">
 
     <div class="content-img">
-        <img class="framed100" src="../../../assets/images/{{node.id}}.jpeg" />
+        <img class="framed200 brown-border4" src="../../../assets/images/locations/{{node.id}}.jpeg" />
     </div>
 
     <div class="content-title wrapper flexbox-left">
-        <h1 class = "italic dark">{{node.scene | titlecase }}</h1>
+        <h1 class = "location italic" (click)="openLocationMenu(node)">The {{node.scene | titlecase }}</h1>
     </div>
 
     <div class="content-body">
         <p>{{node.description | paragraph}}</p>
+
+        <p>{{destinationText}}<ng-template ngFor let-destination [ngForOf]="destinationObjectsArray" let-i="index">     
+            <span class="location" (click)="openLocationMenu(destination)">{{destination.scene}}</span>
+            <span *ngIf="i === destinationObjectsArray.length - 1">.</span>
+            <span *ngIf="i === destinationObjectsArray.length - 2">, or a </span>
+            <span *ngIf="i < destinationObjectsArray.length - 2">, a </span>
+        </ng-template>
+        </p>
     </div>
 
 </div>
 
 <app-location-menu 
-    [(display)]="displayPopup"
-    [header]="header"></app-location-menu>
+    [(display)]="locationMenuDisplay"
+    [destination]="destination"
+    (changeNode)="newNode($event)"></app-location-menu>
