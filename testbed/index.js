@@ -1,4 +1,6 @@
 class Node {
+
+    id;
     
     name;
     
@@ -8,14 +10,25 @@ class Node {
     
     previousNode;
 
+    isCorrectPath;
+
     isFinalNode;
 
-    constructor(name, description, nodes, previousNode = null, isFinalNode = false)
-    {
+    constructor(
+        id,
+        name, 
+        description, 
+        nodes, 
+        previousNode = null,
+        isCorrectPath = true,
+        isFinalNode = false
+    ) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.nodes = nodes;
         this.previousNode = previousNode;
+        this.isCorrectPath = isCorrectPath;
         this.isFinalNode = isFinalNode;
     }
 }
@@ -75,17 +88,17 @@ class Generator
      * 
      * @returns {void}
      */
-    generate = (isCorrectPath = true, depth = 0, deviation = 0) => {
-        if (this.previousNode === null) {
-            this.rootNode = this.makeNode();
-            this.previousNode = this.rootNode;
+    generate = (currentNode = null, isCorrectPath = true, depth = 0, deviation = 0) => {
+        if (currentNode === null) {
+            currentNode = this.makeNode();
+            this.rootNode = currentNode;
         }
 
         if (deviation > this.DEVIATION_LIMIT) {
             return;
         }
 
-        if (this.previousNode.isFinalNode === true) {
+        if (currentNode.isFinalNode === true) {
             return;
         }
 
@@ -99,22 +112,30 @@ class Generator
             if (i !== successfulPathIndex) {
                 deviation++;
                 isCorrectPath = false;
+            } else {
+                isCorrectPath = true;
             }
 
+            let finalNode = false;
+            if (depth > 10) {
+                finalNode = true;
+            }
 
-            
-            let newNode = this.makeNode();
-            this.previousNode.nodes.push(newNode);
-            this.previousNode = newNode;
-            this.generate(isCorrectPath, depth, deviation);
+            let newNode = this.makeNode(finalNode, isCorrectPath);
+
+            currentNode.nodes.push(newNode);
+            currentNode = newNode;
+            this.generate(currentNode, isCorrectPath, depth, deviation);
         }
+
+        depth++;
     }
 
     /**
      * 
      * @returns {Node}
      */
-    makeNode = () => {
+    makeNode = (isFinalNode = false, isCorrectPath = true) => {
         const lastKey = this.nodeOptions.length - 1;
         const key = this.getRandomNumber(lastKey);
         const data = this.nodeOptions[key];
@@ -124,14 +145,10 @@ class Generator
         // again worry about this when recurring
         const previousNode = null;
 
-        let isFinalNode = false;
-        if (this.iteration === 5) {
-            isFinalNode = true;
-        }
-
+        const id = this.iteration;
         this.iteration++;
 
-        return new Node(data.name, data.description, nodes, previousNode, isFinalNode)
+        return new Node(id, data.name, data.description, nodes, previousNode, isCorrectPath, isFinalNode)
     }
 
     /**
@@ -141,8 +158,6 @@ class Generator
      */
     getNumberOfPaths = () => {
         const randomInt = this.getRandomNumber(10);
-
-        console.log(`getNumberOfPaths randomInt - ${randomInt}`)
 
         if (randomInt <= 6) {
             return 1;
