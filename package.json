@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "production": "cd ./cardinal_toe_app && ./node_modules/.bin/ng build && cd .. && node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,10 @@
   "homepage": "https://github.com/DrBenSullivan/Cardinal_Toe/blob/master/README.md",
   "dependencies": {
     "angular": "^1.8.3",
+    "express": "^4.19.2",
     "primeng": "^17.12.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "^17.3.3"
   }
 }
