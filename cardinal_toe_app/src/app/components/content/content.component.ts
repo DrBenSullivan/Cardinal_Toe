@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Place } from '../../interfaces/place';
+import { Location } from '../../interfaces/Location';
 import { NarratorComponent } from '../narrator/narrator.component';
-import { LocatorService } from '../../services/locator/locator.service'
+import { LocationGeneratorService } from '../../services/locator/location-generator.service'
 
 
 @Component({
@@ -12,17 +12,17 @@ import { LocatorService } from '../../services/locator/locator.service'
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
-  node: Place = {
+  node: Location = {
     id: 0,
-    scene: "",
+    name: "",
     description: "",
     routes: [],
   }
 
-  constructor(private locatorService: LocatorService){
+  constructor(private locationGeneratorService: LocationGeneratorService){
   }
 
   ngOnInit() {
-    this.node = this.locatorService.getLocationDetails(this.node.id);
+    this.node = this.locationGeneratorService.getLocationDetails(this.node.id);
     }
 }

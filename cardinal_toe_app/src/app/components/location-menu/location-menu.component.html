@@ -13,7 +13,7 @@
 
             <div class="grid-body">
                 <h2 class="italic"
-                    *ngIf="localDestination">The {{localDestination.scene | titlecase}}</h2>
+                    *ngIf="localDestination">The {{localDestination.name | titlecase}}</h2>
                 <p
                     *ngIf="localDestination">{{localDestination.blurb ?? localDestination.description}}</p>
             </div>

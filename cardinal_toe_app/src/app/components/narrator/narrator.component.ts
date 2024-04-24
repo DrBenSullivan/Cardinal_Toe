@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
-import { Place } from '../../interfaces/place';
+import { Location } from '../../interfaces/Location';
 import { CommonModule, NgForOf } from '@angular/common';
 import { LocationMenuComponent } from '../location-menu/location-menu.component';
 import { DialogModule } from 'primeng/dialog';
@@ -15,15 +15,15 @@ import { DestinationsService } from '../../services/destinations/destinations.se
 })
 
 export class NarratorComponent implements OnInit {
-  @Input() node!: Place;
+  @Input() node!: Location;
 
   locationMenuDisplay: boolean = false;
   currentLocation: boolean = false;
   routesText: string = "";
-  destinationObjectsArray: Place[] = [];
-  destinationScenesArray: string[] = [];
+  destinationObjectsArray: Location[] = [];
+  destinationNamesArray: string[] = [];
   destinationText: string = "";
-  selectedDestination?: Place;
+  selectedDestination?: Location;
 
   constructor(private destinationService: DestinationsService) {
   }
@@ -32,7 +32,7 @@ export class NarratorComponent implements OnInit {
     this.updateDestinations();
   }
 
-  newNode(node: Place){
+  newLocation(node: Location){
     this.node = node;
     this.updateDestinations();
   }
@@ -41,12 +41,12 @@ export class NarratorComponent implements OnInit {
     this.locationMenuDisplay = false;
     this.routesText = "";
     this.destinationObjectsArray = [];
-    this.destinationScenesArray = [];
+    this.destinationNamesArray = [];
     this.destinationText = "";
-    this.destinationText = this.destinationService.getDestinations(this.node, this.destinationObjectsArray, this.destinationScenesArray);
+    this.destinationText = this.destinationService.getDestinations(this.node, this.destinationObjectsArray, this.destinationNamesArray);
   }
   
-  openLocationMenu (destination: Place, current: boolean) {
+  openLocationMenu (destination: Location, current: boolean) {
     if(destination) {
       this.currentLocation = current;
       this.selectedDestination = destination;

@@ -1,33 +1,35 @@
-  import { Injectable } from '@angular/core';
-import { LocatorService } from '../locator/locator.service';
-import { Place } from '../../interfaces/place';
+import { Injectable } from '@angular/core';
+import { LocationGeneratorService } from '../locator/location-generator.service';
+import { Location } from '../../interfaces/Location';
+import locationsJSON from '../../../assets/data/locations.json';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class DestinationsService {
 
-  constructor(private locatorService: LocatorService) { }
+  constructor(private locationGeneratorService: LocationGeneratorService) { }
 
-  getDestinations(place: Place, objectArray: Place[], sceneArray: string[]) {
-    this.fillDestinationArrays(place, objectArray, sceneArray);
+  getDestinations(place: Location, objectArray: Location[], nameArray: string[]) {
+    this.fillDestinationArrays(place, objectArray, nameArray);
     return this.getDestinationText(objectArray);
   }
 
-  fillDestinationArrays(place: Place, objectArray: object[], sceneArray: string[]) {
+  fillDestinationArrays(place: Location, objectArray: object[], nameArray: string[]) {
     if(!place.routes) {
       return
     } 
     for (let i=0; i<place.routes.length; i++) {
-      const destination: Place = this.locatorService.getLocationDetails(place.routes[i]);
+      const destination: Location = this.locationGeneratorService.getLocationDetails(place.routes[i]);
       objectArray.push(destination);
-      if (destination.scene) {
-        sceneArray.push(destination.scene);
+      if (destination.name) {
+        nameArray.push(destination.name);
       } 
     }
   }
 
-  getDestinationText(objectArray: Place[]) {
+  getDestinationText(objectArray: Location[]) {
     let outputText = "";
     if (objectArray.length === 0) {
       outputText = "You can see no exit. Alas, your story ends. Please call again, traveller, to begin your adventure once more."

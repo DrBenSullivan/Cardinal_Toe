@@ -1,5 +1,5 @@
 import { Input, Component, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
-import { Place } from '../../interfaces/place';
+import { Location } from '../../interfaces/Location';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { NgIf, TitleCasePipe } from '@angular/common';
@@ -13,12 +13,12 @@ import { NgIf, TitleCasePipe } from '@angular/common';
 })  
 export class LocationMenuComponent implements OnChanges {
   @Input() display: boolean = false;
-  @Input() selectedDestination?: Place | undefined;
+  @Input() selectedDestination?: Location | undefined;
   @Input() currentLocation?: boolean | undefined;
   @Output() changeDisplay = new EventEmitter<boolean>();
-  @Output() changeNode = new EventEmitter<Place>();
+  @Output() changeLocation = new EventEmitter<Location>();
 
-  localDestination: Place | undefined;
+  localDestination: Location | undefined;
   localCurrent: boolean | undefined;
   canSearch!: boolean | undefined;
   canGo!: boolean | undefined;
@@ -42,7 +42,7 @@ export class LocationMenuComponent implements OnChanges {
   }
 
   goToDestination(){
-    this.changeNode.emit(this.localDestination);
+    this.changeLocation.emit(this.localDestination);
     this.closePopup();  
     this.resetVariables();
   }
