@@ -33,9 +33,10 @@ export class LocationGeneratorService {
 
     let locationKeyToLookup = null;
 
+
     // Forces the first & second generated locations to be "Glade", followed by "Forest".
     if (this.usedLocationKeys.length < 2) {
-      locationKeyToLookup = locationsJSON.length;
+      locationKeyToLookup = this.usedLocationKeys.length;
       this.usedLocationKeys.push(locationKeyToLookup);
     }
 
@@ -44,7 +45,7 @@ export class LocationGeneratorService {
     else {
   
       while (!locationKeyToLookup || this.usedLocationKeys.includes(locationKeyToLookup)) {
-        locationKeyToLookup = this.numberRandomiserService.getRandomNumber(locationsJSON.length);
+        locationKeyToLookup = this.numberRandomiserService.getRandomNumber(locationsJSON.length - 1);
       }
 
       this.usedLocationKeys.push(locationKeyToLookup);

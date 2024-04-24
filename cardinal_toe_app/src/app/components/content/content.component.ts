@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '../../interfaces/Location';
 import { NarratorComponent } from '../narrator/narrator.component';
-import { LocationGeneratorService } from '../../services/locator/location-generator.service'
+import { LocationGeneratorService } from '../../services/location-generator/location-generator.service'
+import { MapGeneratorService } from '../../services/map-generator/map-generator.service';
 
 
 @Component({
@@ -11,18 +12,23 @@ import { LocationGeneratorService } from '../../services/locator/location-genera
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })
-export class ContentComponent implements OnInit {
-  node: Location = {
-    id: 0,
-    name: "",
-    description: "",
-    routes: [],
-  }
 
-  constructor(private locationGeneratorService: LocationGeneratorService){
-  }
+export class ContentComponent implements OnInit {
+
+  currentLocation!: Location;
+
+  constructor(
+    private mapGeneratorService: MapGeneratorService
+  ) { }
 
   ngOnInit() {
-    this.node = this.locationGeneratorService.getLocationDetails(this.node.id);
-    }
+    this.currentLocation = this.mapGeneratorService.getMap();
+    console.log(this.currentLocation);
+  }
+
+  changeCurrentLocation(route: Location) {
+    this.currentLocation = route;
+    console.log(this.currentLocation);
+  }
+
 }

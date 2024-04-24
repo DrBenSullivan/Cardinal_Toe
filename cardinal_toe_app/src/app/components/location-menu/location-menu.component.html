@@ -13,15 +13,15 @@
 
             <div class="grid-body">
                 <h2 class="italic"
-                    *ngIf="localDestination">The {{localDestination.name | titlecase}}</h2>
+                    *ngIf="selectedRoute">The {{selectedRoute.name | titlecase}}</h2>
                 <p
-                    *ngIf="localDestination">{{localDestination.blurb ?? localDestination.description}}</p>
+                    *ngIf="selectedRoute">{{selectedRoute.blurb ?? selectedRoute.description}}</p>
             </div>
 
             <div class="grid-image">
                 <img 
-                    *ngIf="localDestination"
-                    src="../../../assets/images/locations/{{localDestination.id}}.jpeg" class="framed100 brown-border4" />
+                    *ngIf="selectedRoute"
+                    src="../../../assets/images/locations/{{selectedRoute.name}}.jpeg" class="framed100 brown-border4" />
             </div>
 
             <div class="wrapper grid-controls">
@@ -30,9 +30,9 @@
                 <p-button styleClass="popup-button other" type="button" label="Search" [disabled]="canSearch"></p-button>
 
                 <!-- Go-to button in control panel, if NOT currentLocation, canGo -->
-                <p-button styleClass="popup-button other" type="button" label="Go-to" [disabled]="canGo" (click)="goToDestination()"></p-button>
+                <p-button styleClass="popup-button other" type="button" label="Go-to" [disabled]="canGo" (click)="goToLocation(selectedRoute)"></p-button>
             
-                <!-- Close pop-up button in control panel-->
+                <!-- Close pop-up button in control panel -->
                 <p-button styleClass="popup-button close" type="button" label="Close" (click)="closePopup()"></p-button>
 
             </div>

@@ -1,1 +1,5 @@
-<app-narrator [node]="node"></app-narrator>
+<!-- Container component for map generation & location storage. -->
+
+<app-narrator 
+    [currentLocation]="currentLocation"
+    (nextLocation)="changeCurrentLocation($event)"></app-narrator>

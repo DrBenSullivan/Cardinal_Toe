@@ -1,30 +1,35 @@
 <div class="grid-container">
 
     <div class="content-img">
-        <img class="framed200 brown-border4" src="../../../assets/images/locations/{{node.id}}.jpeg" />
+        <img class="framed200 brown-border4" src="../../../assets/images/locations/{{currentLocation.name}}.jpeg" />
     </div>
 
     <div class="content-title wrapper flexbox-left">
-        <h1 class = "location italic" (click)="openLocationMenu(node, true)">The {{node.name | titlecase }}</h1>
+        <h1 
+            class = "location italic" 
+            (click)="openLocationMenu(currentLocation, true)"
+            >The {{currentLocation.name | titlecase }}</h1>
     </div>
 
     <div class="content-body">
-        <p>{{node.description | paragraph}}</p>
+        <p>{{currentLocation.description | paragraph}}</p>
 
-        <p>{{destinationText}}<ng-template ngFor let-destination [ngForOf]="destinationObjectsArray" let-i="index">     
-            <span class="location" (click)="openLocationMenu(destination, false)">{{destination.name}}</span>
-            <span *ngIf="i === destinationObjectsArray.length - 1">.</span>
-            <span *ngIf="i === destinationObjectsArray.length - 2">, or a </span>
-            <span *ngIf="i < destinationObjectsArray.length - 2">, a </span>
+        <p>{{routesText}}<ng-template ngFor let-route [ngForOf]="currentLocation.routes" let-last="last">
+            <span class="location" (click)="openLocationMenu(route, false)">{{route.name}}</span>
+            <span *ngIf="last">.</span>
+            <span *ngIf="route === currentLocation.routes[(currentLocation.routes.length - (3 || 4 || 5))]">, </span>
+            <span *ngIf="route === currentLocation.routes[currentLocation.routes.length - 2]">, or a </span>
         </ng-template>
+        
         </p>
+
     </div>
 
 </div>
 
 <app-location-menu 
     [display]="locationMenuDisplay"
-    [selectedDestination]="selectedDestination"
-    [currentLocation]="currentLocation"
+    [selectedRoute]="selectedRoute"
+    [isCurrentLocation]="isCurrentLocation"
     (changeDisplay)="changeLocationMenuDisplay($event)"
-    (changeLocation)="newLocation($event)"></app-location-menu>
+    (newLocation)="goToLocation($event)"></app-location-menu>

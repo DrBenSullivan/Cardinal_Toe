@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { Location } from '../../interfaces/Location';
 import { CommonModule, NgForOf } from '@angular/common';
 import { LocationMenuComponent } from '../location-menu/location-menu.component';
@@ -14,44 +14,34 @@ import { DestinationsService } from '../../services/destinations/destinations.se
   styleUrl: './narrator.component.scss'
 })
 
-export class NarratorComponent implements OnInit {
-  @Input() node!: Location;
+export class NarratorComponent implements OnChanges {
+  @Input() currentLocation!: Location;
+  @Output() nextLocation = new EventEmitter<Location>;
 
   locationMenuDisplay: boolean = false;
-  currentLocation: boolean = false;
-  routesText: string = "";
-  destinationObjectsArray: Location[] = [];
-  destinationNamesArray: string[] = [];
-  destinationText: string = "";
-  selectedDestination?: Location;
+  routesText!: string;
+  selectedRoute!: Location;
+  isCurrentLocation!: boolean;
 
-  constructor(private destinationService: DestinationsService) {
-  }
+  constructor (
+    private destinationsService: DestinationsService
+  ) {}
 
-  ngOnInit(): void {
-    this.updateDestinations();
-  }
-
-  newLocation(node: Location){
-    this.node = node;
-    this.updateDestinations();
-  }
-
-  updateDestinations() {
-    this.locationMenuDisplay = false;
-    this.routesText = "";
-    this.destinationObjectsArray = [];
-    this.destinationNamesArray = [];
-    this.destinationText = "";
-    this.destinationText = this.destinationService.getDestinations(this.node, this.destinationObjectsArray, this.destinationNamesArray);
-  }
-  
-  openLocationMenu (destination: Location, current: boolean) {
-    if(destination) {
-      this.currentLocation = current;
-      this.selectedDestination = destination;
-      this.locationMenuDisplay = true;
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes) {
+      this.routesText = this.destinationsService.getDestinationText(this.currentLocation.routes);
     }
+  }
+
+  goToLocation (route: Location) {
+    this.nextLocation.emit(route);
+  }
+
+  openLocationMenu (route: Location, isCurrent: boolean) {
+    this.selectedRoute = route;
+    this.isCurrentLocation = isCurrent;
+    this.locationMenuDisplay = true;
+    
   }
 
   changeLocationMenuDisplay (event: boolean) {

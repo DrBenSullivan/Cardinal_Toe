@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Location } from '../../interfaces/Location';
-import { LocationGeneratorService } from '../locator/location-generator.service';
+import { LocationGeneratorService } from '../location-generator/location-generator.service';
 import { NumberRandomiserService } from '../number-randomiser/number-randomiser.service';
 import locationsJSON from '../../../assets/data/locations.json';
 
@@ -27,10 +27,20 @@ export class MapGeneratorService {
    */
   private readonly DEPTH_LIMIT = 10;
 
+  rootLocation!: Location;
+
   constructor ( 
     private locationGeneratorService: LocationGeneratorService, 
     private numberRandomiserService: NumberRandomiserService 
   ) { }
+
+
+  getMap(): Location {
+    console.log(`Getting map...`)
+    this.generateMap();
+    return this.rootLocation;
+  }
+
 
   /**
    * ???
@@ -39,15 +49,18 @@ export class MapGeneratorService {
    * @param currentLocation ???
    * @param isCorrectRoute  OPTIONAL: tracks if `currentLocation` leads to `isFinalLocation` (i.e. is on the _'winning route'_).
    */
-  generateMap(
+  generateMap (
       depthValue: number = 0, 
       deviationValue: number = 0,
       currentLocation: Location | null = null, 
-    ): void {
+    ) {
+
+      
 
       // If `currentLocation` not provided, generate first Location.
       if (!currentLocation) {
           currentLocation = this.locationGeneratorService.generateLocation(null, false, deviationValue);
+          this.rootLocation = currentLocation;
       }
 
       // If `currentLocation` is the 'goal' or the current branch of the Location tree
