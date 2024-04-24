@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '../../interfaces/Location';
 import { NarratorComponent } from '../narrator/narrator.component';
-import { LocationGeneratorService } from '../../services/location-generator/location-generator.service'
 import { MapGeneratorService } from '../../services/map-generator/map-generator.service';
 
 

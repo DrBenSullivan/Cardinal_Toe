@@ -1,4 +1,4 @@
-import { Input, Component, Output, EventEmitter, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
+import { Input, Component, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { Location } from '../../interfaces/Location';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';

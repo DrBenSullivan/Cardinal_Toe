@@ -4,7 +4,7 @@ import { CommonModule, NgForOf } from '@angular/common';
 import { LocationMenuComponent } from '../location-menu/location-menu.component';
 import { DialogModule } from 'primeng/dialog';
 import { ParagraphPipe } from '../../pipes/paragraph.pipe';
-import { DestinationsService } from '../../services/destinations/destinations.service';
+import { RouteTextGeneratorService } from '../../services/route-text-generator/route-text-generator.service';
 
 @Component({
   selector: 'app-narrator',
@@ -24,12 +24,12 @@ export class NarratorComponent implements OnChanges {
   isCurrentLocation!: boolean;
 
   constructor (
-    private destinationsService: DestinationsService
+    private routeTextGenerator: RouteTextGeneratorService
   ) {}
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes) {
-      this.routesText = this.destinationsService.getDestinationText(this.currentLocation.routes);
+      this.routesText = this.routeTextGenerator.getRoutesText(this.currentLocation.routes);
     }
   }
 
@@ -41,7 +41,6 @@ export class NarratorComponent implements OnChanges {
     this.selectedRoute = route;
     this.isCurrentLocation = isCurrent;
     this.locationMenuDisplay = true;
-    
   }
 
   changeLocationMenuDisplay (event: boolean) {
