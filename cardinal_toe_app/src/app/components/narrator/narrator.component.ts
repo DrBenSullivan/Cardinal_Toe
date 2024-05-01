@@ -1,57 +1,55 @@
-import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
-import { Place } from '../../interfaces/place';
-import { CommonModule, NgForOf } from '@angular/common';
+import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges } from '@angular/core';
+import { Location } from '../../interfaces/Location';
+import { CommonModule } from '@angular/common';
 import { LocationMenuComponent } from '../location-menu/location-menu.component';
 import { DialogModule } from 'primeng/dialog';
-import { ParagraphPipe } from '../../pipes/paragraph.pipe';
-import { DestinationsService } from '../../services/destinations/destinations.service';
+import { ParagraphPipe } from '../../pipes/paragraph/paragraph.pipe';
+import { SpacedPipe } from '../../pipes/spaced/spaced.pipe';
+import { RouteTextGeneratorService } from '../../services/route-text-generator/route-text-generator.service';
 
 @Component({
   selector: 'app-narrator',
   standalone: true,
-  imports: [ LocationMenuComponent, DialogModule, CommonModule, ParagraphPipe, NgForOf ],
+  imports: [ LocationMenuComponent, DialogModule, CommonModule, ParagraphPipe, SpacedPipe ],
   templateUrl: './narrator.component.html',
   styleUrl: './narrator.component.scss'
 })
 
-export class NarratorComponent implements OnInit {
-  @Input() node!: Place;
+export class NarratorComponent implements OnChanges {
+  @Input() currentLocation!: Location;
+  @Output() nextLocation = new EventEmitter<Location>;
 
   locationMenuDisplay: boolean = false;
-  currentLocation: boolean = false;
-  routesText: string = "";
-  destinationObjectsArray: Place[] = [];
-  destinationScenesArray: string[] = [];
-  destinationText: string = "";
-  selectedDestination?: Place;
+  routesText!: string;
+  possibleRoutes!: Location[];
+  selectedRoute!: Location;
+  isCurrentLocation!: boolean;
 
-  constructor(private destinationService: DestinationsService) {
-  }
+  constructor (
+    private routeTextGenerator: RouteTextGeneratorService
+  ) {}
 
-  ngOnInit(): void {
-    this.updateDestinations();
-  }
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes) {
 
-  newNode(node: Place){
-    this.node = node;
-    this.updateDestinations();
-  }
+      this.possibleRoutes = Array.from(this.currentLocation.routes);
 
-  updateDestinations() {
-    this.locationMenuDisplay = false;
-    this.routesText = "";
-    this.destinationObjectsArray = [];
-    this.destinationScenesArray = [];
-    this.destinationText = "";
-    this.destinationText = this.destinationService.getDestinations(this.node, this.destinationObjectsArray, this.destinationScenesArray);
-  }
-  
-  openLocationMenu (destination: Place, current: boolean) {
-    if(destination) {
-      this.currentLocation = current;
-      this.selectedDestination = destination;
-      this.locationMenuDisplay = true;
+      if (this.currentLocation.previousLocation) {
+        this.possibleRoutes.push(this.currentLocation.previousLocation);
+      }
+      
+      this.routesText = this.routeTextGenerator.getRoutesText(this.possibleRoutes);
     }
+  }
+
+  goToLocation (route: Location) {
+    this.nextLocation.emit(route);
+  }
+
+  openLocationMenu (route: Location, isCurrent: boolean) {
+    this.selectedRoute = route;
+    this.isCurrentLocation = isCurrent;
+    this.locationMenuDisplay = true;
   }
 
   changeLocationMenuDisplay (event: boolean) {

@@ -1,1 +1,14 @@
-<app-narrator [node]="node"></app-narrator>
+<!-- Container component for map generation & location storage. -->
+<div class="wrapper" [ngSwitch]="currentLocation.isFinalLocation">
+    <app-narrator
+        *ngSwitchCase="false"
+        [currentLocation]="currentLocation"
+        (nextLocation)="changeCurrentLocation($event)">
+    </app-narrator>
+
+    <app-victory
+        *ngSwitchCase="true"
+        (newMap)="changeCurrentLocation($event)">
+    </app-victory>
+</div>
+

@@ -1,54 +1,43 @@
 import { Input, Component, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
-import { Place } from '../../interfaces/place';
+import { Location } from '../../interfaces/Location';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { NgIf, TitleCasePipe } from '@angular/common';
+import { SpacedPipe } from '../../pipes/spaced/spaced.pipe';
 
 @Component({
   selector: 'app-location-menu',
-  imports: [ DialogModule, ButtonModule, NgIf, TitleCasePipe ],
+  imports: [ DialogModule, ButtonModule, NgIf, TitleCasePipe, SpacedPipe ],
   standalone: true,
   templateUrl: './location-menu.component.html',
   styleUrls: ['./location-menu.component.scss']
 })  
+
 export class LocationMenuComponent implements OnChanges {
   @Input() display: boolean = false;
-  @Input() selectedDestination?: Place | undefined;
-  @Input() currentLocation?: boolean | undefined;
+  @Input() selectedRoute!: Location;
+  @Input() isCurrentLocation!: boolean;
   @Output() changeDisplay = new EventEmitter<boolean>();
-  @Output() changeNode = new EventEmitter<Place>();
+  @Output() newLocation = new EventEmitter<Location>();
 
-  localDestination: Place | undefined;
-  localCurrent: boolean | undefined;
-  canSearch!: boolean | undefined;
-  canGo!: boolean | undefined;
-
+  canSearch!: boolean;
+  canGo!: boolean;
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes && this.selectedDestination) {
-      this.localCurrent = this.currentLocation;
-      this.canSearch = !this.localCurrent;
-      this.canGo = this.localCurrent;
-      this.localDestination = this.selectedDestination;
-    } else {
-      this.resetVariables();
+    if (changes && this.selectedRoute) {
+      this.canSearch = !this.isCurrentLocation;
+      this.canGo = this.isCurrentLocation;
     }
   }
   
   closePopup(){
     this.display = false;
     this.changeDisplay.emit(this.display);
-    this.resetVariables();
   }
 
-  goToDestination(){
-    this.changeNode.emit(this.localDestination);
+  goToLocation(route: Location){
+    this.newLocation.emit(route);
     this.closePopup();  
-    this.resetVariables();
   }
 
-  resetVariables(){
-    this.localDestination = undefined;
-    this.localCurrent = undefined;
-  }
 }

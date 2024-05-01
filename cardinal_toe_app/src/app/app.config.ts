@@ -3,11 +3,11 @@ import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routes } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
-import { LocatorService } from './services/locator/locator.service';
+import { LocationGeneratorService } from './services/location-generator/location-generator.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, withComponentInputBinding()),
-    importProvidersFrom([BrowserAnimationsModule, BrowserModule, LocatorService])
+    importProvidersFrom([BrowserAnimationsModule, BrowserModule, LocationGeneratorService])
     ]
 };
