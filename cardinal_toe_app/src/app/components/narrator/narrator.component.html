@@ -1,24 +1,24 @@
 <div class="grid-container">
 
     <div class="content-img">
-        <img class="framed200 brown-border4" src="../../../assets/images/locations/{{currentLocation.name}}.jpeg" />
+        <img class="framed200 brown-border4" src="../../../assets/images/locations/{{currentLocation.name}}.jpg" />
     </div>
 
     <div class="content-title wrapper flexbox-left">
         <h1 
             class = "location italic" 
             (click)="openLocationMenu(currentLocation, true)"
-            >The {{currentLocation.name | titlecase }}</h1>
+            >The {{ currentLocation.name | spaced | titlecase }}</h1>
     </div>
 
     <div class="content-body">
-        <p>{{currentLocation.description | paragraph}}</p>
+        <p>{{ currentLocation.description | paragraph }}</p>
 
-        <p>{{routesText}}<ng-template ngFor let-route [ngForOf]="currentLocation.routes" let-last="last">
-            <span class="location" (click)="openLocationMenu(route, false)">{{route.name}}</span>
+        <p>{{routesText}}<ng-template ngFor let-route [ngForOf]="possibleRoutes" let-last="last">
+            <span class="location" (click)="openLocationMenu(route, false)">{{ route.name | spaced }}</span>
             <span *ngIf="last">.</span>
-            <span *ngIf="route === currentLocation.routes[(currentLocation.routes.length - (3 || 4 || 5))]">, </span>
-            <span *ngIf="route === currentLocation.routes[currentLocation.routes.length - 2]">, or a </span>
+            <span *ngIf="route === possibleRoutes[possibleRoutes.length - 2]">, or a </span>
+            <span *ngIf="!last && route !== possibleRoutes[possibleRoutes.length - 2]">, </span>
         </ng-template>
         
         </p>

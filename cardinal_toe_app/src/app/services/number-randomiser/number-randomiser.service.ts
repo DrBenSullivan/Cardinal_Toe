@@ -10,6 +10,7 @@ export class NumberRandomiserService {
   * @function
   * @param {number} max `REQUIRED`
   */
-      getRandomNumber = (max: number): number => Math.floor(Math.random() * max);
+  getRandomNumber = (max: number): number => Math.ceil(Math.random() * max)
       
 }
+

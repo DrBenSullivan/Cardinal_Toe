@@ -6,10 +6,9 @@ export interface Location {
 
     //Required for MapGeneratorService
     previousLocation: Location | null,
-    isRootLocation: boolean,
     isFinalLocation: boolean,
     routes: Location[],
-    deviationValue: number
+    deviationValue: number,
 
     //In development
     blurb?: string,

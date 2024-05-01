@@ -15,7 +15,7 @@
 
                 <h2 
                     class="italic"
-                    *ngIf="selectedRoute">The {{selectedRoute.name | titlecase}}
+                    *ngIf="selectedRoute">The {{selectedRoute.name | spaced | titlecase}}
                 </h2>
 
                 <p
@@ -28,7 +28,7 @@
 
                 <img 
                     *ngIf="selectedRoute"
-                    src="../../../assets/images/locations/{{selectedRoute.name}}.jpeg" 
+                    src="../../../assets/images/locations/{{selectedRoute.name}}.jpg" 
                     class="framed100 brown-border4" 
                 />
 

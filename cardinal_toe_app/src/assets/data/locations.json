@@ -116,7 +116,7 @@
     "description": "You step into a sterile hospital room, where the air is heavy with the smell of disinfectant. Nurses bustle about, tending to patients in various states of illness and injury, and the steady beep of monitors provides a constant background noise."
   },
   {
-    "name": "concert hall",
+    "name": "concert_hall",
     "description": "You enter a grand concert hall, where the air is alive with the sound of music. The stage is bathed in light, and the orchestra plays with passion and precision, filling the room with beautiful melodies."
   },
   {
@@ -128,23 +128,27 @@
     "description": "You wander through a quiet graveyard, where tombstones dot the landscape like silent sentinels. The air is heavy with the scent of flowers and the sound of rustling leaves, and a sense of peace settles over you as you pay your respects to the departed."
   },
   {
-    "name": "train station",
-    "description": "You arrive at a bustling train station, where people hurry to and fro with bags and luggage. The air is thick with the scent of diesel and the sound of trains rumbling on the tracks, and the promise of adventure hangs heavy in the air."
+    "name": "train_station",
+    "description": "You arrive at a train station, brimming with the hurried to-and-fro with bags and luggage. The air is acrid with the smog of steam & woodsmoke. The ground shakes with sound of trains rumbling on the tracks, and the promise of adventure hangs heavy in the air.",
+    "blurb": "By The Gods, traveller. What a sight! These monsters of bronze & iron must surely dwarfs any magic you've ever seen."
   },
   {
     "name": "office",
-    "description": "You step into a bustling office building, where people sit at desks and type furiously on their keyboards. The air is filled with the sound of ringing phones and clicking mice, and the smell of coffee wafts through the air as people work late into the night."
+    "description": "A sign read \"Ye Olde Officee\". But all you see is rows of goblins, fiercly clattering on small bizarre machines. A sharp wafted stench lingers. \"Cawfy\" the small enslaved green halflings seem to call it.",
+    "blurb": "What a bizarre place, traveller. All dey got tae dae's work."
   },
   {
-    "name": "warehouse",
-    "description": "You find yourself in a vast warehouse, where shelves stretch up to the ceiling and boxes are stacked high. The air is heavy with the scent of cardboard and the sound of forklifts beeping, and the hustle and bustle of activity fills the air as workers move goods to and fro."
+    "name": "storehouse",
+    "description": "You stand as an ant in this leviathan of storehouse. Shelves stretch to the rafters and chests are stacked high.",
+    "blurb": "If there was ever a place to search, it'd be this one, traveller."
   },
   {
-    "name": "zoo",
-    "description": "You enter a lively zoo, where the air is filled with the sounds of animals chattering and the smell of hay and dung. Children laugh and point as they watch the animals frolic in their enclosures, and the occasional roar or trumpet adds to the cacophony of noise."
+    "name": "menagerie",
+    "description": "You've encountered what appears to be a mysterious abandoned zoo. The centaurs frolick behind aging iron bars and satyrs skulk in the bushes, throwing conkers at the bestubbled cougar who lies motionless in the West End.",
+    "blurb": "Ahh a zoo, I cannae remember the last time I went tae "
   },
   {
-    "name": "amusement park",
+    "name": "amusement_park",
     "description": "You arrive at a bustling amusement park, where rides whir and lights flash in every direction. The air is filled with the sound of laughter and screams of delight, and the smell of cotton candy and funnel cakes wafts through the air as people enjoy the thrills and excitement of the park."
   },
   {

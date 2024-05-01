@@ -3,10 +3,11 @@ import { Location } from '../../interfaces/Location';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { NgIf, TitleCasePipe } from '@angular/common';
+import { SpacedPipe } from '../../pipes/spaced/spaced.pipe';
 
 @Component({
   selector: 'app-location-menu',
-  imports: [ DialogModule, ButtonModule, NgIf, TitleCasePipe ],
+  imports: [ DialogModule, ButtonModule, NgIf, TitleCasePipe, SpacedPipe ],
   standalone: true,
   templateUrl: './location-menu.component.html',
   styleUrls: ['./location-menu.component.scss']
@@ -26,8 +27,6 @@ export class LocationMenuComponent implements OnChanges {
     if (changes && this.selectedRoute) {
       this.canSearch = !this.isCurrentLocation;
       this.canGo = this.isCurrentLocation;
-
-      console.log(this.isCurrentLocation, this.canSearch, this.canGo);
     }
   }
   
