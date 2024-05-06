@@ -31,13 +31,10 @@ export class NarratorComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes) {
-
       this.possibleRoutes = Array.from(this.currentLocation.routes);
-
       if (this.currentLocation.previousLocation) {
         this.possibleRoutes.push(this.currentLocation.previousLocation);
       }
-      
       this.routesText = this.routeTextGenerator.getRoutesText(this.possibleRoutes);
     }
   }

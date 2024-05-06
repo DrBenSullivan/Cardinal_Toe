@@ -6,21 +6,32 @@
         padding: '16px',  
         background: '#6e3030',
         border: '4px solid #371818',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        transition: 'height 0.5s'
     }">
         
         <div class="grid-container">
 
             <div class="grid-body">
 
-                <h2 
-                    class="italic"
-                    *ngIf="selectedRoute">The {{selectedRoute.name | spaced | titlecase}}
+                <h2 class="italic" 
+                    *ngIf="selectedRoute"
+                    >The {{selectedRoute.name | spaced | titlecase}}
                 </h2>
-
-                <p
-                    *ngIf="selectedRoute">{{selectedRoute.blurb ?? selectedRoute.description}}
+                <br>
+                
+                <p *ngIf="selectedRoute"
+                >{{selectedRoute.blurb ?? selectedRoute.description}}
                 </p>
+
+                <ng-container *ngIf="hasBeenSearched">
+                    <p *ngIf="localLandmarks.length === 0"
+                        >You search high and low, traveller but alas you find nothing with which to interact.</p>
+                    <p *ngFor="let landmark of localLandmarks"
+                        >{{landmark}}</p>
+                </ng-container>
+
+                <p>What would you like to do?</p>
 
             </div>
 
@@ -41,7 +52,8 @@
                     styleClass="popup-button other" 
                     type="button" 
                     label="Search" 
-                    [disabled]="canSearch">
+                    [disabled]="isSearchDisabled"
+                    (click)="searchLocation()">
                 </p-button>
 
                 <!-- Go-to button in control panel, if NOT currentLocation, canGo -->
@@ -49,7 +61,7 @@
                     styleClass="popup-button other" 
                     type="button" 
                     label="Go-to" 
-                    [disabled]="canGo" 
+                    [disabled]="isGoToDisabled" 
                     (click)="goToLocation(selectedRoute)">
                 </p-button>
             

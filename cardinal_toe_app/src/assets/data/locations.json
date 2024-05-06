@@ -7,7 +7,13 @@
   {
     "name": "forest",
     "description": "You find yourself in a dense, ancient forest. Tall trees tower above you, their branches blocking out most of the sunlight. The forest floor is covered in a thick layer of moss and fallen leaves. You can hear the distant sounds of wildlife echoing through the trees.",
-    "blurb": "A woodland like this could swallow a centaur whole. How I survived the night, the Gods will only ever know..."
+    "blurb": "A woodland like this could swallow a centaur whole. How I survived the night, the Gods will only ever know...",
+    "landmarks":
+      [
+        "A large tree",
+        "A rabbit hole",
+        "A small door slightly obscured by a shrubbery"
+      ]
   },
   {
     "name": "field",

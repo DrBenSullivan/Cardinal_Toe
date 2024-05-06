@@ -3,6 +3,7 @@
     column-gap: 16px;
     row-gap: 16px;
     overflow: hidden;
+    transition: height 0.5s;
     grid-template: 
         "g-body g-image" auto
         "g-controls g-controls" 60px / auto auto;
