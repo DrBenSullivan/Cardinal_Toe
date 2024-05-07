@@ -5,7 +5,17 @@ import { Location } from '../../interfaces/Location';
   providedIn: 'root'
 })
 
-export class RouteTextGeneratorService {
+export class RoutesService {
+
+  getRoutes(currentLocation: Location): Location[] {
+    const routesArray = Array.from(currentLocation.routes);
+    
+    if (currentLocation.previousLocation) {
+        routesArray.push(currentLocation.previousLocation);
+      }
+
+    return routesArray
+  }
 
   getRoutesText(routesArray: Location[]): string {
     switch (routesArray.length) {

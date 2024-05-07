@@ -1,0 +1,41 @@
+.grid-container {
+    display: grid;
+    column-gap: 16px;
+    row-gap: 16px;
+    overflow: hidden;
+    transition: height 0.5s;
+    grid-template: 
+        "g-body g-image" auto
+        "g-controls g-controls" 60px / auto auto;
+}
+
+.grid-image {
+    grid-area: g-image;
+}
+
+.grid-body {
+    grid-area: g-body;
+}
+
+.grid-controls {
+    height: 80px;
+    grid-area: g-controls;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:space-between;
+}
+
+p-button {
+
+    margin-top: 0;
+
+    &.other {
+        align-self:baseline;
+    }
+
+    &.close {
+        margin-left: auto;
+        justify-self: flex-end;
+    }
+}

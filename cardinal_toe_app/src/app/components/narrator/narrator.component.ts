@@ -1,16 +1,17 @@
 import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges } from '@angular/core';
 import { Location } from '../../interfaces/Location';
 import { CommonModule } from '@angular/common';
-import { LocationMenuComponent } from '../location-menu/location-menu.component';
+import { NewLocationMenuComponent } from '../new-location-menu/new-location-menu.component';
 import { DialogModule } from 'primeng/dialog';
 import { ParagraphPipe } from '../../pipes/paragraph/paragraph.pipe';
 import { SpacedPipe } from '../../pipes/spaced/spaced.pipe';
-import { RouteTextGeneratorService } from '../../services/route-text-generator/route-text-generator.service';
+import { RoutesService } from '../../services/routes/routes.service';
+import { CurrentLocationMenuComponent } from '../current-location-menu/current-location-menu.component';
 
 @Component({
   selector: 'app-narrator',
   standalone: true,
-  imports: [ LocationMenuComponent, DialogModule, CommonModule, ParagraphPipe, SpacedPipe ],
+  imports: [ CurrentLocationMenuComponent, NewLocationMenuComponent, DialogModule, CommonModule, ParagraphPipe, SpacedPipe ],
   templateUrl: './narrator.component.html',
   styleUrl: './narrator.component.scss'
 })
@@ -18,39 +19,45 @@ import { RouteTextGeneratorService } from '../../services/route-text-generator/r
 export class NarratorComponent implements OnChanges {
   @Input() currentLocation!: Location;
   @Output() nextLocation = new EventEmitter<Location>;
-
-  locationMenuDisplay: boolean = false;
-  routesText!: string;
+  newLocationMenuDisplay: boolean = false;
+  currentLocationMenuDisplay: boolean = false;
+  routesText: string = "";
   possibleRoutes!: Location[];
   selectedRoute!: Location;
-  isCurrentLocation!: boolean;
 
   constructor (
-    private routeTextGenerator: RouteTextGeneratorService
+    private routesService: RoutesService
   ) {}
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(changes: SimpleChanges) {
     if (changes) {
-      this.possibleRoutes = Array.from(this.currentLocation.routes);
-      if (this.currentLocation.previousLocation) {
-        this.possibleRoutes.push(this.currentLocation.previousLocation);
-      }
-      this.routesText = this.routeTextGenerator.getRoutesText(this.possibleRoutes);
+      console.log(this.currentLocation.routes)
+      this.possibleRoutes = this.routesService.getRoutes(this.currentLocation);
+      console.log(this.possibleRoutes);
+      this.routesText = this.routesService.getRoutesText(this.possibleRoutes);
     }
+  }
+
+  openNewLocationMenu (route: Location) {
+    this.selectedRoute = route;
+    this.newLocationMenuDisplay = true;
+  }
+
+  changeNewLocationMenuDisplay (event: boolean) {
+    this.newLocationMenuDisplay = event;
   }
 
   goToLocation (route: Location) {
     this.nextLocation.emit(route);
   }
 
-  openLocationMenu (route: Location, isCurrent: boolean) {
+  openCurrentLocationMenu (route: Location) {
     this.selectedRoute = route;
-    this.isCurrentLocation = isCurrent;
-    this.locationMenuDisplay = true;
+    this.currentLocationMenuDisplay = true;
   }
 
-  changeLocationMenuDisplay (event: boolean) {
-    this.locationMenuDisplay = event;
+  changeCurrentLocationMenuDisplay (event: boolean) {
+    this.currentLocationMenuDisplay = event;
   }
 
 }

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LocationMenuComponent } from './location-menu.component';
+import { LocationMenuComponent } from './new-location-menu.component';
 
 describe('LocationMenuComponent', () => {
   let component: LocationMenuComponent;

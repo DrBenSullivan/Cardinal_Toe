@@ -7,7 +7,7 @@ import { Location } from '../../interfaces/Location';
 @Injectable({
   providedIn: 'root'
 })
-export class LocationDataFetcherService {
+export class LocationDataService {
 
   fetchLandmarks(location: Location) : string[] {
     const currentLocation = locationsJSON.find(

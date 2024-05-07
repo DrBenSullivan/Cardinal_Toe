@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RouteTextGeneratorService } from './route-text-generator.service';
+import { RouteTextGeneratorService } from './routes.service';
 
 describe('RouteTextGeneratorService', () => {
   let service: RouteTextGeneratorService;

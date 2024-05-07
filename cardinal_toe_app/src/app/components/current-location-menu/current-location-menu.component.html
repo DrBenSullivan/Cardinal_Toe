@@ -47,29 +47,20 @@
 
             <div class="wrapper grid-controls">
 
-                <!-- Search button in control panel, if currentLocation, canSearch -->
+                <!-- Search button in control panel, if currentLocation, button enabled. -->
                 <p-button 
                     styleClass="popup-button other" 
                     type="button" 
                     label="Search" 
-                    [disabled]="isSearchDisabled"
+                    [disabled]="hasBeenSearched"
                     (click)="searchLocation()">
-                </p-button>
-
-                <!-- Go-to button in control panel, if NOT currentLocation, canGo -->
-                <p-button 
-                    styleClass="popup-button other" 
-                    type="button" 
-                    label="Go-to" 
-                    [disabled]="isGoToDisabled" 
-                    (click)="goToLocation(selectedRoute)">
                 </p-button>
             
                 <!-- Close pop-up button in control panel -->
                 <p-button 
                     styleClass="popup-button close" 
                     type="button" 
-                    label="Close" 
+                    label="Cancel" 
                     (click)="closePopup()">
                 </p-button>
 

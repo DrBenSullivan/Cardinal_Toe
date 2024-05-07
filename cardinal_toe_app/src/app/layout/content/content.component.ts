@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '../../interfaces/Location';
-import { NarratorComponent } from '../narrator/narrator.component';
+import { NarratorComponent } from '../../components/narrator/narrator.component';
 import { MapGeneratorService } from '../../services/map-generator/map-generator.service';
 import { SessionStateService } from '../../services/session-state/session-state.service';
-import { VictoryComponent } from '../victory/victory.component';
+import { VictoryComponent } from '../../pages/victory/victory.component';
 import { NgSwitch, NgSwitchCase } from '@angular/common';
 
 
@@ -36,9 +36,6 @@ export class ContentComponent implements OnInit {
 
   changeCurrentLocation(route: Location) {
     this.currentLocation = route;
-    if ( this.currentLocation.isFinalLocation ) {
-
-    }
     this.sessionStateService.saveGameState(route);
     console.log(this.currentLocation);
   }
