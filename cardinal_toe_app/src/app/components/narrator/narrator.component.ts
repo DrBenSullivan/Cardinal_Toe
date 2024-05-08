@@ -31,9 +31,7 @@ export class NarratorComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes) {
-      console.log(this.currentLocation.routes)
       this.possibleRoutes = this.routesService.getRoutes(this.currentLocation);
-      console.log(this.possibleRoutes);
       this.routesText = this.routesService.getRoutesText(this.possibleRoutes);
     }
   }

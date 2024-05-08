@@ -14,35 +14,26 @@
 
             <div class="grid-body">
 
-                <h2 class="italic" 
-                    *ngIf="selectedRoute"
-                    >The {{selectedRoute.name | spaced | titlecase}}
-                </h2>
-                <br>
+                <h2 class="italic underlined">The {{selectedRoute.name | spaced | titlecase}}</h2>
                 
-                <p *ngIf="selectedRoute"
+                <p class="local-text" *ngIf="selectedRoute"
                 >{{selectedRoute.blurb ?? selectedRoute.description}}
                 </p>
-
-                <ng-container *ngIf="hasBeenSearched">
-                    <p *ngIf="localLandmarks.length === 0"
-                        >You search high and low, traveller but alas you find nothing with which to interact.</p>
-                    <p *ngFor="let landmark of localLandmarks"
-                        >{{landmark}}</p>
-                </ng-container>
-
-                <p>What would you like to do?</p>
 
             </div>
 
             <div class="grid-image">
-
                 <img 
-                    *ngIf="selectedRoute"
                     src="../../../assets/images/locations/{{selectedRoute.name}}.jpg" 
-                    class="framed100 brown-border4" 
+                    class="framed100 dark-border2" 
                 />
+            </div>
 
+            <div class="grid-console">
+                <p *ngIf="!hasBeenSearched; else landmarks">I wonder if there is anything of interest nearby... <br>What would you like to do?</p>
+                <ng-template #landmarks>
+                    <app-landmarks [currentLocation]="selectedRoute"></app-landmarks>
+                </ng-template>   
             </div>
 
             <div class="wrapper grid-controls">
@@ -60,7 +51,7 @@
                 <p-button 
                     styleClass="popup-button close" 
                     type="button" 
-                    label="Cancel" 
+                    label="Close" 
                     (click)="closePopup()">
                 </p-button>
 

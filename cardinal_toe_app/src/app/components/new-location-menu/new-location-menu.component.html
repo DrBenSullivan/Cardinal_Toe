@@ -13,29 +13,24 @@
         <div class="grid-container">
 
             <div class="grid-body">
-
-                <h2 class="italic" 
+                <h2 class="italic underlined">The {{selectedRoute.name | spaced | titlecase}}</h2>
+                <p  class="local-text" 
+                    style="font-style: italic;" 
                     *ngIf="selectedRoute"
-                    >The {{selectedRoute.name | spaced | titlecase}}
-                </h2>
-                <br>
-                
-                <p *ngIf="selectedRoute"
-                >{{selectedRoute.blurb ?? selectedRoute.description}}
-                </p>
-
-                <p>What would you like to do?</p>
-
+                    >{{selectedRoute.blurb ?? selectedRoute.description}}</p>
             </div>
 
             <div class="grid-image">
 
                 <img 
-                    *ngIf="selectedRoute"
                     src="../../../assets/images/locations/{{selectedRoute.name}}.jpg" 
-                    class="framed100 brown-border4" 
+                    class="framed100 dark-border2"
                 />
 
+            </div>
+
+            <div class="grid-console">
+                <p>What would you like to do?</p>
             </div>
 
             <div class="wrapper grid-controls">

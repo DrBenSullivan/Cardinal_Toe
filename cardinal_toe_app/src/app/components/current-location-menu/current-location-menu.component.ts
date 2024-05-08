@@ -5,11 +5,12 @@ import { ButtonModule } from 'primeng/button';
 import { NgFor, NgIf, TitleCasePipe } from '@angular/common';
 import { SpacedPipe } from '../../pipes/spaced/spaced.pipe';
 import { LocationDataService } from '../../services/location-data/location-data.service';
+import { LandmarksComponent } from '../landmarks/landmarks.component';
 
 
 @Component({
   selector: 'app-current-location-menu',
-  imports: [ DialogModule, ButtonModule, NgIf, TitleCasePipe, SpacedPipe, NgFor],
+  imports: [ DialogModule, ButtonModule, NgIf, TitleCasePipe, SpacedPipe, NgFor, LandmarksComponent ],
   standalone: true,
   templateUrl: './current-location-menu.component.html',
   styleUrls: ['./current-location-menu.component.scss']
@@ -29,7 +30,8 @@ export class CurrentLocationMenuComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes) {
-      this.resetLocalVariables();
+      this.hasBeenSearched = false;
+      this.localLandmarks = [];
     }
   }
 
@@ -39,13 +41,8 @@ export class CurrentLocationMenuComponent implements OnChanges {
   }
 
   searchLocation() {
-    this.hasBeenSearched = true;
     this.localLandmarks = this.locationDataService.fetchLandmarks(this.selectedRoute);
-  }
-
-  resetLocalVariables() {
-    this.hasBeenSearched = false;
-    this.localLandmarks = [];
+    this.hasBeenSearched = true;
   }
 
 }

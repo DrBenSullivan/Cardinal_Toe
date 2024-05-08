@@ -1,12 +1,17 @@
 .grid-container {
     display: grid;
-    column-gap: 16px;
-    row-gap: 16px;
-    overflow: hidden;
+    gap: 8px;
+    margin-left: 8px;
+    margin-right: 0;
     transition: height 0.5s;
     grid-template: 
         "g-body g-image" auto
-        "g-controls g-controls" 60px / auto auto;
+        "g-console g-console" auto
+        "g-controls g-controls" min-content / auto auto auto;
+}
+
+.grid-console {
+    grid-area: g-console;
 }
 
 .grid-image {
@@ -15,27 +20,33 @@
 
 .grid-body {
     grid-area: g-body;
+
 }
 
 .grid-controls {
-    height: 80px;
+    height: 100%;
+    width: 100%;
     grid-area: g-controls;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content:space-between;
+    flex-direction: row;
+    justify-content:space-between;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.local-text {
+    color: #deb887b0;
+    margin-top: 4px;
 }
 
 p-button {
 
-    margin-top: 0;
-
     &.other {
-        align-self:baseline;
+        margin-right: 0;
     }
 
     &.close {
-        margin-left: auto;
-        justify-self: flex-end;
+        margin-left: 0;
     }
+
 }

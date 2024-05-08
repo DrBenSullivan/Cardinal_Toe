@@ -134,7 +134,7 @@ export class MapGeneratorService {
   }
 
   /**
-  * Returns a random `number` between `1` & `4` weighted toward 2.
+  * Returns a pseudorandom `number` between `1` & `4` weighted toward 2.
   * @function
   */
   getRandomNumberOfRoutes(): number {

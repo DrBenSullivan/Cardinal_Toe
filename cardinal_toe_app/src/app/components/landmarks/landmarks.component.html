@@ -1,0 +1,12 @@
+<p 
+  *ngIf="landmarksArray.length === 0; 
+  else landmarkLoop"
+  >You search high and low, traveller. But alas, you find nothing with which to interact.
+</p>
+
+<ng-template #landmarkLoop>
+  <p 
+    *ngFor="let landmark of landmarksArray; index as i"
+    >{{landmarksStringArray[i]}}<span class="item">{{landmark}}</span>.
+  </p>
+</ng-template>
