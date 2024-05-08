@@ -1,19 +1,16 @@
 export interface Location {
-
-    //Required for UI
     name: string,
     description: string,
-
-    //Required for MapGeneratorService
+    blurb?: string,
+    hasBeenSearched: boolean,
     previousLocation: Location | null,
     isFinalLocation: boolean,
     routes: Location[],
     deviationValue: number,
+    landmarks: string[],
 
-    //In development
-    blurb?: string,
+    // To be developed
     events?: object[],
     people?: number[],
     items?: number[]
-
 }

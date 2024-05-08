@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { LandmarksService } from './landmarks.service';
+import { LandmarksService } from './landmark-sentence.service';
 
 describe('LandmarksService', () => {
   let service: LandmarksService;

@@ -2,7 +2,8 @@
     {
       "name": "glade",
       "description": "You come to your senses in a small forest clearing. Brilliant beams of sunlight pierce the soft mist of the glade. Your recollection of preceding events is, at best, questionable & the cloying scent of Buckfast burns your nostrils.",
-      "blurb": "A beautiful clearing in the forest. I awakened there, beflummoxed by the poisons of yesternight..."
+      "blurb": "A beautiful clearing in the forest. I awakened there, beflummoxed by the poisons of yesternight...",
+      "landmarks": []
     },
     {
       "name": "forest",

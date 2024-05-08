@@ -6,6 +6,7 @@ import { NgFor, NgIf, TitleCasePipe } from '@angular/common';
 import { SpacedPipe } from '../../pipes/spaced/spaced.pipe';
 import { LocationDataService } from '../../services/location-data/location-data.service';
 import { LandmarksComponent } from '../landmarks/landmarks.component';
+import { SessionStateService } from '../../services/session-state/session-state.service';
 
 
 @Component({
@@ -20,29 +21,25 @@ export class CurrentLocationMenuComponent implements OnChanges {
   @Input() display: boolean = false;
   @Input() selectedRoute!: Location;
   @Output() changeDisplay = new EventEmitter<boolean>();
-
-  hasBeenSearched: boolean = false;
-  localLandmarks: string[] = [];
-
-  constructor (
-    private locationDataService: LocationDataService
-  ) {}
+  isLandmarksDisplayDisabled: boolean = true;
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes) {
-      this.hasBeenSearched = false;
-      this.localLandmarks = [];
+      this.isLandmarksDisplayDisabled = true;
+      if (this.selectedRoute.hasBeenSearched) {
+        this.isLandmarksDisplayDisabled = false;
+      }
     }
   }
 
   closePopup(){
+    this.isLandmarksDisplayDisabled = true;
     this.display = false;
     this.changeDisplay.emit(this.display);
   }
 
   searchLocation() {
-    this.localLandmarks = this.locationDataService.fetchLandmarks(this.selectedRoute);
-    this.hasBeenSearched = true;
+    this.isLandmarksDisplayDisabled = false;
   }
 
 }

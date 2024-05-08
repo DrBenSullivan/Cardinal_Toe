@@ -25,6 +25,7 @@
 </div>
 
 <app-new-location-menu 
+    *ngIf="selectedRoute"
     [display]="newLocationMenuDisplay"
     [selectedRoute]="selectedRoute"
     (newLocation)="goToLocation($event)"
@@ -32,6 +33,7 @@
 </app-new-location-menu>
 
 <app-current-location-menu 
+    *ngIf="selectedRoute"
     [display]="currentLocationMenuDisplay"
     [selectedRoute]="selectedRoute"
     (changeDisplay)="changeCurrentLocationMenuDisplay($event)">

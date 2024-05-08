@@ -21,8 +21,8 @@ export class NewLocationMenuComponent implements OnChanges {
   @Output() newLocation = new EventEmitter<Location>();
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (!changes){ 
-      return
+    if (changes) {
+      
     }
   }
 

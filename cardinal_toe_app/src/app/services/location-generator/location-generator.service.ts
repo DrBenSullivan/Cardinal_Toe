@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Location } from '../../interfaces/Location';
 import { NumberRandomiserService } from '../number-randomiser/number-randomiser.service';
 import locationsJSON from '../../../assets/data/locations.json';
+import { LandmarkFilterService } from '../landmark-filter/landmark-filter.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,8 @@ import locationsJSON from '../../../assets/data/locations.json';
 export class LocationGeneratorService {
 
   constructor ( 
-    private numberRandomiserService: NumberRandomiserService
+    private numberRandomiserService: NumberRandomiserService,
+    private landmarkFilterService: LandmarkFilterService
   ) {}
 
   /**
@@ -47,10 +49,9 @@ export class LocationGeneratorService {
     else {
   
       while (!locationKeyToLookup || this.usedLocationKeys.includes(locationKeyToLookup)) {
-        locationKeyToLookup = this.numberRandomiserService.getRandomNumber(locationsJSON.length - 1);
+        locationKeyToLookup = this.numberRandomiserService.getRandomCeilNumber(locationsJSON.length - 1);
       }
       this.usedLocationKeys.push(locationKeyToLookup);
-
     }
 
     // Populate data from locationsJSON & return as a `Location`.
@@ -58,12 +59,14 @@ export class LocationGeneratorService {
     const locationObject: Location = {
         name: locationDetails.name,
         description: locationDetails.description,
-        blurb: locationDetails.blurb || undefined,
-        previousLocation: previousLocation || null,
+        blurb: locationDetails.blurb ?? undefined,
+        previousLocation: previousLocation ?? null,
         isFinalLocation: finalLocationBoolean,
         routes: [],
-        deviationValue: deviation
-    }
+        deviationValue: deviation,
+        hasBeenSearched: false,
+        landmarks: this.landmarkFilterService.filterLandmarks(locationDetails.landmarks)
+    };
     return locationObject
   }
 }

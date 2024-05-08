@@ -50,3 +50,14 @@ p-button {
     }
 
 }
+
+.local-dialog {
+    width: 50vw;
+    height: max-content;
+    color: #deb887;
+    padding: 16px;
+    background: #6e3030;
+    border: 4px solid #371818;
+    overflow: hidden;
+    transition: all 0.5s;
+}

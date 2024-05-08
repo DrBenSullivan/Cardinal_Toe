@@ -24,7 +24,7 @@ export class SessionStateService {
   }
 
   /***************************************
-   * Check if there is a saved `gameState`
+   * Checks if there is a saved `gameState`
    * @returns `boolean`
    ***************************************/
   checkIfNewGame(): boolean {
@@ -33,4 +33,7 @@ export class SessionStateService {
     }
     return true
   }
+
 }
+
+

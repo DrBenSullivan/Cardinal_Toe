@@ -1,12 +1,26 @@
-<p 
-  *ngIf="landmarksArray.length === 0; 
-  else landmarkLoop"
-  >You search high and low, traveller. But alas, you find nothing with which to interact.
-</p>
+<ng-container [ngSwitch]="true">
+  <ng-container *ngSwitchCase="!previouslySearched && currentLocation.landmarks.length === 0">
+    <p>You search high and low, traveller. But alas, you find nothing with which to interact.</p>
+  </ng-container>
 
-<ng-template #landmarkLoop>
-  <p 
-    *ngFor="let landmark of landmarksArray; index as i"
-    >{{landmarksStringArray[i]}}<span class="item">{{landmark}}</span>.
-  </p>
-</ng-template>
+  <ng-container *ngSwitchCase="!previouslySearched && currentLocation.landmarks.length !== 0">
+    <p *ngFor="let landmark of currentLocation.landmarks; index as i">
+      {{ landmarksStringArray[i] }}<span class="item">{{ landmark }}</span>.
+    </p>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="previouslySearched && currentLocation.landmarks.length === 0">
+    <p>You found nothing of interest last time you were here.</p>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="previouslySearched && currentLocation.landmarks.length !== 0">
+    <p>You recognise this place, you previously found:</p>
+    <ul>
+      <li *ngFor="let landmark of currentLocation.landmarks"><span class="item">{{ landmark | titlecase }}</span>.</li>
+    </ul>
+  </ng-container>
+
+  <ng-container *ngSwitchDefault>
+    <p>***ERROR***</p>
+  </ng-container>
+</ng-container>

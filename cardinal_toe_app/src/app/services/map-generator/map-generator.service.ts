@@ -102,7 +102,7 @@ export class MapGeneratorService {
            * Randomised index of the available `currentLocation.routes` is on the _'winning path'_.
            * All other routes are on branches that result in a dead-end.
            */
-          correctRouteIndex = (this.numberRandomiserService.getRandomNumber(numberOfRoutes) - 1);
+          correctRouteIndex = (this.numberRandomiserService.getRandomCeilNumber(numberOfRoutes) - 1);
         }
       }
 
@@ -138,7 +138,7 @@ export class MapGeneratorService {
   * @function
   */
   getRandomNumberOfRoutes(): number {
-    const randomInt = this.numberRandomiserService.getRandomNumber(10);
+    const randomInt = this.numberRandomiserService.getRandomCeilNumber(10);
 
     if (randomInt <= 2) {
       return 1;

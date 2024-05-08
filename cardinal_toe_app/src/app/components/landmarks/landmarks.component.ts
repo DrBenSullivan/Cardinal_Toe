@@ -1,32 +1,33 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { NgIf, NgFor } from '@angular/common';
-import { LandmarksService } from '../../services/landmarks/landmarks.service';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, TitleCasePipe } from '@angular/common';
+import { LandmarkSentenceService } from '../../services/landmark-sentence/landmark-sentence.service';
 import { Location } from '../../interfaces/Location';
-import { LocationDataService } from '../../services/location-data/location-data.service';
 
 @Component({
   selector: 'app-landmarks',
   standalone: true,
-  imports: [ NgIf, NgFor ],
+  imports: [ NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, TitleCasePipe ],
   templateUrl: './landmarks.component.html',
   styleUrl: './landmarks.component.scss'
 })
-export class LandmarksComponent implements OnInit {
+export class LandmarksComponent implements OnChanges {
   @Input() currentLocation!: Location;
-  landmarksArray!: string[];
+  previouslySearched: boolean = false;
   landmarksStringArray!: string[];
 
   constructor (
-    private landmarksService: LandmarksService,
-    private locationDataService: LocationDataService
+    private landmarkSentenceService: LandmarkSentenceService,
   ) {}
 
-  ngOnInit(): void {
-    this.landmarksArray = this.landmarksService.filterLandmarks(
-      this.locationDataService.fetchLandmarks(this.currentLocation)
-    );
-    if (this.landmarksArray.length !== 0) {
-      this.landmarksStringArray = this.landmarksService.getSentences(this.landmarksArray);
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes) {
+      if(this.currentLocation.hasBeenSearched) {
+        this.previouslySearched = true;
+      }
+      if (!this.currentLocation.hasBeenSearched){
+        this.currentLocation.hasBeenSearched = true;
+        this.landmarksStringArray = this.landmarkSentenceService.getSentences(this.currentLocation.landmarks.length);
+      }
     }
   }
 }
