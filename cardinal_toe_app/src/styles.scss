@@ -33,19 +33,26 @@ a {
     }
 }
 
+.location, .person, .item {
+    transition: 0.2s;
+    
+    &:hover{
+    cursor: help;
+    text-decoration: underline;
+    }
+
+}
+
 .location {
     color: green;
-    transition: 0.2s;
 }
 
 .person {
     color: blue;
-    transition: 0.2s;
 }
 
 .item {
-    color: red;
-    transition: 0.2s;
+    color: rgb(202, 11, 11);
 }
 
 .italic {

@@ -14,4 +14,5 @@ import { FooterComponent } from './layout/footer/footer.component';
 })
 export class AppComponent {
   title: any = 'cardinal_toe_app';
+  
 }
