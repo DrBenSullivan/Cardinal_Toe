@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Location } from '../../interfaces/Location';
-import { LocationGeneratorService } from '../location-generator/location-generator.service';
-import { NumberRandomiserService } from '../number-randomiser/number-randomiser.service';
+import { LocationGeneratorService } from '../LocationServices/location-generator/location-generator.service';
+import { NumberRandomiserService } from '../UtilityServices/number-randomiser/number-randomiser.service';
 
 @Injectable({
   providedIn: 'root'

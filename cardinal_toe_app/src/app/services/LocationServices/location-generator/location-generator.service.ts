@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Location } from '../../interfaces/Location';
-import { NumberRandomiserService } from '../number-randomiser/number-randomiser.service';
-import locationsJSON from '../../../assets/data/locations.json';
-import { LandmarkFilterService } from '../landmark-filter/landmark-filter.service';
+import { Location } from '../../../interfaces/Location';
+import { Landmark } from '../../../interfaces/Landmark';
+import { NumberRandomiserService } from '../../UtilityServices/number-randomiser/number-randomiser.service';
+import locationsJSON from '../../../../assets/data/locations.json';
+import { LandmarkFilterService } from '../../LandmarkServices/landmark-filter/landmark-filter.service';
 
 @Injectable({
   providedIn: 'root'
@@ -56,6 +57,17 @@ export class LocationGeneratorService {
 
     // Populate data from locationsJSON & return as a `Location`.
     const locationDetails = locationsJSON[locationKeyToLookup];
+
+    // Get this location's landmarks.
+    const locationLandmarks: Landmark[] = [];
+    for (let i = 0; i < locationDetails.landmarks.length; i++)
+      {
+        locationLandmarks.push({
+          name: locationDetails.landmarks[i]
+        })
+      }
+
+    // Generate Location typed object.
     const locationObject: Location = {
         name: locationDetails.name,
         description: locationDetails.description,
@@ -65,8 +77,12 @@ export class LocationGeneratorService {
         routes: [],
         deviationValue: deviation,
         hasBeenSearched: false,
-        landmarks: this.landmarkFilterService.filterLandmarks(locationDetails.landmarks)
+        landmarks: locationLandmarks
     };
+
+    // Filter Landmarks using service.
+    locationObject.landmarks = this.landmarkFilterService.filterLandmarks(locationObject);
+    
     return locationObject
   }
 }

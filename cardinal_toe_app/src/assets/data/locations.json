@@ -1,450 +1,450 @@
 [
-    {
-      "name": "glade",
-      "description": "You come to your senses in a small forest clearing. Brilliant beams of sunlight pierce the soft mist of the glade. Your recollection of preceding events is, at best, questionable & the cloying scent of Buckfast burns your nostrils.",
-      "blurb": "A beautiful clearing in the forest. I awakened there, beflummoxed by the poisons of yesternight...",
-      "landmarks": []
-    },
-    {
-      "name": "forest",
-      "description": "You find yourself in a dense, ancient forest. Tall trees tower above you, their branches blocking out most of the sunlight. The forest floor is covered in a thick layer of moss and fallen leaves. You can hear the distant sounds of wildlife echoing through the trees.",
-      "blurb": "A woodland like this could swallow a centaur whole. How I survived the night, the Gods will only ever know...",
-      "landmarks": [
-        "a large tree",
-        "a rabbit hole",
-        "a hidden door",
-        "a mushroom circle",
-        "a gaggle of unkempt deciduous trees"
-      ]
-    },
-    {
-      "name": "field",
-      "description": "You stand in a vast field stretching out before you. Golden wheat sways gently in the breeze, creating waves of movement across the landscape. The sky above is wide and open, with only a few fluffy clouds drifting lazily by. In the distance, you can see a small farmhouse.",
-      "blurb": "An immense fertile meadow: it's beauty, arouses sweet nostalgia of Yoker.",
-      "landmarks": [
-        "the lifeless corpse of a poet who happened to be a scarecrow as well",
-        "a treasure chest",
-        "a sprig of singing flowers",
-        "a field mouse on a tiny mountainbike",
-        "a dragon cloud"
-      ]
-    },
-    {
-      "name": "farm",
-      "description": "You arrive at a quaint farm nestled in the countryside. Chickens peck at the ground, while cows graze lazily in the pasture. The farmhouse itself is weathered but welcoming, with smoke curling from the chimney. A sense of peace and tranquility envelops the area.",
-      "blurb": "A idyllic wee farmhouse littered with cows, punctuated by cocks...",
-      "landmarks": [
-        "a gaggle of chatty barn animals",
-        "a well of wishes that does not wish you well",
-        "a mischievous goblin haystack",
-        "a philosophical pigpen",
-        "a puddle of wood"
-      ]
-    },
-    {
-      "name": "town",
-      "description": "You enter a busy town, filled with the hustle and bustle of daily life. Merchants hawk their wares in the crowded marketplace, while children play in the cobblestone streets. The scent of freshly baked bread wafts through the air, mingling with the sounds of laughter and chatter.",
-      "landmarks": [
-        "a towering statue of a mayor",
-        "a fountain of wishes",
-        "an alleyway of alley cats",
-        "a singing clock tower",
-        "a rainbow cobblestone street"
-      ]
-    },
-    {
-      "name": "palace",
-      "description": "Before you stands a magnificent palace, its towering spires reaching towards the sky. Guards in gleaming armor stand watch at the entrance, their eyes sharp and alert. The palace grounds are immaculately kept, with vibrant gardens and sparkling fountains. You can't help but feel a sense of awe at the grandeur before you.",
-      "landmarks": [
-        "a royal rose garden",
-        "a maze of living topiaries",
-        "a bickering throne room",
-        "a lively portrait gallery",
-        "a tapestry depicting the life & times of a heroic squirrel"
-      ]
-    },
-    {
-      "name": "room",
-      "description": "You find yourself in a small, dimly lit room. The air is musty and stale, and the only furnishings are a rickety wooden chair and a moth-eaten rug. A single window lets in a shaft of weak sunlight, illuminating the dust motes dancing in the air.",
-      "landmarks": [
-        "a creaky floorboard treasure map",
-        "a cobweb-covered chandelier",
-        "a stern-faced ancestor portrait",
-        "a whispering bookshelf",
-        "a ghostly apparition"
-      ]
-    },
-    {
-      "name": "cave",
-      "description": "You stumble into a dark, foreboding cave. The air is cool and damp, and the only sound is the echo of your footsteps against the stone walls. Strange shadows flicker across the cavern floor, and you can't shake the feeling that you're being watched.",
-      "landmarks": [
-        "a crystal-clear underground lake",
-        "a stalactite jellyfish",
-        "a hidden chamber of gemstones",
-        "a bat colony concert",
-        "a mysterious cave door"
-      ]
-    },
-    {
-      "name": "tunnel",
-      "description": "You find yourself in a narrow tunnel, its walls rough and uneven. The air is thick with the smell of earth and dampness, and the only sound is the faint drip of water echoing in the distance. You can't see more than a few feet ahead of you, and the darkness feels suffocating.",
-      "landmarks": [
-        "a hidden alcove",
-        "a crop of glowing mushrooms",
-        "a semirecumbent mermaid carcass",
-        "a labyrinthine network",
-        "a plethora of nonsense"
-      ]
-    },
-    {
-      "name": "blacksmith",
-      "description": "You step into a bustling blacksmith's shop, filled with the clang of metal on metal and the hiss of steam. A burly blacksmith works at the forge, sweat beading on his brow as he shapes molten metal into intricate designs. Weapons and armor line the walls, gleaming in the firelight.",
-      "landmarks": [
-        "a giant anvil",
-        "a magical forge",
-        "a technicolour dreamsuit of armor",
-        "a wall of shields",
-        "a sword that rolls its eyes at you"
-      ]
-    },
-    {
-      "name": "mountain",
-      "description": "You stand at the base of a towering mountain, its jagged peaks disappearing into the clouds above. The air is thin and crisp, and the only sound is the distant cry of a mountain hawk. The mountain slopes are dotted with hardy shrubs and patches of snow, and the ascent looks treacherous.",
-      "landmarks": [
-        "a yeti cave",
-        "a weather-predicting mountain goat. Hmm... it's lying down",
-        "a hot spring",
-        "a dragon lair",
-        "a wish-granting summit"
-      ]
-    },
-    {
-      "name": "beach",
-      "description": "You find yourself on a sandy beach, with gentle waves lapping at the shore. Seagulls wheel overhead, their cries mingling with the sound of the surf. The air is salty and fresh, and the sun beats down warmly on your skin. A sense of serenity washes over you as you gaze out at the endless expanse of the ocean.",
-      "landmarks": [
-        "the ruins of a sandcastle kingdom",
-        "a bank of ocean next to a sea of sand",
-        "a griffin-shaped hole",
-        "a seashell orchestra",
-        "a dolphin dance party"
-      ]
-    },
-    {
-      "name": "desert",
-      "description": "You are lost in a vast desert, with dunes stretching out in every direction as far as the eye can see. The sun beats down mercilessly, and the heat shimmers off the sand in waves. There is no sign of life except for the occasional scuttle of a lizard or the distant cry of a desert bird.",
-      "landmarks": [
-        "a mirage of oases",
-        "sessions",
-        "not very much",
-        "a camel caravan. It's a static",
-        "bones and stuff"
-      ]
-    },
-    {
-      "name": "ruins",
-      "description": "You stumble upon a set of ancient ruins, their crumbling walls bearing silent witness to the passage of time. Vines and moss cling to the weathered stones, and the air is heavy with the weight of history. You can almost hear the echoes of a forgotten civilization as you explore the deserted corridors and crumbling archways.",
-      "landmarks": [
-        "a ghostly banquet hall",
-        "an unsettling tomb",
-        "a passage",
-        "a statue garden",
-        "a haunting melody"
-      ]
-    },
-    {
-      "name": "cemetery",
-      "description": "You find yourself in a quiet cemetery, with rows of weathered headstones standing sentinel over the graves. The air is still and heavy, and the only sound is the whisper of the wind through the trees. A sense of melancholy hangs in the air as you walk among the graves, reading the names and dates etched into the stone.",
-      "landmarks": [
-        "a ghostly tea party",
-        "a weeping willow sanctuary",
-        "a hidden mausoleum",
-        "a haunted crypt",
-        "a spectral choir"
-      ]
-    },
-    {
-      "name": "library",
-      "description": "You step into a grand library, its shelves lined with dusty tomes and ancient scrolls. The air is thick with the smell of old paper and leather bindings, and shafts of sunlight filter through stained glass windows, casting colorful patterns on the polished wooden floors. You can't help but feel a sense of awe at the vast repository of knowledge surrounding you.",
-      "landmarks": [
-        "dust",
-        "a magical reading nook",
-        "a librarian's ghost's corpse's ectoplasm's residue",
-        "well, bookshelves. Obviously",
-        "a treasure map book made out of receipts. Its content has faded"
-      ]
-    },
-    {
-      "name": "castle",
-      "description": "You find yourself in the courtyard of a massive castle, its imposing walls rising high above you. Flags flutter in the breeze, and the sound of clashing swords drifts from the training grounds. The castle grounds are alive with activity, with knights in shining armor bustling about and servants scurrying to and fro.",
-      "landmarks": [
-        "a turret",
-        "a magical mystery moat",
-        "a throne room of thrones",
-        "a knight's training ground",
-        "the royal jester's stage"
-      ]
-    },
-    {
-      "name": "dungeon",
-      "description": "You descend into a dark and forbidding dungeon, its stone walls damp with moisture and streaked with grime. The air is thick and musty, and the only sounds are the drip of water from unseen leaks and the distant skittering of rats. Shadows dance on the walls as you navigate the twisting passages and dimly lit corridors.",
-      "landmarks": [
-        "a treasure-hoarding dragon",
-        "a maze of traps",
-        "a ribcage xylophone. Actually I think it's a glockenspiel",
-        "more dungeon",
-        "something DANK"
-      ]
-    },
-    {
-      "name": "volcano",
-      "description": "You find yourself at the edge of a smoldering volcano, its crater bubbling and steaming ominously. The air is thick with sulfur, and the ground beneath your feet is hot to the touch. Lava flows sluggishly down the mountainside, casting an eerie orange glow over the barren landscape. You can't help but feel a sense of impending danger as you gaze into the roiling depths below.",
-      "landmarks": [
-        "a lava waterfall. A lavafall",
-        "a fiery phoenix nest, long deserted",
-        "a magma chamber",
-        "a volcanic crystal cavern",
-        "a steam geyser"
-      ]
-    },
-    {
-      "name": "waterfall",
-      "description": "You stand at the foot of a majestic waterfall, its waters cascading down from high above in a torrent of foam and spray. The air is cool and refreshing, and the sound of rushing water fills your ears. Rainbows dance in the mist as the sunlight filters through, creating a dazzling display of color and light.",
-      "landmarks": [
-        "a mermaid grotto",
-        "a hidden cave behind the falls",
-        "a brutal plungepool",
-        "a rainbow bridge",
-        "water... Unsuprising, really"
-      ]
-    },
-    {
-      "name": "marketplace",
-      "description": "You find yourself in a bustling marketplace, where merchants from all over gather to sell their wares. The air is filled with the scent of spices and the sound of haggling, as people barter for goods of all kinds.",
-      "landmarks": [
-        "a mystical potion cart",
-        "a fortune-teller's tent",
-        "a juggler's square",
-        "a magical artifact stall",
-        "a dragonfruit stand"
-      ]
-    },
-    {
-      "name": "river",
-      "description": "You come across a gentle river, its waters flowing peacefully downstream. The banks are lined with lush vegetation, and the occasional splash of a fish breaks the surface of the water.",
-      "blurb": "Gorgeous. It's nae Clyde though.",
-      "landmarks": [
-        "a mermaid's lagoon",
-        "a hidden pirate's cove",
-        "a singing siren rock",
-        "a sunken treasure chest",
-        "an oxbow lake. Your geography lessons taught you well, traveller"
-      ]
-    },
-    {
-      "name": "mountaintop",
-      "description": "You reach the summit of a towering mountain, where the air is thin and the view stretches out for miles. Below you, clouds drift lazily by, and the world seems small and insignificant from your lofty vantage point.",
-      "landmarks": [
-        "a cloud kingdom",
-        "a celestial observatory",
-        "a dragon bones",
-        "a star gazing platform. It's the ground",
-        "a misty abyss"
-      ]
-    },
-    {
-      "name": "seaside",
-      "description": "You find yourself on a tranquil seaside cliff, with the sound of waves crashing against the rocks below. Seabirds circle overhead, and the salty breeze fills your lungs as you gaze out at the endless expanse of the ocean.",
-      "landmarks": [
-        "a cove of sorts",
-        "a pirate shipwreck",
-        "an looted treasure chest in the sand",
-        "a sea serpent's lair",
-        "a beached whale. Aye, it's deed"
-      ]
-    },
-    {
-      "name": "alleyway",
-      "description": "You wander into a dimly lit alleyway, where shadows cling to the walls and the air is heavy with the scent of decay. The sounds of distant footsteps echo off the cobblestones, and you can't shake the feeling that you're being watched.",
-      "landmarks": [
-        "a hidden thief's den",
-        "an inexplicable magical portal",
-        "a vast treasure chest. It appears to have belonged to a grandwizard by the name of \"Biffa\"",
-        "a mysterious alley cat",
-        "soiled syringes"
-      ]
-    },
-    {
-      "name": "park",
-      "description": "You enter a peaceful park, where trees rustle in the breeze and birds sing in the branches. The scent of flowers fills the air, and the sound of children's laughter drifts across the grassy meadows.",
-      "landmarks": [
-        "a fountain",
-        "a fairy's ring",
-        "a hidden gnome village",
-        "a butterfly sanctuary",
-        "a singing tree"
-      ]
-    },
-    {
-      "name": "school",
-      "description": "You find yourself outside a bustling schoolyard, where children play and laugh under the watchful eye of their teachers. The sound of bells fills the air as classes change, and the promise of knowledge hangs thick in the air.",
-      "landmarks": [
-        "a magical library",
-        "a talking school bell",
-        "a treasure chest in the playground",
-        "a hidden cave behind the gymnasium",
-        "a potion-making classroom"
-      ]
-    },
-    {
-      "name": "hospital",
-      "description": "You step into a sterile hospital room, where the air is heavy with the smell of disinfectant. Nurses bustle about, tending to patients in various states of illness and injury, and the steady beep of monitors provides a constant background noise.",
-      "landmarks": [
-        "a healing crystal garden",
-        "a secret wing",
-        "a raided medicine cabinet",
-        "a talking medical equipment",
-        "a machine that goes *PING*"
-      ]
-    },
-    {
-      "name": "concert_hall",
-      "description": "You enter a grand concert hall, where the air is alive with the sound of music. The stage is bathed in light, and the orchestra plays with passion and precision, filling the room with beautiful melodies.",
-      "landmarks": [
-        "a maestro's podium",
-        "a magical sound amplifier",
-        "a hidden musical score",
-        "a dancing floor, dancing away",
-        "a talking instrument section"
-      ]
-    },
-    {
-      "name": "cinema",
-      "description": "You find yourself in a darkened cinema, where the flicker of the projector casts dancing shadows on the screen. The scent of popcorn fills the air, and the audience sits in rapt attention as the story unfolds before them.",
-      "landmarks": [
-        "a magical film reel",
-        "chairs and whatnot",
-        "a popcorn machine",
-        "a discarded bag of goose nipple chips",
-        "a talking movie screen... A movie screen"
-      ]
-    },
-    {
-      "name": "graveyard",
-      "description": "You wander through a quiet graveyard, where tombstones dot the landscape like silent sentinels. The air is heavy with the scent of flowers and the sound of rustling leaves, and a sense of peace settles over you as you pay your respects to the departed.",
-      "landmarks": [
-        "a ghostly tea party",
-        "a sanctuary of willows that weep",
-        "a mausoleum",
-        "a crypt",
-        "at least one headstone"
-      ]
-    },
-    {
-      "name": "train_station",
-      "description": "You arrive at a train station, brimming with the hurried to-and-fro with bags and luggage. The air is acrid with the smog of steam & woodsmoke. The ground shakes with sound of trains rumbling on the tracks, and the promise of adventure hangs heavy in the air.",
-      "blurb": "By The Gods, traveller. What a sight! These monsters of bronze & iron must surely dwarfs any magic you've ever seen.",
-      "landmarks": [
-        "a magical ticket booth",
-        "Platform 9¾",
-        "a striking train conductor",
-        "a lively passenger's lifeless body",
-        "a ghostly train"
-      ]
-    },
-    {
-      "name": "office",
-      "description": "A sign read \"Ye Olde Officee\". But all you see is rows of goblins, fiercly clattering on small bizarre machines. A sharp wafted stench lingers. \"Cawfy\" the small enslaved green halflings seem to call it.",
-      "blurb": "What a bizarre place, traveller. All dey got tae dae's work.",
-      "landmarks": [
-        "a magical office chair, partially hidden under a desk",
-        "a hidden office nook",
-        "a thing",
-        "a coffee bean garden",
-        "a possessed spreadsheet"
-      ]
-    },
-    {
-      "name": "storehouse",
-      "description": "You stand as an ant in this leviathan of storehouse. Shelves stretch to the rafters and chests are stacked high.",
-      "blurb": "If there was ever a place to search, it'd be this one, traveller.",
-      "landmarks": [
-        "shelves and that",
-        "several windows",
-        "a massive problem",
-        "a magical inventory scroll",
-        "a ghostly forklift"
-      ]
-    },
-    {
-      "name": "menagerie",
-      "description": "You've encountered what appears to be a mysterious abandoned zoo. The centaurs frolick behind aging bars, the werewolves sleep in the elephant pens and gryphons soar overhead.",
-      "blurb": "By the Gods, traveller, this place be writhing with wondrous creatures!",
-      "landmarks": [
-        "cages upon cages of nothing",
-        "a hidden habitat",
-        "a talking parrot",
-        "a breeding ground",
-        "a coarsely-beheaded lion tamer"
-      ]
-    },
-    {
-        "name": "amusement_park",
-        "description": "You arrive at a bustling amusement park, where rides whir and lights flash in every direction. The air is filled with the sound of laughter and screams of delight, and the smell of cotton candy and funnel cakes wafts through the air as people enjoy the thrills and excitement of the park.",
-        "blurb": "What a magical place this must be!",
-        "landmarks": [
-            "a bonfire next to a wooden rollercoaster",
-            "chips and brown sauce",
-            "a meadsmith's stand",
-            "a sketchy sketcher of caricatures",
-            "Buckfast Billy's Breakfast Bar"
-        ]
-    },
-    {
-        "name": "circus",
-        "description": "You step into a colorful circus tent, where the air is alive with the sound of music and the smell of popcorn. Acrobats perform daring feats high above the crowd, and clowns make children laugh with their antics, creating an atmosphere of magic and wonder.",
-        "blurb": "It appears to host a superlative freakshow.",
-        "landmarks": [
-            "a bearded-lady's nook",
-            "an ethereal sense of happiness",
-            "wains e'rywhere",
-            "things of a circesian nature",
-            "some stuff"
-        ]
-    },
-    {
-        "name": "airport",
-        "description": "You find yourself in a bustling airport terminal, where people rush to catch their flights and say goodbye to loved ones. The air is filled with the sound of announcements and the smell of jet fuel, as travelers hurry to catch their ride. The air is thick with the scent of sweat and metal, and the sound of announcements echoes off the tiled walls as you navigate the labyrinthine tunnels.",
-        "blurb": "Mechanical dragons aplenty.",
-        "landmarks": [
-            "an engine of sorts",
-            "planes and that",
-            "all manner of nothing",
-            "a discerning impression of the world warming",
-            "lots and lots of smoke"
-        ]
-    },
-    {
-        "name": "church",
-        "description": "You step into a quiet church, where the air is heavy with the scent of incense and the sound of whispered prayers. Sunlight filters through stained glass windows, casting colorful patterns on the polished pews, and a sense of peace settles over you as you kneel in quiet contemplation.",
-        "blurb": "You should check that place oot, traveller. Me? Am banned.",
-        "landmarks": [
-            "an extra extravagant, excommunicated ex-expert who happens to be your ex",
-            "things of a churchy-nature",
-            "some novels",
-            "rows of pew-pew-pews",
-            "a tiny bath on stilts"
-        ]
-    },
-    {
-        "name": "garden",
-        "description": "You find yourself in a lush garden, where flowers bloom and butterflies flit from blossom to blossom. The air is heavy with the scent of roses and the sound of buzzing bees, and the gentle rustle of leaves fills the air as you wander through the winding paths.",
-        "blurb": "A well-trodden but well-tended lady's garden, just like ma granny's.",
-        "landmarks": [
-            "a well-trimmed bush",
-            "a less-than-impressive garlic bulb",
-            "a pile of unpaired secateurs",
-            "an outhouse",
-            "a wisecracking will o' the wisp"
-        ]
-    }
+  {
+    "name": "glade",
+    "description": "You come to your senses in a small forest clearing. Brilliant beams of sunlight pierce the soft mist of the glade. Your recollection of preceding events is, at best, questionable & the cloying scent of Buckfast burns your nostrils.",
+    "blurb": "A beautiful clearing in the forest. I awakened there, beflummoxed by the poisons of yesternight...",
+    "landmarks": []
+  },
+  {
+    "name": "forest",
+    "description": "You find yourself in a dense, ancient forest. Tall trees tower above you, their branches blocking out most of the sunlight. The forest floor is covered in a thick layer of moss and fallen leaves. You can hear the distant sounds of wildlife echoing through the trees.",
+    "blurb": "A woodland like this could swallow a centaur whole. How I survived the night, the Gods will only ever know...",
+    "landmarks": [
+      "a large tree",
+      "a rabbit hole",
+      "a hidden door",
+      "a mushroom circle",
+      "a gaggle of unkempt deciduous trees"
+    ]
+  },
+  {
+    "name": "field",
+    "description": "You stand in a vast field stretching out before you. Golden wheat sways gently in the breeze, creating waves of movement across the landscape. The sky above is wide and open, with only a few fluffy clouds drifting lazily by. In the distance, you can see a small farmhouse.",
+    "blurb": "An immense fertile meadow: it's beauty, arouses sweet nostalgia of Yoker.",
+    "landmarks": [
+      "the lifeless corpse of a poet who happened to be a scarecrow as well",
+      "a treasure chest",
+      "a sprig of singing flowers",
+      "a field mouse on a tiny mountainbike",
+      "a dragon cloud"
+    ]
+  },
+  {
+    "name": "farm",
+    "description": "You arrive at a quaint farm nestled in the countryside. Chickens peck at the ground, while cows graze lazily in the pasture. The farmhouse itself is weathered but welcoming, with smoke curling from the chimney. A sense of peace and tranquility envelops the area.",
+    "blurb": "A idyllic wee farmhouse littered with cows, punctuated by cocks...",
+    "landmarks": [
+      "a gaggle of chatty barn animals",
+      "a well of wishes that does not wish you well",
+      "a mischievous goblin haystack",
+      "a philosophical pigpen",
+      "a puddle of wood"
+    ]
+  },
+  {
+    "name": "town",
+    "description": "You enter a busy town, filled with the hustle and bustle of daily life. Merchants hawk their wares in the crowded marketplace, while children play in the cobblestone streets. The scent of freshly baked bread wafts through the air, mingling with the sounds of laughter and chatter.",
+    "landmarks": [
+      "a towering statue of a mayor",
+      "a fountain of wishes",
+      "an alleyway of alley cats",
+      "a singing clock tower",
+      "a rainbow cobblestone street"
+    ]
+  },
+  {
+    "name": "palace",
+    "description": "Before you stands a magnificent palace, its towering spires reaching towards the sky. Guards in gleaming armor stand watch at the entrance, their eyes sharp and alert. The palace grounds are immaculately kept, with vibrant gardens and sparkling fountains. You can't help but feel a sense of awe at the grandeur before you.",
+    "landmarks": [
+      "a royal rose garden",
+      "a maze of living topiaries",
+      "a bickering throne room",
+      "a lively portrait gallery",
+      "a tapestry depicting the life & times of a heroic squirrel"
+    ]
+  },
+  {
+    "name": "room",
+    "description": "You find yourself in a small, dimly lit room. The air is musty and stale, and the only furnishings are a rickety wooden chair and a moth-eaten rug. A single window lets in a shaft of weak sunlight, illuminating the dust motes dancing in the air.",
+    "landmarks": [
+      "a creaky floorboard treasure map",
+      "a cobweb-covered chandelier",
+      "a stern-faced ancestor portrait",
+      "a whispering bookshelf",
+      "a ghostly apparition"
+    ]
+  },
+  {
+    "name": "cave",
+    "description": "You stumble into a dark, foreboding cave. The air is cool and damp, and the only sound is the echo of your footsteps against the stone walls. Strange shadows flicker across the cavern floor, and you can't shake the feeling that you're being watched.",
+    "landmarks": [
+      "a crystal-clear underground lake",
+      "a stalactite jellyfish",
+      "a hidden chamber of gemstones",
+      "a bat colony concert",
+      "a mysterious cave door"
+    ]
+  },
+  {
+    "name": "tunnel",
+    "description": "You find yourself in a narrow tunnel, its walls rough and uneven. The air is thick with the smell of earth and dampness, and the only sound is the faint drip of water echoing in the distance. You can't see more than a few feet ahead of you, and the darkness feels suffocating.",
+    "landmarks": [
+      "a hidden alcove",
+      "a crop of glowing mushrooms",
+      "a semirecumbent mermaid carcass",
+      "a labyrinthine network",
+      "a plethora of nonsense"
+    ]
+  },
+  {
+    "name": "blacksmith",
+    "description": "You step into a bustling blacksmith's shop, filled with the clang of metal on metal and the hiss of steam. A burly blacksmith works at the forge, sweat beading on his brow as he shapes molten metal into intricate designs. Weapons and armor line the walls, gleaming in the firelight.",
+    "landmarks": [
+      "a giant anvil",
+      "a magical forge",
+      "a technicolour dreamsuit of armor",
+      "a wall of shields",
+      "a sword that rolls its eyes at you"
+    ]
+  },
+  {
+    "name": "mountain",
+    "description": "You stand at the base of a towering mountain, its jagged peaks disappearing into the clouds above. The air is thin and crisp, and the only sound is the distant cry of a mountain hawk. The mountain slopes are dotted with hardy shrubs and patches of snow, and the ascent looks treacherous.",
+    "landmarks": [
+      "a yeti cave",
+      "a weather-predicting mountain goat. Hmm... it's lying down",
+      "a hot spring",
+      "a dragon lair",
+      "a wish-granting summit"
+    ]
+  },
+  {
+    "name": "beach",
+    "description": "You find yourself on a sandy beach, with gentle waves lapping at the shore. Seagulls wheel overhead, their cries mingling with the sound of the surf. The air is salty and fresh, and the sun beats down warmly on your skin. A sense of serenity washes over you as you gaze out at the endless expanse of the ocean.",
+    "landmarks": [
+      "the ruins of a sandcastle kingdom",
+      "a bank of ocean next to a sea of sand",
+      "a griffin-shaped hole",
+      "a seashell orchestra",
+      "a dolphin dance party"
+    ]
+  },
+  {
+    "name": "desert",
+    "description": "You are lost in a vast desert, with dunes stretching out in every direction as far as the eye can see. The sun beats down mercilessly, and the heat shimmers off the sand in waves. There is no sign of life except for the occasional scuttle of a lizard or the distant cry of a desert bird.",
+    "landmarks": [
+      "a mirage of oases",
+      "sessions",
+      "not very much",
+      "a camel caravan. It's a static",
+      "bones and stuff"
+    ]
+  },
+  {
+    "name": "ruins",
+    "description": "You stumble upon a set of ancient ruins, their crumbling walls bearing silent witness to the passage of time. Vines and moss cling to the weathered stones, and the air is heavy with the weight of history. You can almost hear the echoes of a forgotten civilization as you explore the deserted corridors and crumbling archways.",
+    "landmarks": [
+      "a ghostly banquet hall",
+      "an unsettling tomb",
+      "a passage",
+      "a statue garden",
+      "a haunting melody"
+    ]
+  },
+  {
+    "name": "cemetery",
+    "description": "You find yourself in a quiet cemetery, with rows of weathered headstones standing sentinel over the graves. The air is still and heavy, and the only sound is the whisper of the wind through the trees. A sense of melancholy hangs in the air as you walk among the graves, reading the names and dates etched into the stone.",
+    "landmarks": [
+      "a ghostly tea party",
+      "a weeping willow sanctuary",
+      "a hidden mausoleum",
+      "a haunted crypt",
+      "a spectral choir"
+    ]
+  },
+  {
+    "name": "library",
+    "description": "You step into a grand library, its shelves lined with dusty tomes and ancient scrolls. The air is thick with the smell of old paper and leather bindings, and shafts of sunlight filter through stained glass windows, casting colorful patterns on the polished wooden floors. You can't help but feel a sense of awe at the vast repository of knowledge surrounding you.",
+    "landmarks": [
+      "dust",
+      "a magical reading nook",
+      "a librarian's ghost's corpse's ectoplasm's residue",
+      "well, bookshelves. Obviously",
+      "a treasure map book made out of receipts. Its content has faded"
+    ]
+  },
+  {
+    "name": "castle",
+    "description": "You find yourself in the courtyard of a massive castle, its imposing walls rising high above you. Flags flutter in the breeze, and the sound of clashing swords drifts from the training grounds. The castle grounds are alive with activity, with knights in shining armor bustling about and servants scurrying to and fro.",
+    "landmarks": [
+      "a turret",
+      "a magical mystery moat",
+      "a throne room of thrones",
+      "a knight's training ground",
+      "the royal jester's stage"
+    ]
+  },
+  {
+    "name": "dungeon",
+    "description": "You descend into a dark and forbidding dungeon, its stone walls damp with moisture and streaked with grime. The air is thick and musty, and the only sounds are the drip of water from unseen leaks and the distant skittering of rats. Shadows dance on the walls as you navigate the twisting passages and dimly lit corridors.",
+    "landmarks": [
+      "a treasure-hoarding dragon",
+      "a maze of traps",
+      "a ribcage xylophone. Actually I think it's a glockenspiel",
+      "more dungeon",
+      "something DANK"
+    ]
+  },
+  {
+    "name": "volcano",
+    "description": "You find yourself at the edge of a smoldering volcano, its crater bubbling and steaming ominously. The air is thick with sulfur, and the ground beneath your feet is hot to the touch. Lava flows sluggishly down the mountainside, casting an eerie orange glow over the barren landscape. You can't help but feel a sense of impending danger as you gaze into the roiling depths below.",
+    "landmarks": [
+      "a lava waterfall. A lavafall",
+      "a fiery phoenix nest, long deserted",
+      "a magma chamber",
+      "a volcanic crystal cavern",
+      "a steam geyser"
+    ]
+  },
+  {
+    "name": "waterfall",
+    "description": "You stand at the foot of a majestic waterfall, its waters cascading down from high above in a torrent of foam and spray. The air is cool and refreshing, and the sound of rushing water fills your ears. Rainbows dance in the mist as the sunlight filters through, creating a dazzling display of color and light.",
+    "landmarks": [
+      "a mermaid grotto",
+      "a hidden cave behind the falls",
+      "a brutal plungepool",
+      "a rainbow bridge",
+      "water... Unsuprising, really"
+    ]
+  },
+  {
+    "name": "marketplace",
+    "description": "You find yourself in a bustling marketplace, where merchants from all over gather to sell their wares. The air is filled with the scent of spices and the sound of haggling, as people barter for goods of all kinds.",
+    "landmarks": [
+      "a mystical potion cart",
+      "a fortune-teller's tent",
+      "a juggler's square",
+      "a magical artifact stall",
+      "a dragonfruit stand"
+    ]
+  },
+  {
+    "name": "river",
+    "description": "You come across a gentle river, its waters flowing peacefully downstream. The banks are lined with lush vegetation, and the occasional splash of a fish breaks the surface of the water.",
+    "blurb": "Gorgeous. It's nae Clyde though.",
+    "landmarks": [
+      "a mermaid's lagoon",
+      "a hidden pirate's cove",
+      "a singing siren rock",
+      "a sunken treasure chest",
+      "an oxbow lake. Your geography lessons taught you well, traveller"
+    ]
+  },
+  {
+    "name": "mountaintop",
+    "description": "You reach the summit of a towering mountain, where the air is thin and the view stretches out for miles. Below you, clouds drift lazily by, and the world seems small and insignificant from your lofty vantage point.",
+    "landmarks": [
+      "a cloud kingdom",
+      "a celestial observatory",
+      "a dragon bones",
+      "a star gazing platform. It's the ground",
+      "a misty abyss"
+    ]
+  },
+  {
+    "name": "seaside",
+    "description": "You find yourself on a tranquil seaside cliff, with the sound of waves crashing against the rocks below. Seabirds circle overhead, and the salty breeze fills your lungs as you gaze out at the endless expanse of the ocean.",
+    "landmarks": [
+      "a cove of sorts",
+      "a pirate shipwreck",
+      "an looted treasure chest in the sand",
+      "a sea serpent's lair",
+      "a beached whale. Aye, it's deed"
+    ]
+  },
+  {
+    "name": "alleyway",
+    "description": "You wander into a dimly lit alleyway, where shadows cling to the walls and the air is heavy with the scent of decay. The sounds of distant footsteps echo off the cobblestones, and you can't shake the feeling that you're being watched.",
+    "landmarks": [
+      "a hidden thief's den",
+      "an inexplicable magical portal",
+      "a vast treasure chest. It appears to have belonged to a grandwizard by the name of \"Biffa\"",
+      "a mysterious alley cat",
+      "soiled syringes"
+    ]
+  },
+  {
+    "name": "park",
+    "description": "You enter a peaceful park, where trees rustle in the breeze and birds sing in the branches. The scent of flowers fills the air, and the sound of children's laughter drifts across the grassy meadows.",
+    "landmarks": [
+      "a fountain",
+      "a fairy's ring",
+      "a hidden gnome village",
+      "a butterfly sanctuary",
+      "a singing tree"
+    ]
+  },
+  {
+    "name": "school",
+    "description": "You find yourself outside a bustling schoolyard, where children play and laugh under the watchful eye of their teachers. The sound of bells fills the air as classes change, and the promise of knowledge hangs thick in the air.",
+    "landmarks": [
+      "a magical library",
+      "a talking school bell",
+      "a treasure chest in the playground",
+      "a hidden cave behind the gymnasium",
+      "a potion-making classroom"
+    ]
+  },
+  {
+    "name": "hospital",
+    "description": "You step into a sterile hospital room, where the air is heavy with the smell of disinfectant. Nurses bustle about, tending to patients in various states of illness and injury, and the steady beep of monitors provides a constant background noise.",
+    "landmarks": [
+      "a healing crystal garden",
+      "a secret wing",
+      "a raided medicine cabinet",
+      "a talking medical equipment",
+      "a machine that goes *PING*"
+    ]
+  },
+  {
+    "name": "concert_hall",
+    "description": "You enter a grand concert hall, where the air is alive with the sound of music. The stage is bathed in light, and the orchestra plays with passion and precision, filling the room with beautiful melodies.",
+    "landmarks": [
+      "a maestro's podium",
+      "a magical sound amplifier",
+      "a hidden musical score",
+      "a dancing floor, dancing away",
+      "a talking instrument section"
+    ]
+  },
+  {
+    "name": "cinema",
+    "description": "You find yourself in a darkened cinema, where the flicker of the projector casts dancing shadows on the screen. The scent of popcorn fills the air, and the audience sits in rapt attention as the story unfolds before them.",
+    "landmarks": [
+      "a magical film reel",
+      "chairs and whatnot",
+      "a popcorn machine",
+      "a discarded bag of goose nipple chips",
+      "a talking movie screen... A movie screen"
+    ]
+  },
+  {
+    "name": "graveyard",
+    "description": "You wander through a quiet graveyard, where tombstones dot the landscape like silent sentinels. The air is heavy with the scent of flowers and the sound of rustling leaves, and a sense of peace settles over you as you pay your respects to the departed.",
+    "landmarks": [
+      "a ghostly tea party",
+      "a sanctuary of willows that weep",
+      "a mausoleum",
+      "a crypt",
+      "at least one headstone"
+    ]
+  },
+  {
+    "name": "train_station",
+    "description": "You arrive at a train station, brimming with the hurried to-and-fro with bags and luggage. The air is acrid with the smog of steam & woodsmoke. The ground shakes with sound of trains rumbling on the tracks, and the promise of adventure hangs heavy in the air.",
+    "blurb": "By The Gods, traveller. What a sight! These monsters of bronze & iron must surely dwarfs any magic you've ever seen.",
+    "landmarks": [
+      "a magical ticket booth",
+      "Platform 9¾",
+      "a striking train conductor",
+      "a lively passenger's lifeless body",
+      "a ghostly train"
+    ]
+  },
+  {
+    "name": "office",
+    "description": "A sign read \"Ye Olde Officee\". But all you see is rows of goblins, fiercly clattering on small bizarre machines. A sharp wafted stench lingers. \"Cawfy\" the small enslaved green halflings seem to call it.",
+    "blurb": "What a bizarre place, traveller. All dey got tae dae's work.",
+    "landmarks": [
+      "a magical office chair, partially hidden under a desk",
+      "a hidden office nook",
+      "a thing",
+      "a coffee bean garden",
+      "a possessed spreadsheet"
+    ]
+  },
+  {
+    "name": "storehouse",
+    "description": "You stand as an ant in this leviathan of storehouse. Shelves stretch to the rafters and chests are stacked high.",
+    "blurb": "If there was ever a place to search, it'd be this one, traveller.",
+    "landmarks": [
+      "shelves and that",
+      "several windows",
+      "a massive problem",
+      "a magical inventory scroll",
+      "a ghostly forklift"
+    ]
+  },
+  {
+    "name": "menagerie",
+    "description": "You've encountered what appears to be a mysterious abandoned zoo. The centaurs frolick behind aging bars, the werewolves sleep in the elephant pens and gryphons soar overhead.",
+    "blurb": "By the Gods, traveller, this place be writhing with wondrous creatures!",
+    "landmarks": [
+      "cages upon cages of nothing",
+      "a hidden habitat",
+      "a talking parrot",
+      "a breeding ground",
+      "a coarsely-beheaded lion tamer"
+    ]
+  },
+  {
+    "name": "amusement_park",
+    "description": "You arrive at a bustling amusement park, where rides whir and lights flash in every direction. The air is filled with the sound of laughter and screams of delight, and the smell of cotton candy and funnel cakes wafts through the air as people enjoy the thrills and excitement of the park.",
+    "blurb": "What a magical place this must be!",
+    "landmarks": [
+      "a bonfire next to a wooden rollercoaster",
+      "chips and brown sauce",
+      "a meadsmith's stand",
+      "a sketchy sketcher of caricatures",
+      "Buckfast Billy's Breakfast Bar"
+    ]
+  },
+  {
+    "name": "circus",
+    "description": "You step into a colorful circus tent, where the air is alive with the sound of music and the smell of popcorn. Acrobats perform daring feats high above the crowd, and clowns make children laugh with their antics, creating an atmosphere of magic and wonder.",
+    "blurb": "It appears to host a superlative freakshow.",
+    "landmarks": [
+      "a bearded-lady's nook",
+      "an ethereal sense of happiness",
+      "wains e'rywhere",
+      "things of a circesian nature",
+      "some stuff"
+    ]
+  },
+  {
+    "name": "airport",
+    "description": "You find yourself in a bustling airport terminal, where people rush to catch their flights and say goodbye to loved ones. The air is filled with the sound of announcements and the smell of jet fuel, as travelers hurry to catch their ride. The air is thick with the scent of sweat and metal, and the sound of announcements echoes off the tiled walls as you navigate the labyrinthine tunnels.",
+    "blurb": "Mechanical dragons aplenty.",
+    "landmarks": [
+      "an engine of sorts",
+      "planes and that",
+      "all manner of nothing",
+      "a discerning impression of the world warming",
+      "lots and lots of smoke"
+    ]
+  },
+  {
+    "name": "church",
+    "description": "You step into a quiet church, where the air is heavy with the scent of incense and the sound of whispered prayers. Sunlight filters through stained glass windows, casting colorful patterns on the polished pews, and a sense of peace settles over you as you kneel in quiet contemplation.",
+    "blurb": "You should check that place oot, traveller. Me? Am banned.",
+    "landmarks": [
+      "an extra extravagant, excommunicated ex-expert who happens to be your ex",
+      "things of a churchy-nature",
+      "some novels",
+      "rows of pew-pew-pews",
+      "a tiny bath on stilts"
+    ]
+  },
+  {
+    "name": "garden",
+    "description": "You find yourself in a lush garden, where flowers bloom and butterflies flit from blossom to blossom. The air is heavy with the scent of roses and the sound of buzzing bees, and the gentle rustle of leaves fills the air as you wander through the winding paths.",
+    "blurb": "A well-trodden but well-tended lady's garden, just like ma granny's.",
+    "landmarks": [
+      "a well-trimmed bush",
+      "a less-than-impressive garlic bulb",
+      "a pile of unpaired secateurs",
+      "an outhouse",
+      "a wisecracking will o' the wisp"
+    ]
+  }
 ]

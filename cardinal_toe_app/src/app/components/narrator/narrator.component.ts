@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges } from
 import { CommonModule } from '@angular/common';
 import { DialogModule } from 'primeng/dialog';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
-import { RoutesService } from '../../services/routes/routes.service';
+import { RoutesService } from '../../services/LocationServices/routes/routes.service';
 
 import { NewLocationMenuComponent } from '../new-location-menu/new-location-menu.component';
 import { CurrentLocationMenuComponent } from '../current-location-menu/current-location-menu.component';

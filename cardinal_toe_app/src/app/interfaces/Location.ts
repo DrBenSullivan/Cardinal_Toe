@@ -1,3 +1,7 @@
+import { Item } from "./Item";
+import { ItemTarget } from "./Item-Target";
+import { Landmark } from "./Landmark";
+
 export interface Location {
     name: string,
     description: string,
@@ -7,10 +11,11 @@ export interface Location {
     isFinalLocation: boolean,
     routes: Location[],
     deviationValue: number,
-    landmarks: string[],
+    landmarks: Landmark[],
 
-    // To be developed
+    // For future extensions.
     events?: object[],
-    people?: number[],
-    items?: number[]
+    people?: object[],
+    items?: Item[],
+    itemTargets?: ItemTarget[]
 }

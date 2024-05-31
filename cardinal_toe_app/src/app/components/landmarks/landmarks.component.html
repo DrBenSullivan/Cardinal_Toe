@@ -5,7 +5,7 @@
 
   <ng-container *ngSwitchCase="!previouslySearched && currentLocation.landmarks.length !== 0">
     <p *ngFor="let landmark of currentLocation.landmarks; index as i">
-      {{ landmarksStringArray[i] }}<span (click)="op.toggle($event)" class="item">{{ landmark }}</span>!
+      {{ landmarksStringArray[i] }}<span (click)="op.toggle($event)" class="item">{{ landmark.name }}</span>!
     </p>
   </ng-container>
 
@@ -16,7 +16,7 @@
   <ng-container *ngSwitchCase="previouslySearched && currentLocation.landmarks.length !== 0">
     <p>You recognise this place. Here, you previously found:</p>
     <ul>
-      <li *ngFor="let landmark of currentLocation.landmarks"><span (click)="op.toggle($event)" class="item">{{ landmark | titlecase }}</span>.</li>
+      <li *ngFor="let landmark of currentLocation.landmarks"><span (click)="op.toggle($event)" class="item">{{ landmark.name | titlecase }}</span>.</li>
     </ul>
   </ng-container>
 </ng-container>

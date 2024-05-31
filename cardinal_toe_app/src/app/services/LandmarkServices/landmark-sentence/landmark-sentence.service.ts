@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { NumberRandomiserService } from '../number-randomiser/number-randomiser.service';
+import { NumberRandomiserService } from '../../UtilityServices/number-randomiser/number-randomiser.service';
 
 @Injectable({
   providedIn: 'root'

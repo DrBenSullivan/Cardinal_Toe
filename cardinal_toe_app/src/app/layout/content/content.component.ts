@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '../../interfaces/Location';
-import { NarratorComponent } from '../../components/narrator/narrator.component';
 import { MapGeneratorService } from '../../services/map-generator/map-generator.service';
-import { SessionStateService } from '../../services/session-state/session-state.service';
+import { SessionStateService } from '../../services/UtilityServices/session-state/session-state.service';
 import { VictoryComponent } from '../../pages/victory/victory.component';
 import { NgSwitch, NgSwitchCase } from '@angular/common';
+import { NarratorComponent } from '../../components/narrator/narrator.component';
 
 
 @Component({

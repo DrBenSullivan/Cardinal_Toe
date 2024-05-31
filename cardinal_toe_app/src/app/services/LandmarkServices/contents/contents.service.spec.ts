@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { LocationDataService } from './location-data.service';
+import { ContentsService } from './contents.service';
 
-describe('LocationDataFetcherService', () => {
-  let service: LocationDataService;
+describe('ContentsService', () => {
+  let service: ContentsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(LocationDataService);
+    service = TestBed.inject(ContentsService);
   });
 
   it('should be created', () => {

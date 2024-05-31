@@ -1,9 +1,10 @@
 import { Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, TitleCasePipe } from '@angular/common';
-import { LandmarkSentenceService } from '../../services/landmark-sentence/landmark-sentence.service';
+import { LandmarkSentenceService } from '../../services/LandmarkServices/landmark-sentence/landmark-sentence.service';
 import { LandmarkMenuComponent } from '../landmark-menu/landmark-menu.component';
 import { OverlayPanel, OverlayPanelModule } from 'primeng/overlaypanel';
 import { Location } from '../../interfaces/Location';
+import { Landmark } from '../../interfaces/Landmark';
 
 
 @Component({
@@ -28,6 +29,7 @@ export class LandmarksComponent implements OnChanges {
       if(this.currentLocation.hasBeenSearched) {
         this.previouslySearched = true;
       }
+
       if (!this.currentLocation.hasBeenSearched){
         this.currentLocation.hasBeenSearched = true;
         this.landmarksStringArray = this.landmarkSentenceService.getSentences(this.currentLocation.landmarks.length);
