@@ -21,4 +21,6 @@
   </ng-container>
 </ng-container>
 
-<p-overlayPanel #op></p-overlayPanel>
+<p-overlayPanel #op>
+  <app-landmark-menu *ngIf="landmarkWithTarget" [landmarkWithTarget]="landmarkWithTarget"></app-landmark-menu>
+</p-overlayPanel>

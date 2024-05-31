@@ -19,6 +19,7 @@ export class LandmarksComponent implements OnChanges {
   @Input() currentLocation!: Location;
   previouslySearched: boolean = false;
   landmarksStringArray!: string[];
+  landmarkWithTarget?: Landmark;
 
   constructor (
     private landmarkSentenceService: LandmarkSentenceService,
@@ -33,6 +34,13 @@ export class LandmarksComponent implements OnChanges {
       if (!this.currentLocation.hasBeenSearched){
         this.currentLocation.hasBeenSearched = true;
         this.landmarksStringArray = this.landmarkSentenceService.getSentences(this.currentLocation.landmarks.length);
+      }
+
+      for (let landmark of this.currentLocation.landmarks){
+        if (landmark.contents)
+          {
+            this.landmarkWithTarget = landmark!;
+          }
       }
     }
   }

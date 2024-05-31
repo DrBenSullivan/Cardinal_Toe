@@ -14,17 +14,17 @@ export class ContentsService {
     private numberRandomiser: NumberRandomiserService
   ) { }
 
-  getItemTarget(): ItemTarget {
+  getItemTarget(): ItemTarget[] {
     const randomIndex = this.numberRandomiser.getRandomRoundedNumber(ItemTargetJSON.length) - 1;
     const JSONItemTarget = ItemTargetJSON[randomIndex];
-    const _requiredItem = this.getRequiredItem(JSONItemTarget.alias)
-    return {
+    const _requiredItem = this.getRequiredItem(JSONItemTarget.alias);
+    return [{
       targetAlias: JSONItemTarget.alias,
       name: JSONItemTarget.name,
       description: JSONItemTarget.description,
       requiredItemAlias: _requiredItem,
       isCompleted: false
-    }
+    }]
   }
 
   // Gets the item according to the input itemTarget alias.

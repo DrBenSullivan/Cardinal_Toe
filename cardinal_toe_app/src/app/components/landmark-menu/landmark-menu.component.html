@@ -1,26 +1,7 @@
-<div class="flex flex-column gap-3 w-25rem">
-    <div>
-        <span class="font-medium text-900 block mb-2">Share this document</span>
-            <input pInputText value="https://primeng.org/12323ff26t2g243g423g234gg52hy25XADXAG3" readonly class="w-25rem" />
+<ng-container *ngIf="currentItemTarget">
+    <div *ngIf="currentItemTarget" class="wrapper">
+        <h3>{{ landmarkWithTarget.name | titlecase }}</h3>
+        <p>Within the {{ landmarkWithTarget.name }} you find {{ currentItemTarget.name }}</p>
+        <p>{{ currentItemTarget.description }} </p>
     </div>
-    <div>
-        <span class="font-medium text-900 block mb-2">Invite Member</span>
-        <div class="flex">
-        </div>
-    </div>
-    <div>
-        <span class="font-medium text-900 block mb-2">Team Members</span>
-        <ul class="list-none p-0 m-0 flex flex-column gap-3">
-            <li>
-                <div>
-                    <span class="font-medium">Hi</span>
-                    <div class="text-sm text-color-secondary">Hi</div>
-                </div>
-                <div class="flex align-items-center gap-2 text-color-secondary ml-auto text-sm">
-                    <span>A GUY</span>
-                    <i class="pi pi-angle-down"></i>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
+</ng-container>

@@ -63,7 +63,8 @@ export class LocationGeneratorService {
     for (let i = 0; i < locationDetails.landmarks.length; i++)
       {
         locationLandmarks.push({
-          name: locationDetails.landmarks[i]
+          name: locationDetails.landmarks[i],
+          contents: []
         })
       }
 

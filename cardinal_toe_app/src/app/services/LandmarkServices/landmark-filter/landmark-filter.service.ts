@@ -63,6 +63,7 @@ export class LandmarkFilterService {
       for (let index of filteredIndices) {
         const _landmark: Landmark = {
           name: location.landmarks[index].name,
+          contents: []
         }
         filteredArr.push(_landmark);
       }

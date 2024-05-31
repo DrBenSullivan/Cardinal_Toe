@@ -1,8 +1,8 @@
 [
   {
     "alias": "gate",
-    "name": "delapidated old gate",
-    "description": "You might have been able to break through this ancient door if your arms were not so withered and pasty. Behind it lies a makeshift cell. There seems to be some form of troll cowering in corner behind it. You call out to it, but it only grumbles, sweatily and mentions some form of key.",
+    "name": "a delapidated old gate",
+    "description": "You might have been able to break through this ancient door if your arms were not so withered and pasty. Behind it lies a makeshift cell. There seems to be some form of troll cowering in corner behind it. You call out to it, but it only grumbles, sweatily and mentions some form of key...",
     "requiredItemAlias": "key"
   }
 ]

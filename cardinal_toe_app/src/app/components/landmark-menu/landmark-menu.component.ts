@@ -1,14 +1,26 @@
-import { Component } from '@angular/core';
-import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { Component, Input, OnChanges } from '@angular/core';
+import { ItemTarget } from '../../interfaces/Item-Target';
+import { Landmark } from '../../interfaces/Landmark';
+import { NgIf, TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-landmark-menu',
   standalone: true,
-  imports: [ OverlayPanelModule ],
+  imports: [ TitleCasePipe, NgIf ],
   templateUrl: './landmark-menu.component.html',
   styleUrl: './landmark-menu.component.scss'
 })
 
-export class LandmarkMenuComponent {
+export class LandmarkMenuComponent implements OnChanges {
+  @Input() landmarkWithTarget!: Landmark; 
+
+  currentItemTarget!: ItemTarget;
+
+  constructor() {}
+  
+  ngOnChanges() {
+    this.currentItemTarget = this.landmarkWithTarget.contents[0];
+  }
+
 
 }
