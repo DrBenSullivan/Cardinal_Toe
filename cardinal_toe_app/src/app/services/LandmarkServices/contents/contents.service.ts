@@ -22,7 +22,7 @@ export class ContentsService {
       targetAlias: JSONItemTarget.alias,
       name: JSONItemTarget.name,
       description: JSONItemTarget.description,
-      requiredItemAlias: _requiredItem,
+      requiredItem: _requiredItem,
       isCompleted: false
     }]
   }

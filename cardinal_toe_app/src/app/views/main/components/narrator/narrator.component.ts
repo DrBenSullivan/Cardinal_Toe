@@ -2,15 +2,15 @@ import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges } from
 import { CommonModule } from '@angular/common';
 import { DialogModule } from 'primeng/dialog';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
-import { RoutesService } from '../../services/LocationServices/routes/routes.service';
+import { RoutesService } from '../../../../services/LocationServices/routes/routes.service';
 
 import { NewLocationMenuComponent } from '../new-location-menu/new-location-menu.component';
 import { CurrentLocationMenuComponent } from '../current-location-menu/current-location-menu.component';
 
-import { Location } from '../../interfaces/Location';
+import { Location } from '../../../../interfaces/Location';
 
-import { ParagraphPipe } from '../../pipes/paragraph/paragraph.pipe';
-import { SpacedPipe } from '../../pipes/spaced/spaced.pipe';
+import { ParagraphPipe } from '../../../../pipes/paragraph/paragraph.pipe';
+import { SpacedPipe } from '../../../../pipes/spaced/spaced.pipe';
 
 @Component({
   selector: 'app-narrator',
@@ -34,7 +34,8 @@ export class NarratorComponent implements OnChanges {
   @Output() nextLocation = new EventEmitter<Location>;
 
   possibleRoutes!: Location[];
-  selectedRoute!: Location;
+  selectedRoute?: Location;
+  routesText!: string;
 
   constructor (
     private routesService: RoutesService
@@ -42,7 +43,6 @@ export class NarratorComponent implements OnChanges {
 
   newLocationMenuDisplay: boolean = false;
   currentLocationMenuDisplay: boolean = false;
-  routesText: string = "";
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes) {
@@ -58,6 +58,7 @@ export class NarratorComponent implements OnChanges {
 
   changeNewLocationMenuDisplay (event: boolean) {
     this.newLocationMenuDisplay = event;
+    this.selectedRoute = undefined;
   }
 
   goToLocation (route: Location) {
@@ -71,6 +72,7 @@ export class NarratorComponent implements OnChanges {
 
   changeCurrentLocationMenuDisplay (event: boolean) {
     this.currentLocationMenuDisplay = event;
+    this.selectedRoute = undefined;
   }
 
 }

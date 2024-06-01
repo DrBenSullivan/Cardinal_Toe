@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LocationMenuComponent } from './new-location-menu.component';
+import { NewLocationMenuComponent } from '../../components/new-location-menu/new-location-menu.component';
 
 describe('LocationMenuComponent', () => {
-  let component: LocationMenuComponent;
-  let fixture: ComponentFixture<LocationMenuComponent>;
+  let component: NewLocationMenuComponent;
+  let fixture: ComponentFixture<NewLocationMenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LocationMenuComponent]
+      imports: [NewLocationMenuComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(LocationMenuComponent);
+    fixture = TestBed.createComponent(NewLocationMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,44 @@
+<p-dialog styleClass="current-location-menu-dialog" [(visible)]="display" [modal]=true [closable]=false [draggable]=false>
+        
+    <div class="grid-container">
+
+        <div class="grid-image">
+            <img src="../../../assets/images/locations/{{selectedRoute.name}}.jpg" class="framed300 dark-border2"/>
+        </div>
+
+        <div class="grid-body">
+            <div class="grid-title"><h2 class="italic underlined">The {{selectedRoute.name | spaced | titlecase}}</h2></div>
+            <div class="grid-text"><p class="local-text">{{selectedRoute.blurb ?? selectedRoute.description}}</p></div>
+        </div>
+
+        <div class="grid-console">
+            <p *ngIf="isLandmarksDisplayDisabled; else landmarks">I wonder if there is anything of interest nearby... <br>What would you like to do?</p>
+            <ng-template #landmarks>
+                <app-landmarks 
+                    [currentLocation]="selectedRoute">
+                </app-landmarks>
+            </ng-template>   
+        </div>
+
+        <div class="wrapper grid-controls">
+            <!-- Search button in control panel, if currentLocation, button enabled. -->
+            <p-button 
+                styleClass="popup-button other" 
+                type="button" 
+                label="Search" 
+                [disabled]="!isLandmarksDisplayDisabled"
+                (click)="searchLocation()">
+            </p-button>
+        
+            <!-- Close pop-up button in control panel -->
+            <p-button 
+                styleClass="popup-button close" 
+                type="button" 
+                label="Close" 
+                (click)="closePopup()">
+            </p-button>
+        </div>
+
+    </div>
+
+</p-dialog>

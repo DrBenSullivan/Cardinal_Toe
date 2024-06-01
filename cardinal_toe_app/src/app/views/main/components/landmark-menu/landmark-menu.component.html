@@ -1,0 +1,34 @@
+<p-dialog styleClass="landmark-menu-dialog" [(visible)]="display" [closable]=false [draggable]=false>
+
+    <div class="grid-container">
+    
+        <div class="grid-image">
+            <img class="image framed100 dark-border2" src="../../../../../assets/images/itemTargets/{{ currentItemTarget.targetAlias }}.jpg"/>
+        </div>
+
+        <div class="grid-body">
+            <div class="grid-title">
+                <h3 class="italic underlined">{{ currentItemTarget.name | titlecase }}</h3>
+            </div>
+    
+            <div class="grid-text">
+                <p>Near {{ landmarkWithTarget.name }}, you find <span class="italic">{{ currentItemTarget.name }}</span>.</p>
+                <p>{{ currentItemTarget.description | paragraph }}</p>      
+            </div>
+        </div>    
+        
+        <div class="grid-console">
+            <p>Hmmm, I wonder if you can find this <span class="item">{{ currentItemTarget.requiredItem.itemAlias }}</span>, traveller...</p>
+        </div>
+
+        <div class="grid-controls">
+            <p-button
+                styleClass="popup-button exit" 
+                type="button" 
+                label="Close" 
+                (click)="closePopup()">
+            </p-button>
+        </div>
+    </div>
+
+</p-dialog>

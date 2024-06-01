@@ -1,9 +1,9 @@
 import { Input, Component, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
-import { Location } from '../../interfaces/Location';
+import { Location } from '../../../../interfaces/Location';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { NgFor, NgIf, TitleCasePipe } from '@angular/common';
-import { SpacedPipe } from '../../pipes/spaced/spaced.pipe';
+import { SpacedPipe } from '../../../../pipes/spaced/spaced.pipe';
 
 
 @Component({

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Location } from '../../interfaces/Location';
-import { LocationGeneratorService } from '../LocationServices/location-generator/location-generator.service';
-import { NumberRandomiserService } from '../UtilityServices/number-randomiser/number-randomiser.service';
+import { Location } from '../../../interfaces/Location';
+import { LocationGeneratorService } from '../../LocationServices/location-generator/location-generator.service';
+import { NumberRandomiserService } from '../../UtilityServices/number-randomiser/number-randomiser.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class MapGeneratorService {
    * @readonly
    * @constant
    */
-  private readonly DEVIATION_LIMIT = 3;
+  private readonly DEVIATION_LIMIT = 1;
   /**
    * Sets the limit of the number of Locations (i.e. distance) that can be generated in the Location tree
    * before reaching the _'goal Location'_.
@@ -24,7 +24,7 @@ export class MapGeneratorService {
    * @readonly
    * @constant
    */
-  private readonly DEPTH_LIMIT = 4;
+  private readonly DEPTH_LIMIT = 2;
 
   rootLocation!: Location;
 

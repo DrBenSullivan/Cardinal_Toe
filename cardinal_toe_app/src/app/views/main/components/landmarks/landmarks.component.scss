@@ -1,0 +1,101 @@
+ul {
+    margin-left: 30px;
+}
+
+li {
+    display: list-item;
+}
+
+app-landmark-menu {
+    overflow: visible;
+    width: 200vw;
+    height: 200vh;
+}
+
+.wrapper {
+    overflow-y: scroll;
+}
+
+
+::ng-deep .new-location-menu-dialog{
+    width: 80vw;
+    height: 80vh;
+    color: #deb887;
+    padding: 16px 16px 24px 16px;
+    background-color: #6e3030;
+    border: 4px solid #371818;
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+}
+
+.grid-container {
+    height: 100%;
+    display: grid;
+    gap: 16px;
+    overflow-x: hidden;
+    transition: height 0.5s;
+    grid-template: 
+        "g-image g-body" 300px
+        "g-console g-console" auto
+        "g-controls g-controls" max-content / minmax(min-content, max-content) auto;
+}
+
+.grid-body {
+    grid-area: g-body;
+    display: grid;
+    row-gap: 16px;
+    grid-template:
+        "g-title" max-content
+        "g-text" auto / auto;
+}
+
+
+.grid-console {
+    grid-area: g-console;
+    padding: 8px;
+    border: 4px inset #371818;
+    background-color: #4d2121;
+    overflow-y: auto;
+}
+
+.grid-image {
+    grid-area: g-image;
+}
+
+.grid-title {
+    grid-area: g-title;
+    display: flex;
+    align-items: center;
+}
+
+.grid-text {
+    grid-area: g-text;
+    overflow-y: auto;
+}
+
+.grid-controls {
+    max-height: fit-content;
+    grid-area: g-controls;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.local-text {
+    color: #deb887b0;
+    margin-top: 4px;
+}
+
+p-button {
+
+    &.other {
+        margin-right: 0;
+    }
+
+    &.close {
+        margin-left: 0;
+    }
+
+}

@@ -4,6 +4,6 @@ export interface ItemTarget {
     targetAlias: string,
     name: string,
     description: string,
-    requiredItemAlias: Item,
+    requiredItem: Item,
     isCompleted: boolean,
 }

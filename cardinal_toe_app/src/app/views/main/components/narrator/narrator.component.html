@@ -27,15 +27,15 @@
 
 <app-new-location-menu 
     *ngIf="selectedRoute"
-    [display]="newLocationMenuDisplay"
     [selectedRoute]="selectedRoute"
+    [display]="newLocationMenuDisplay"
     (newLocation)="goToLocation($event)"
     (changeDisplay)="changeNewLocationMenuDisplay($event)">
 </app-new-location-menu>
 
 <app-current-location-menu 
     *ngIf="selectedRoute"
-    [display]="currentLocationMenuDisplay"
     [selectedRoute]="selectedRoute"
+    [display]="currentLocationMenuDisplay"
     (changeDisplay)="changeCurrentLocationMenuDisplay($event)">
 </app-current-location-menu>

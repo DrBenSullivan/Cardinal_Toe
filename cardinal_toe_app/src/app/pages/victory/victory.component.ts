@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Location } from '../../interfaces/Location';
-import { MapGeneratorService } from '../../services/map-generator/map-generator.service';
+import { MapGeneratorService } from '../../services/LocationServices/map-generator/map-generator.service';
 import { ButtonModule } from 'primeng/button';
 
 @Component({

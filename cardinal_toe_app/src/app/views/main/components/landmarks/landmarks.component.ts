@@ -1,29 +1,31 @@
-import { Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, TitleCasePipe } from '@angular/common';
-import { LandmarkSentenceService } from '../../services/LandmarkServices/landmark-sentence/landmark-sentence.service';
+import { LandmarkSentenceService } from '../../../../services/LandmarkServices/landmark-sentence/landmark-sentence.service';
 import { LandmarkMenuComponent } from '../landmark-menu/landmark-menu.component';
-import { OverlayPanel, OverlayPanelModule } from 'primeng/overlaypanel';
-import { Location } from '../../interfaces/Location';
-import { Landmark } from '../../interfaces/Landmark';
+import { Location } from '../../../../interfaces/Location';
+import { Landmark } from '../../../../interfaces/Landmark';
+import { DialogModule } from 'primeng/dialog';
 
 
 @Component({
   selector: 'app-landmarks',
   standalone: true,
-  imports: [ NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, TitleCasePipe, LandmarkMenuComponent, OverlayPanelModule],
+  imports: [ NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, TitleCasePipe, LandmarkMenuComponent, DialogModule],
   templateUrl: './landmarks.component.html',
   styleUrl: './landmarks.component.scss'
 })
 export class LandmarksComponent implements OnChanges {
-  @ViewChild('op') op!: OverlayPanel;
   @Input() currentLocation!: Location;
-  previouslySearched: boolean = false;
   landmarksStringArray!: string[];
   landmarkWithTarget?: Landmark;
+
 
   constructor (
     private landmarkSentenceService: LandmarkSentenceService,
   ) {}
+
+  landmarkMenuDisplay: boolean = false;
+  previouslySearched: boolean = false;
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes) {
@@ -42,6 +44,16 @@ export class LandmarksComponent implements OnChanges {
             this.landmarkWithTarget = landmark!;
           }
       }
+    }
+  }
+
+  changeLandmarkMenuDisplay(event: boolean) {
+    this.landmarkMenuDisplay = event;
+    for (let landmark of this.currentLocation.landmarks){
+      if (landmark.contents)
+        {
+          this.landmarkWithTarget = landmark!;
+        }
     }
   }
 }
