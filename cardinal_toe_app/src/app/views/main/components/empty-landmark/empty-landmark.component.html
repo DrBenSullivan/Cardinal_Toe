@@ -1,0 +1,15 @@
+@if (isSentenceProvided && !isLandmarkSearched) {
+    <p>{{ sentence }} <span class="location" (click)="searchLandmark()">{{ landmark.name }}</span>.</p>
+}
+
+@if (isSentenceProvided && isLandmarkSearched) {
+    <p>{{ landmark.name | titlecase }} is empty.</p>
+}
+
+@if (!isSentenceProvided && !isLandmarkSearched) {
+    <li><span class="location" (click)="searchLandmark()">{{ landmark.name | titlecase }}</span></li>
+}
+
+@if (!isSentenceProvided && isLandmarkSearched) {
+    <li>{{ landmark.name | titlecase }} is empty.</li>
+}

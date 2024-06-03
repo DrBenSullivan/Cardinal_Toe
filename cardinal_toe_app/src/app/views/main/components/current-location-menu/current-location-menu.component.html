@@ -12,12 +12,13 @@
         </div>
 
         <div class="grid-console">
-            <p *ngIf="isLandmarksDisplayDisabled; else landmarks">I wonder if there is anything of interest nearby... <br>What would you like to do?</p>
-            <ng-template #landmarks>
-                <app-landmarks 
-                    [currentLocation]="selectedRoute">
-                </app-landmarks>
-            </ng-template>   
+            @if (isLandmarksDisplayDisabled) {
+                <p>I wonder if there is anything of interest nearby...</p>
+            }
+            @else {
+                <app-landmarks [currentLocation]="selectedRoute"></app-landmarks>
+            }
+
         </div>
 
         <div class="wrapper grid-controls">

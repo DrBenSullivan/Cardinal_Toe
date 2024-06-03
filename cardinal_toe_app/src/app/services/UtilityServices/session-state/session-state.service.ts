@@ -58,9 +58,12 @@ export class SessionStateService {
   searchForItems(): void {
     for (let i = 0; i < this.sessionState.itemSearchList.length; i++){
       this.sessionState.itemSearchList[i].searchCountdown--;
-      if (this.sessionState.itemSearchList[i].searchCountdown--) {
+      console.log(this.sessionState.itemSearchList[i].itemAlias, " in searchList's countdown = ", this.sessionState.itemSearchList[i].searchCountdown);
+      if (this.sessionState.itemSearchList[i].searchCountdown == 0) {
+        console.log(this.sessionState.itemSearchList[i].itemAlias, " in searchList's countdown = 0, adding item to inventory");
         this.sessionState.inventory.push(this.sessionState.itemSearchList[i]);
         this.sessionState.itemSearchList.splice(i, 1);
+        console.log(this.sessionState.inventory[this.sessionState.inventory.length].itemAlias, " added to inventory");
       }
     }
   }

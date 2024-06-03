@@ -18,7 +18,7 @@
         </div>    
         
         <div class="grid-console">
-            <p>Hmmm, I wonder if you can find this <span class="item">{{ currentItemTarget.requiredItem.itemAlias }}</span>, traveller...</p>
+            <p>Hmmm, I wonder if you can find this <span class="item" (click)="addItemToSearchList(currentItemTarget.requiredItem)">{{ currentItemTarget.requiredItem.itemAlias }}</span>, traveller...</p>
         </div>
 
         <div class="grid-controls">

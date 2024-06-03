@@ -5,6 +5,8 @@ import { NgIf, TitleCasePipe } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { ParagraphPipe } from '../../../../pipes/paragraph/paragraph.pipe';
 import { DialogModule } from 'primeng/dialog';
+import { SessionStateService } from '../../../../services/UtilityServices/session-state/session-state.service';
+import { Item } from '../../../../interfaces/Item';
 
 @Component({
   selector: 'app-landmark-menu',
@@ -19,9 +21,18 @@ export class LandmarkMenuComponent implements OnChanges {
   @Input() landmarkWithTarget!: Landmark;
   @Output() changeDisplay = new EventEmitter<boolean>();
   currentItemTarget!: ItemTarget;
+
+  constructor(
+    private sessionStateService: SessionStateService
+  ){}
   
   ngOnChanges() {
     this.currentItemTarget = this.landmarkWithTarget.contents[0];
+  }
+
+  addItemToSearchList(_item: Item){
+    this.sessionStateService.addItemToSearchList(_item);
+    this.closePopup();
   }
 
   closePopup(){

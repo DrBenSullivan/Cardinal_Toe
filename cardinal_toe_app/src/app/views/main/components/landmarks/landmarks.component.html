@@ -1,29 +1,55 @@
-<ng-container [ngSwitch]="true">
-  <ng-container *ngSwitchCase="!previouslySearched && currentLocation.landmarks.length === 0">
+@if (!previouslySearched){
+
+  @if (currentLocation.landmarks.length > 0){
+
+    @if (landmarkWithTarget){
+      <p>{{ landmarksStringArray[0] }} <span class="location" (click)="changeLandmarkMenuDisplay(true)"> {{ landmarkWithTarget.name }}</span></p>
+    }
+    
+    @else {
+      @for (landmark of currentLocation.landmarks; track landmark; let index = $index) {
+        <app-empty-landmark [landmark]="landmark" [sentence]="landmarksStringArray[$index]"></app-empty-landmark>
+      }
+    }
+
+  }
+
+  @if (currentLocation.landmarks.length === 0){
     <p>You search high and low, traveller. But alas, you find nothing with which to interact.</p>
-  </ng-container>
+  }
 
-  <ng-container *ngSwitchCase="!previouslySearched && currentLocation.landmarks.length !== 0">
-    <p *ngFor="let landmark of currentLocation.landmarks; index as i">
-      {{ landmarksStringArray[i] }}<span (click)="landmarkMenuDisplay = !landmarkMenuDisplay" class="location">{{ landmark.name }}</span>!
-    </p>
-  </ng-container>
+}
 
-  <ng-container *ngSwitchCase="previouslySearched && currentLocation.landmarks.length === 0">
-    <p>You found nothing of interest last time you were here.</p>
-  </ng-container>
+@if (previouslySearched) {
 
-  <ng-container *ngSwitchCase="previouslySearched && currentLocation.landmarks.length !== 0">
-    <p>You recognise this place. Here, you previously found:</p>
+  @if (currentLocation.landmarks.length > 0){
+    <p>You recall this place vividly, last time you found:</p>
     <ul>
-      <li *ngFor="let landmark of currentLocation.landmarks"><span (click)="landmarkMenuDisplay = !landmarkMenuDisplay" class="location">{{ landmark.name | titlecase }}</span></li>
-    </ul>
-  </ng-container>
-</ng-container>
 
-<app-landmark-menu 
-  *ngIf="landmarkWithTarget"
-  [landmarkWithTarget]="landmarkWithTarget"
-  [display]="landmarkMenuDisplay"
-  (changeDisplay)="changeLandmarkMenuDisplay($event)">
-</app-landmark-menu>
+      @if (landmarkWithTarget){
+        <li><span class="location" (click)="changeLandmarkMenuDisplay(true)">{{ landmarkWithTarget.name | titlecase }}</span></li>
+      }
+
+      @else {
+        @for (landmark of currentLocation.landmarks; track landmark) {
+          <app-empty-landmark [landmark]="landmark"></app-empty-landmark>
+        }
+      }
+    </ul>
+  }
+
+  @if (currentLocation.landmarks.length === 0){
+    <p>You found nothing of interest when you were last here, traveller. You should move on...</p>
+  }
+
+}
+
+@if (landmarkWithTarget && landmarkMenuDisplay) {
+  <app-landmark-menu 
+    [landmarkWithTarget]="landmarkWithTarget"
+    [display]="landmarkMenuDisplay"
+    (changeDisplay)="changeLandmarkMenuDisplay($event)">
+  </app-landmark-menu>
+}
+
+
