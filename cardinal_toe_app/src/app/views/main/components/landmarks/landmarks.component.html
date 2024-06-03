@@ -1,0 +1,55 @@
+@if (!previouslySearched){
+
+  @if (currentLocation.landmarks.length > 0){
+
+    @if (landmarkWithTarget){
+      <p>{{ landmarksStringArray[0] }} <span class="location" (click)="changeLandmarkMenuDisplay(true)"> {{ landmarkWithTarget.name }}</span></p>
+    }
+    
+    @else {
+      @for (landmark of currentLocation.landmarks; track landmark; let index = $index) {
+        <app-empty-landmark [landmark]="landmark" [sentence]="landmarksStringArray[$index]"></app-empty-landmark>
+      }
+    }
+
+  }
+
+  @if (currentLocation.landmarks.length === 0){
+    <p>You search high and low, traveller. But alas, you find nothing with which to interact.</p>
+  }
+
+}
+
+@if (previouslySearched) {
+
+  @if (currentLocation.landmarks.length > 0){
+    <p>You recall this place vividly, last time you found:</p>
+    <ul>
+
+      @if (landmarkWithTarget){
+        <li><span class="location" (click)="changeLandmarkMenuDisplay(true)">{{ landmarkWithTarget.name | titlecase }}</span></li>
+      }
+
+      @else {
+        @for (landmark of currentLocation.landmarks; track landmark) {
+          <app-empty-landmark [landmark]="landmark"></app-empty-landmark>
+        }
+      }
+    </ul>
+  }
+
+  @if (currentLocation.landmarks.length === 0){
+    <p>You found nothing of interest when you were last here, traveller. You should move on...</p>
+  }
+
+}
+
+@if (landmarkWithTarget && landmarkMenuDisplay) {
+  <app-landmark-menu 
+    [landmarkWithTarget]="landmarkWithTarget"
+    [display]="landmarkMenuDisplay"
+    (changeDisplay)="changeLandmarkMenuDisplay($event)">
+  </app-landmark-menu>
+}
+
+

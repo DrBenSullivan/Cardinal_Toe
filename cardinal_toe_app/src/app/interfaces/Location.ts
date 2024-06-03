@@ -1,19 +1,14 @@
-export interface Location {
+import { Item } from "./Item";
+import { Landmark } from "./Landmark";
 
-    //Required for UI
+export interface Location {
     name: string,
     description: string,
-
-    //Required for MapGeneratorService
+    blurb?: string,
+    hasBeenSearched: boolean,
     previousLocation: Location | null,
     isFinalLocation: boolean,
     routes: Location[],
     deviationValue: number,
-
-    //In development
-    blurb?: string,
-    events?: object[],
-    people?: number[],
-    items?: number[]
-
+    landmarks: Landmark[],
 }

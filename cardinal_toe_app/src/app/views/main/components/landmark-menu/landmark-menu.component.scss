@@ -1,0 +1,83 @@
+::ng-deep .landmark-menu-dialog{
+    width: 95%;
+    height: 95%;
+    color: #deb887;
+    padding: 16px 16px 24px 16px;
+    background-color: #4d2121;
+    border: 4px solid #1b0c0c;
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+}
+
+.grid-container {
+    height: 100%;
+    display: grid;
+    gap: 16px;
+    overflow-x: hidden;
+    transition: height 0.5s;
+    grid-template: 
+        "g-image g-body" 300px
+        "g-console g-console" auto
+        "g-controls g-controls" max-content / minmax(min-content, max-content) auto;
+
+}
+
+.grid-body {
+    grid-area: g-body;
+    display: grid;
+    row-gap: 16px;
+    grid-template:
+        "g-title" max-content
+        "g-text" auto / auto;
+}
+
+
+.grid-console {
+    grid-area: g-console;
+    padding: 8px;
+    border: 4px inset #371818;
+    background-color: #371818;
+    overflow-y: auto;
+}
+
+.grid-image {
+    grid-area: g-image;
+}
+
+.grid-title {
+    grid-area: g-title;
+    display: flex;
+    align-items: center;
+}
+
+.grid-text {
+    grid-area: g-text;
+    overflow-y: auto;
+}
+
+.grid-controls {
+    max-height: fit-content;
+    grid-area: g-controls;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.local-text {
+    color: #deb887b0;
+    margin-top: 4px;
+}
+
+p-button {
+
+    &.close {
+        margin-right: 0;
+        justify-self: flex-end;
+    }
+
+}
+
+h3 {
+    color: #deb887ea;
+}

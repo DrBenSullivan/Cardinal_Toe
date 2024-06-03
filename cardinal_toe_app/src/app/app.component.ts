@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './layout/header/header.component';
-import { ContentComponent } from './components/content/content.component';
-import { NavComponent } from './layout/nav/nav.component';
-import { FooterComponent } from './layout/footer/footer.component';
+import { HeaderComponent } from './views/header/header.component';
+import { ContentComponent } from './views/main/content/content.component';
+import { NavComponent } from './views/nav/nav.component';
+import { FooterComponent } from './views/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -14,4 +14,5 @@ import { FooterComponent } from './layout/footer/footer.component';
 })
 export class AppComponent {
   title: any = 'cardinal_toe_app';
+  
 }

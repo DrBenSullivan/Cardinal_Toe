@@ -1,0 +1,8 @@
+[
+  {
+    "alias": "gate",
+    "name": "a delapidated old gate",
+    "description": "You might have been able to break through this ancient door if your arms were not so withered and pasty. Behind this gate lies a dingy & olfactorily offensive makeshift cell. There seems to be some form of troll cowering in corner behind it. You call out to it, but it only grumbles, sweatily and mentions some form of key...",
+    "requiredItemAlias": "key"
+  }
+]

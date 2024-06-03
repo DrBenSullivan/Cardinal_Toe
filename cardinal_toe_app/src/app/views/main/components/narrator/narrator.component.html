@@ -1,0 +1,41 @@
+<div class="grid-container">
+
+    <div class="content-img">
+        <img class="framed200 brown-border4" src="../../../assets/images/locations/{{currentLocation.name}}.jpg" />
+    </div>
+
+    <div class="content-title wrapper flexbox-left">
+        <h1 class = "location italic" (click)="openCurrentLocationMenu(currentLocation)"
+            >The {{ currentLocation.name | spaced | titlecase }}
+        </h1>
+    </div>
+
+    <div class="content-body">
+        <p>{{ currentLocation.description | paragraph }}</p>
+        <p>{{routesText}}<ng-template ngFor let-route [ngForOf]="possibleRoutes" let-last="last"
+            >
+                <span class="location" (click)="openNewLocationMenu(route)">{{ route.name | spaced }}</span>
+                <span *ngIf="last">.</span>
+                <span *ngIf="route === possibleRoutes[possibleRoutes.length - 2]">, or </span>
+                <span *ngIf="!last && route !== possibleRoutes[possibleRoutes.length - 2]">, </span>
+            </ng-template>
+        </p>
+
+    </div>
+
+</div>
+
+<app-new-location-menu 
+    *ngIf="selectedRoute"
+    [selectedRoute]="selectedRoute"
+    [display]="newLocationMenuDisplay"
+    (newLocation)="goToLocation($event)"
+    (changeDisplay)="changeNewLocationMenuDisplay($event)">
+</app-new-location-menu>
+
+<app-current-location-menu 
+    *ngIf="selectedRoute"
+    [selectedRoute]="selectedRoute"
+    [display]="currentLocationMenuDisplay"
+    (changeDisplay)="changeCurrentLocationMenuDisplay($event)">
+</app-current-location-menu>

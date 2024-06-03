@@ -1,0 +1,41 @@
+<p-dialog styleClass="new-location-menu-dialog" [(visible)]="display" [modal]=true [closable]=false [draggable]=false>
+        
+        <div class="grid-container">
+
+            <div class="grid-body">
+                <h2 class="italic underlined">The {{selectedRoute.name | spaced | titlecase}}</h2>
+                <p class="local-text">{{selectedRoute.blurb ?? selectedRoute.description}}
+                </p>
+            </div>
+
+            <div class="grid-image">
+                <img class="framed300 dark-border2" src="../../../assets/images/locations/{{selectedRoute.name}}.jpg"/>
+            </div>
+
+            <div class="grid-console">
+                <p>What would you like to do?</p>
+            </div>
+
+            <div class="wrapper grid-controls">
+
+                <!-- Go-to button in control panel -->
+                <p-button 
+                    styleClass="popup-button other" 
+                    type="button" 
+                    label="Go-to" 
+                    (click)="goToLocation(selectedRoute)">
+                </p-button>
+            
+                <!-- Close pop-up button in control panel -->
+                <p-button 
+                    styleClass="popup-button close" 
+                    type="button" 
+                    label="Cancel" 
+                    (click)="closePopup()">
+                </p-button>
+
+            </div>
+
+        </div>
+        
+</p-dialog>

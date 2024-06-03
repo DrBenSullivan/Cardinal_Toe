@@ -16,7 +16,7 @@ app-header {
     grid-area: header;
     font-size: 24px;
     color: #deb887;
-    text-shadow: 1px 1px 2px black, 0 0 25px #371818, 0 0 5px brown;
+    text-shadow: 2px 2px 2px black, 0 0 25px #371818, 0 0 5px brown;
     background-color: #6e3030;
     border-bottom: solid 4px #371818;
 }
@@ -39,12 +39,3 @@ app-nav {
         display: none;
     }
 }
-
-// app-footer {
-//     grid-area: footer;
-//     color: #deb887;
-//     text-shadow: 1px 1px 2px black, 0 0 25px #371818, 0 0 5px brown;
-//     background-color: #6e3030;
-//     border-top: solid 2px #371818;
-//     visibility: hidden;
-// }

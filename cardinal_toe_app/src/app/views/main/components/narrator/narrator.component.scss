@@ -1,0 +1,23 @@
+.grid-container {
+    display: grid;
+    gap: 16px;
+    grid-template: 
+        "head-img head-title" 200px
+        "body body" auto / 200px auto;
+}
+
+.content {
+
+    &-img {
+    grid-area: head-img;
+    }
+
+    &-title {
+    grid-area: head-title;
+    }
+
+    &-body {
+    grid-area: body;
+    }
+    
+}
