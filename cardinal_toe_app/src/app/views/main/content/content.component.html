@@ -1,14 +1,15 @@
 @if (currentSession.isVictoryConditionMet){
     <app-victory 
-        [session]="currentSession"
-        (newGame)="currentSession"></app-victory>
+        [(session)]="currentSession"></app-victory>
 }
 
-<!-- Container component for map generation & location storage. -->
-<div class="wrapper">
-    <app-narrator
-        [currentLocation]="currentLocation"
-        (nextLocation)="changeCurrentLocation($event)">
-    </app-narrator>
-</div>
+@else {
+    <!-- Container component for map generation & location storage. -->
+    <div class="wrapper">
+        <app-narrator
+            [currentLocation]="currentLocation"
+            (nextLocation)="changeCurrentLocation($event)">
+        </app-narrator>
+    </div>
+}
 

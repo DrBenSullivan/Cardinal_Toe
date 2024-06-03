@@ -6,8 +6,7 @@
     display: grid;
     grid-template: 
         "header header" 80px
-        "first-panel second-panel" auto / 15% auto;
-        // "footer footer" 60px / 15% auto; if bringing back footer
+        "first-panel second-panel" auto / minmax(min-content, 1fr) minmax(auto, 6fr);
     background-color: #deb887;
     gap: 0;
 }   
@@ -28,14 +27,9 @@ app-nav {
 
 .main {
     grid-area: second-panel;
-    max-height: min-content;
-    overflow-x: hidden;
+    overflow: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none; 
     text-wrap: wrap;
     transition: 0.2s;
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
 }

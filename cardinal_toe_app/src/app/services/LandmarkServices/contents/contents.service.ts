@@ -10,6 +10,8 @@ import { Item } from '../../../interfaces/Item';
 })
 export class ContentsService {
 
+  DEFAULT_ITEM_COUNTDOWN: number = 4;
+
   constructor(
     private numberRandomiser: NumberRandomiserService
   ) { }
@@ -22,8 +24,9 @@ export class ContentsService {
       targetAlias: JSONItemTarget.alias,
       name: JSONItemTarget.name,
       description: JSONItemTarget.description,
+      completedDescription: JSONItemTarget.completedDescription,
       requiredItem: _requiredItem,
-      isCompleted: false
+      isCompleted: false,
     }]
   }
 
@@ -35,7 +38,7 @@ export class ContentsService {
       name: JSONItem.name,
       description: JSONItem.description,
       itemTargetAlias: JSONItem.itemTargetAlias,
-      searchCountdown: 2
+      searchCountdown: this.DEFAULT_ITEM_COUNTDOWN
     }
   }
 }

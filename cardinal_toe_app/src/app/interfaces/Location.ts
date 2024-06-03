@@ -1,4 +1,3 @@
-import { Item } from "./Item";
 import { Landmark } from "./Landmark";
 
 export interface Location {

@@ -16,9 +16,9 @@
     overflow-x: hidden;
     transition: height 0.5s;
     grid-template: 
-        "g-image g-body" 300px
+        "g-image g-body" 304px
         "g-console g-console" auto
-        "g-controls g-controls" max-content / minmax(min-content, max-content) auto;
+        "g-controls g-controls" auto / auto auto auto;
 
 }
 

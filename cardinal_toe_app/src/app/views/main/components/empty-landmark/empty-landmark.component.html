@@ -2,14 +2,28 @@
     <p>{{ sentence }} <span class="location" (click)="searchLandmark()">{{ landmark.name }}</span>.</p>
 }
 
-@if (isSentenceProvided && isLandmarkSearched) {
-    <p>{{ landmark.name | titlecase }} is empty.</p>
-}
-
 @if (!isSentenceProvided && !isLandmarkSearched) {
     <li><span class="location" (click)="searchLandmark()">{{ landmark.name | titlecase }}</span></li>
 }
 
-@if (!isSentenceProvided && isLandmarkSearched) {
-    <li>{{ landmark.name | titlecase }} is empty.</li>
+@if (isLandmarkSearched) {
+    @if (itemsFound.length === 0){
+        <p>You find nothing in {{ landmark.name }}.</p>
+    }
+
+    @else {
+        @if (itemsFound.length === 1){
+            <p><span class="item">You find a {{itemsFound[0].name}} in {{ landmark.name }}. {{itemsFound[0].description}}</span></p>
+        }
+
+        @if (itemsFound.length > 1){
+            <p>In {{landmark.name}}, you find:
+                <ul>
+                    @for (item of itemsFound; track item){
+                        <li><span class="item">A {{item.name}}. {{item.description}}</span></li>
+                    }
+                </ul>
+        }
+    }
+
 }

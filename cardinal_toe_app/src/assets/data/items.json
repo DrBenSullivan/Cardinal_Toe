@@ -1,7 +1,7 @@
 [
   {
     "itemAlias": "key",
-    "name": "rusted old key",
+    "name": "rusty old key",
     "description": "Perhaps this is the key to which the troll alluded...",
     "itemTargetAlias": "gate"
   }

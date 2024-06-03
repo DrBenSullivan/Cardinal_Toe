@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Landmark } from '../../../../interfaces/Landmark';
 import { TitleCasePipe } from '@angular/common';
 import { SessionStateService } from '../../../../services/UtilityServices/session-state/session-state.service';
+import { Item } from '../../../../interfaces/Item';
 
 @Component({
   selector: 'app-empty-landmark',
@@ -15,7 +16,9 @@ export class EmptyLandmarkComponent implements OnInit {
   @Input() landmark!: Landmark;
 
   isSentenceProvided!: boolean;
+
   isLandmarkSearched: boolean = false;
+  itemsFound: Item[] = [];
 
   constructor(
     private sessionStateService: SessionStateService
@@ -31,7 +34,7 @@ export class EmptyLandmarkComponent implements OnInit {
   }
 
   searchLandmark(): void {
-    this.sessionStateService.searchForItems();
+    this.itemsFound = this.sessionStateService.searchForItems();
     this.isLandmarkSearched = true;
   }
 }

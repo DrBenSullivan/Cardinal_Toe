@@ -5,5 +5,7 @@ export interface SessionState {
     map: Location,
     itemSearchList: Item[],
     inventory: Item[],
-    isVictoryConditionMet: boolean
+    isVictoryConditionMet: boolean,
+    encounteredItems: string[],
+    questsCompleted: number
 }

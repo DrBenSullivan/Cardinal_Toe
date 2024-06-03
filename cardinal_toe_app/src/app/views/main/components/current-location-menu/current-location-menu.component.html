@@ -16,7 +16,7 @@
                 <p>I wonder if there is anything of interest nearby...</p>
             }
             @else {
-                <app-landmarks [currentLocation]="selectedRoute"></app-landmarks>
+                <app-landmarks [currentLocation]="selectedRoute" [previouslySearched]="!isLandmarksDisplayDisabled"></app-landmarks>
             }
 
         </div>

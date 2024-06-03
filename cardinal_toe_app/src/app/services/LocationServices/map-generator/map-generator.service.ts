@@ -16,7 +16,7 @@ export class MapGeneratorService {
    * @readonly
    * @constant
    */
-  private readonly DEVIATION_LIMIT = 1;
+  private readonly DEVIATION_LIMIT = 2;
   /**
    * Sets the limit of the number of Locations (i.e. distance) that can be generated in the Location tree
    * before reaching the _'goal Location'_.
@@ -24,7 +24,7 @@ export class MapGeneratorService {
    * @readonly
    * @constant
    */
-  private readonly DEPTH_LIMIT = 2;
+  private readonly DEPTH_LIMIT = 4;
 
   rootLocation!: Location;
 

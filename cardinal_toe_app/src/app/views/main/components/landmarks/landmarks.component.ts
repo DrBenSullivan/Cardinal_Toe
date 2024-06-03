@@ -6,6 +6,7 @@ import { Location } from '../../../../interfaces/Location';
 import { Landmark } from '../../../../interfaces/Landmark';
 import { DialogModule } from 'primeng/dialog';
 import { EmptyLandmarkComponent } from '../empty-landmark/empty-landmark.component';
+import { SessionStateService } from '../../../../services/UtilityServices/session-state/session-state.service';
 
 @Component({
   selector: 'app-landmarks',
@@ -16,18 +17,19 @@ import { EmptyLandmarkComponent } from '../empty-landmark/empty-landmark.compone
 })
 export class LandmarksComponent implements OnChanges {
   @Input() currentLocation!: Location;
+  @Input() previouslySearched!: boolean;
   landmarksStringArray!: string[];
   landmarkWithTarget?: Landmark;
-  previouslySearched!: boolean;
-  
   landmarkMenuDisplay: boolean = false;
 
   constructor (
     private landmarkSentenceService: LandmarkSentenceService,
+    private sessionStateService: SessionStateService
   ) {}
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes) {
+      this.sessionStateService.saveMapState(this.currentLocation);
       if(this.currentLocation.hasBeenSearched) {
         this.previouslySearched = true;
       }

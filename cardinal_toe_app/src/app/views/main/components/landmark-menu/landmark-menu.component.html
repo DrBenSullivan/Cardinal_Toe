@@ -3,7 +3,7 @@
     <div class="grid-container">
     
         <div class="grid-image">
-            <img class="image framed100 dark-border2" src="../../../../../assets/images/itemTargets/{{ currentItemTarget.targetAlias }}.jpg"/>
+            <img class="image framed300 dark-border2" src="../../../../../assets/images/itemTargets/{{ currentItemTarget.targetAlias }}.jpg"/>
         </div>
 
         <div class="grid-body">
@@ -12,13 +12,39 @@
             </div>
     
             <div class="grid-text">
-                <p>Near {{ landmarkWithTarget.name }}, you find <span class="italic">{{ currentItemTarget.name }}</span>.</p>
-                <p>{{ currentItemTarget.description | paragraph }}</p>      
+                @if (landmarkWithTarget.contents[0].isCompleted) {
+                    <p>{{ currentItemTarget.completedDescription | paragraph }}</p>
+                }
+                @else {
+                    <p>Near {{ landmarkWithTarget.name }}, you find a <span class="italic">{{ currentItemTarget.name }}</span>.</p>
+                    <p>{{ currentItemTarget.description | paragraph }}</p>      
+                }
             </div>
         </div>    
         
         <div class="grid-console">
-            <p>Hmmm, I wonder if you can find this <span class="item" (click)="addItemToSearchList(currentItemTarget.requiredItem)">{{ currentItemTarget.requiredItem.itemAlias }}</span>, traveller...</p>
+            @if (landmarkWithTarget.contents[0].isCompleted) {
+                <p>I think we'd best move on, traveller.</p>
+            }
+
+            @else {
+                @if (isItemInInventory){
+                    <p>Do you want to <span class="action" (click)="useItem()">use</span> the {{ currentItemTarget.requiredItem.name }} with the {{ currentItemTarget.targetAlias }}?</p>
+                }
+                
+                @else{
+
+                    @if (isItemNew) {
+                        <p>Hmmm, I wonder if you can find this <span class="item" (click)="addItemToSearchList(currentItemTarget.requiredItem)">{{ currentItemTarget.requiredItem.itemAlias }}</span>, traveller...</p>
+                    }
+        
+                    @if (!isItemNew) {
+                        <p>Let's see if we can find this {{ currentItemTarget.requiredItem.itemAlias }}, traveller.</p>
+                    }
+                }
+            }
+            
+            
         </div>
 
         <div class="grid-controls">

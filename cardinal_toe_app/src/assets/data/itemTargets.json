@@ -1,8 +1,9 @@
 [
   {
     "alias": "gate",
-    "name": "a delapidated old gate",
+    "name": "delapidated old gate",
     "description": "You might have been able to break through this ancient door if your arms were not so withered and pasty. Behind this gate lies a dingy & olfactorily offensive makeshift cell. There seems to be some form of troll cowering in corner behind it. You call out to it, but it only grumbles, sweatily and mentions some form of key...",
-    "requiredItemAlias": "key"
+    "requiredItemAlias": "key",
+    "completedDescription": "Out stumbles the disgusting troll. \"Arrate, CardinalToo 'ow're you?\" The events of last night come flooding back! The troll, Djaklyn, fell off the wagon last night & you've both been on a Scurva bender for the last 3-months. What a calamity! You remember that you actually don't particularly like Djaklyn & decide to move on with your life..."
   }
 ]

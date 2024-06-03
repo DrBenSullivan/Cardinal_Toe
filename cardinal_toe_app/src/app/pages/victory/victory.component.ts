@@ -3,6 +3,7 @@ import { MapGeneratorService } from '../../services/LocationServices/map-generat
 import { ButtonModule } from 'primeng/button';
 import { SessionState } from '../../interfaces/Session-State';
 import { Location } from '../../interfaces/Location';
+import { SessionStateService } from '../../services/UtilityServices/session-state/session-state.service';
 
 @Component({
   selector: 'app-victory',
@@ -13,22 +14,16 @@ import { Location } from '../../interfaces/Location';
 })
 export class VictoryComponent {
   @Input() session!: SessionState;
-  @Output() newGame = new EventEmitter<SessionState>();
+  @Output() sessionChange = new EventEmitter<SessionState>();
 
   constructor (
-    private mapGeneratorService: MapGeneratorService
+    private mapGeneratorService: MapGeneratorService,
+    private sessionStateService: SessionStateService
   ) { }
 
   startNewGame() {
-    const newMap: Location = this.mapGeneratorService.resetMap();
-    const newSession: SessionState = {
-      map: newMap,
-      itemSearchList: [],
-      inventory: [],
-      isVictoryConditionMet: false
-
-    }
-    this.newGame.emit(newSession);
+    const newSession = this.sessionStateService.newGame();
+    this.sessionChange.emit(newSession);
   }
 
 }

@@ -21,6 +21,9 @@ export class LandmarkMenuComponent implements OnChanges {
   @Input() landmarkWithTarget!: Landmark;
   @Output() changeDisplay = new EventEmitter<boolean>();
   currentItemTarget!: ItemTarget;
+  isItemNew!: boolean;
+  isItemInInventory!: boolean;
+  isItemTargetCompleted!: boolean;
 
   constructor(
     private sessionStateService: SessionStateService
@@ -28,14 +31,25 @@ export class LandmarkMenuComponent implements OnChanges {
   
   ngOnChanges() {
     this.currentItemTarget = this.landmarkWithTarget.contents[0];
+    this.isItemNew = !this.sessionStateService.isItemEncountered(this.currentItemTarget.requiredItem);
+    this.isItemInInventory = this.sessionStateService.isInInventory(this.currentItemTarget.requiredItem);
+    this.isItemTargetCompleted = this.currentItemTarget.isCompleted;
   }
 
   addItemToSearchList(_item: Item){
-    this.sessionStateService.addItemToSearchList(_item);
-    this.closePopup();
+    if (this.isItemNew) {
+      this.sessionStateService.addItemToSearchList(_item);
+      this.closePopup();
+    }
   }
 
+  useItem(){
+    this.currentItemTarget.isCompleted = this.sessionStateService.completeItemTarget(this.currentItemTarget);    
+  }
+
+
   closePopup(){
+    this.sessionStateService.checkIfGameOver();
     this.display = false;
     this.changeDisplay.emit(this.display);
   }
