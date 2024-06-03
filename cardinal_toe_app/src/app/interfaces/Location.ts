@@ -1,5 +1,4 @@
 import { Item } from "./Item";
-import { ItemTarget } from "./Item-Target";
 import { Landmark } from "./Landmark";
 
 export interface Location {
@@ -12,10 +11,4 @@ export interface Location {
     routes: Location[],
     deviationValue: number,
     landmarks: Landmark[],
-
-    // For future extensions.
-    events?: object[],
-    people?: object[],
-    items?: Item[],
-    itemTargets?: ItemTarget[]
 }

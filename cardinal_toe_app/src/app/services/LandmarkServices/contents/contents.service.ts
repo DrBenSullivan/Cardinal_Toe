@@ -34,7 +34,8 @@ export class ContentsService {
       itemAlias: JSONItem.itemAlias,
       name: JSONItem.name,
       description: JSONItem.description,
-      itemTargetAlias: JSONItem.itemTargetAlias
+      itemTargetAlias: JSONItem.itemTargetAlias,
+      searchCountdown: 3
     }
   }
 }
