@@ -11,6 +11,7 @@ cardinal_toe_app/dist
 cardinal_toe_app/tmp
 cardinal_toe_app/out-tsc
 cardinal_toe_app/bazel-out
+.vscode
 npm-debug.log
 yarn-error.log
 *.launch
