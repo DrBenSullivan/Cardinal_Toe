@@ -1,0 +1,18 @@
+<h1><i>Welcome To The Curious Adventures of Cardinaltoe!</i></h1><br>
+
+<div *ngIf="pageState === 0; else secondState">
+  <p>Greetings traveller, my name <span class="action" (click)="nextState()">is...</span></p>
+</div>
+
+<ng-template #secondState>
+  <p style="display: inline;">Greetings traveller, my name is </p><h2 [@fade] style="display: inline;">Falconhoof!</h2>
+  <br>
+  <img [@fade] class="framed200 brown-border4" src="https://pbs.twimg.com/media/FaLwTAbWYAIDXVm?format=jpg&name=900x900" />
+  <br>
+  <p [@fade]>And I will be your guide on your quest.</p>
+  <br>
+  <p [@fade]>Let us begin...</p>
+  <br>
+  <br>
+  <a [@fade] class="action" [routerLink]="['/content']">Enter the weird world of Sir Cardinaltoe...</a>
+</ng-template>

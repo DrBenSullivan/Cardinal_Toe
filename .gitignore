@@ -1,5 +1,7 @@
 node_modules
 .gitignore
+.angular
+.vscode
 
 cardinal_toe_app/.vscode/**
 cardinal_toe_app/.angular/**
@@ -11,7 +13,6 @@ cardinal_toe_app/dist
 cardinal_toe_app/tmp
 cardinal_toe_app/out-tsc
 cardinal_toe_app/bazel-out
-.vscode
 npm-debug.log
 yarn-error.log
 *.launch
