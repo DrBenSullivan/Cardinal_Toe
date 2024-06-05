@@ -114,7 +114,7 @@ itemTarget.requiredItemAlias == item.Alias && item.itemTargetAlias == itemTarget
 Images of Item Targets may be added to the `/src/assets/images/itemTargets/` directory. Images should be in `.jpg` format and named to exactly match `itemTarget.alias` as described above.
 
 ## Credits
-Written and designed by [Ben Sullivan](https://github.com/drbensullivan]) and [Karl Minton](https://github.com/karlsminton].
+Written and designed by [Ben Sullivan](https://github.com/drbensullivan]) and [Karl Minton](https://github.com/karlsminton).
 
 *Limmy's Show* Copyright [Limmy on Twitch](https://www.twitch.tv/limmy) and Banijay.
 
